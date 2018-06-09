@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<TerrainDef ParentName="TerrainGravelBase">
+		<defName>ParchedBarrenGravel</defName>
+		<label>parched barren gravel</label>
+		<texturePath>Terrain/Surfaces/Gravel/ParchedBarrenGravel</texturePath>
+		<pathCost>14</pathCost>
+		<fertility>0.40</fertility>
+	</TerrainDef>
+
+	<TerrainDef ParentName="TerrainGravelBase">
+		<defName>DryBarrenGravel</defName>
+		<label>dry barren gravel</label>
+		<texturePath>Terrain/Surfaces/Gravel/DryBarrenGravel</texturePath>
+		<pathCost>10</pathCost>
+		<fertility>0.40</fertility>
+	</TerrainDef>
+
+	<TerrainDef ParentName="TerrainGravelBase">
+		<defName>NormalBarrenGravel</defName>
+		<label>barren gravel</label>
+		<texturePath>Terrain/Surfaces/Gravel/NormalBarrenGravel</texturePath>
+		<pathCost>8</pathCost>
+		<fertility>0.40</fertility>
+	</TerrainDef>
+
+	<TerrainDef ParentName="TerrainGravelBase">
+		<defName>WetBarrenGravel</defName>
+		<label>wet barren gravel</label>
+		<texturePath>Terrain/Surfaces/Gravel/WetBarrenGravel</texturePath>
+		<pathCost>16</pathCost>
+		<fertility>0.40</fertility>
+	</TerrainDef>
+
+	<TerrainDef ParentName="TerrainFloodedBase">
+		<defName>FloodedBarrenGravel</defName>
+		<label>flooded barren gravel</label>
+		<texturePath>Terrain/Surfaces/Gravel/FloodedBarrenGravel</texturePath>
+		<pathCost>19</pathCost>
+		<fertility>0.40</fertility>
+	</TerrainDef>
+
+	<TerrainDef ParentName="TerrainFrozenBase">
+		<defName>FrozenFloodedBarrenGravel</defName>
+		<label>frozen flooded barren gravel</label>
+		<texturePath>Terrain/Surfaces/Gravel/FrozenFloodedBarrenGravel</texturePath>
+		<pathCost>6</pathCost>
+	</TerrainDef>
+
+</Defs>

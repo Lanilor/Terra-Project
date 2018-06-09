@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--============================= Ice deep =============================-->
+
+  <!-- Normal level -->
+
+	<TerrainDef ParentName="IceBase">
+		<defName>IceDeep</defName>
+		<label>ice (deep water)</label>
+	</TerrainDef>
+
+	<TerrainDef ParentName="IceBase">
+		<defName>IceOceanDeep</defName>
+		<label>ice (deep ocean water)</label>
+	</TerrainDef>
+
+	<TerrainDef ParentName="IceBase">
+		<defName>IceMovingDeep</defName>
+		<label>ice (deep moving water)</label>
+	</TerrainDef>
+
+  <!--============================= Ice sloping =============================-->
+
+  <!-- Normal level -->
+
+	<TerrainDef ParentName="IceBase">
+		<defName>IceSloping</defName>
+		<label>ice (sloping water)</label>
+	</TerrainDef>
+
+	<TerrainDef ParentName="IceBase">
+		<defName>IceOceanSloping</defName>
+		<label>ice (sloping ocean water)</label>
+	</TerrainDef>
+
+	<TerrainDef ParentName="IceBase">
+		<defName>IceMovingSloping</defName>
+		<label>ice (sloping moving water)</label>
+	</TerrainDef>
+
+  <!--============================= Ice shallow =============================-->
+
+  <!-- Normal level -->
+
+	<TerrainDef ParentName="IceBase">
+		<defName>IceShallow</defName>
+		<label>ice (shallow water)</label>
+	</TerrainDef>
+
+	<TerrainDef ParentName="IceBase">
+		<defName>IceOceanShallow</defName>
+		<label>ice (shallow ocean water)</label>
+	</TerrainDef>
+
+	<TerrainDef ParentName="IceBase">
+		<defName>IceMovingShallow</defName>
+		<label>ice (shallow moving water)</label>
+	</TerrainDef>
+
+</Defs>

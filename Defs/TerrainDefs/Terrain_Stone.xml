@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<TerrainDef>
+		<defName>FillerStone</defName>
+		<label>filler stone</label>
+		<texturePath>Terrain/Surfaces/RoughStone</texturePath>
+		<color>(255,0,0)</color>
+		<renderPrecedence>399</renderPrecedence>
+		<edgeType>Hard</edgeType>
+		<pathCost>9999</pathCost>
+		<fertility>0</fertility>
+	</TerrainDef>
+
+</Defs>

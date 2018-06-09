@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--============================= Generic bases =============================-->
+
+	<TerrainDef Name="TerrainBase" Abstract="True">
+		<renderPrecedence>350</renderPrecedence>
+		<edgeType>FadeRough</edgeType>
+		<pathCost>1</pathCost>
+		<fertility>0</fertility>
+	</TerrainDef>
+	
+	<TerrainDef Name="TerrainSandBase" ParentName="TerrainBase" Abstract="True">
+		<statBases>
+			<Beauty>-1</Beauty>
+			<Cleanliness>-1</Cleanliness>
+		</statBases>
+		<scatterType>SoftDry</scatterType>
+		<affordances>
+			<li>Light</li>
+			<li>Heavy</li>
+			<li>GrowSoil</li>
+			<li>Diggable</li>
+		</affordances>
+		<terrainFilthDef>FilthSand</terrainFilthDef>
+		<takeFootprints>True</takeFootprints>
+	</TerrainDef>
+	
+	<TerrainDef Name="TerrainSoilBase" ParentName="TerrainBase" Abstract="True">
+		<statBases>
+			<Beauty>-1</Beauty>
+			<Cleanliness>-1</Cleanliness>
+		</statBases>
+		<scatterType>Rocky</scatterType>
+		<affordances>
+			<li>Light</li>
+			<li>Heavy</li>
+			<li>GrowSoil</li>
+			<li>Diggable</li>
+		</affordances>
+		<terrainFilthDef>FilthDirt</terrainFilthDef>
+		<takeFootprints>True</takeFootprints>
+	</TerrainDef>
+	
+	<TerrainDef Name="TerrainGravelBase" ParentName="TerrainSoilBase" Abstract="True">
+		<edgeType>FadeRough</edgeType>
+		<affordances>
+			<li>Light</li>
+			<li>Heavy</li>
+			<li>GrowSoil</li>
+			<li>Diggable</li>
+		</affordances>
+	</TerrainDef>
+	
+	<TerrainDef Name="TerrainFloodedBase" ParentName="TerrainBase" Abstract="True">
+		<statBases>
+			<Beauty>-1</Beauty>
+			<Cleanliness>-2</Cleanliness>
+		</statBases>
+		<scatterType>Rocky</scatterType>
+		<affordances>
+			<li>Light</li>
+			<li>GrowSoil</li>
+			<li>Diggable</li>
+		</affordances>
+		<changeable>false</changeable>
+		<terrainFilthDef>FilthDirt</terrainFilthDef>
+	</TerrainDef>
+	
+	<TerrainDef Name="TerrainFrozenBase" ParentName="TerrainBase" Abstract="True">
+		<statBases>
+			<Beauty>-1</Beauty>
+		</statBases>
+		<scatterType>SoftGray</scatterType>
+		<affordances>
+			<li>Light</li>
+			<li>Heavy</li>
+			<li>Diggable</li>
+		</affordances>
+		<changeable>false</changeable>
+		<terrainFilthDef>FilthDirt</terrainFilthDef>
+		<takeFootprints>True</takeFootprints>
+	</TerrainDef>
+
+  <!--============================= Ice =============================-->
+
+	<TerrainDef Name="IceBase" Abstract="True">
+		<texturePath>Terrain/Surfaces/Ice</texturePath>
+		<edgeType>FadeRough</edgeType>
+		<renderPrecedence>350</renderPrecedence>
+		<pathCost>12</pathCost>
+		<statBases>
+			<Beauty>-1</Beauty>
+		</statBases>
+		<scatterType>SoftGray</scatterType>
+		<affordances>
+			<li>Light</li>
+			<li>Heavy</li>
+			<li>Diggable</li>
+		</affordances>
+		<terrainFilthDef>FilthDirt</terrainFilthDef>
+		<fertility>0.00</fertility>
+		<changeable>false</changeable>
+		<takeFootprints>True</takeFootprints>
+	</TerrainDef>
+
+  <!--============================= Water =============================-->
+
+	<TerrainDef Name="WaterBase" Abstract="True">
+		<waterDepthShader>Map/WaterDepth</waterDepthShader>
+		<edgeType>Water</edgeType>
+		<pathCost>300</pathCost>
+		<acceptFilth>false</acceptFilth>
+		<fertility>0</fertility>
+		<avoidWander>true</avoidWander>
+		<changeable>false</changeable>
+		<holdSnow>false</holdSnow>
+		<takeSplashes>true</takeSplashes>
+		<extinguishesFire>true</extinguishesFire>
+		<tags>
+			<li>Water</li>
+		</tags>
+	</TerrainDef>
+
+</Defs>

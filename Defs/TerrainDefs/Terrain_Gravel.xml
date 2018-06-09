@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<TerrainDef ParentName="TerrainGravelBase">
+		<defName>ParchedGravel</defName>
+		<label>parched gravel</label>
+		<texturePath>Terrain/Surfaces/Gravel/ParchedGravel</texturePath>
+		<pathCost>14</pathCost>
+		<fertility>0.70</fertility>
+	</TerrainDef>
+
+	<TerrainDef ParentName="TerrainGravelBase">
+		<defName>DryGravel</defName>
+		<label>dry gravel</label>
+		<texturePath>Terrain/Surfaces/Gravel/DryGravel</texturePath>
+		<pathCost>10</pathCost>
+		<fertility>0.70</fertility>
+	</TerrainDef>
+
+	<TerrainDef ParentName="TerrainGravelBase">
+		<defName>NormalGravel</defName>
+		<label>gravel</label>
+		<texturePath>Terrain/Surfaces/Gravel/NormalGravel</texturePath>
+		<pathCost>8</pathCost>
+		<fertility>0.70</fertility>
+	</TerrainDef>
+
+	<TerrainDef ParentName="TerrainGravelBase">
+		<defName>WetGravel</defName>
+		<label>wet gravel</label>
+		<texturePath>Terrain/Surfaces/Gravel/WetGravel</texturePath>
+		<pathCost>16</pathCost>
+		<fertility>0.70</fertility>
+	</TerrainDef>
+
+	<TerrainDef ParentName="TerrainFloodedBase">
+		<defName>FloodedGravel</defName>
+		<label>flooded gravel</label>
+		<texturePath>Terrain/Surfaces/Gravel/FloodedGravel</texturePath>
+		<pathCost>19</pathCost>
+		<fertility>0.70</fertility>
+	</TerrainDef>
+
+	<TerrainDef ParentName="TerrainFrozenBase">
+		<defName>FrozenFloodedGravel</defName>
+		<label>frozen flooded gravel</label>
+		<texturePath>Terrain/Surfaces/Gravel/FrozenFloodedGravel</texturePath>
+		<pathCost>6</pathCost>
+	</TerrainDef>
+
+</Defs>

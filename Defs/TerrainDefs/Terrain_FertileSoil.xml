@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<TerrainDef ParentName="TerrainSoilBase">
+		<defName>ParchedFertileSoil</defName>
+		<label>parched fertile soil</label>
+		<texturePath>Terrain/Surfaces/Soil/ParchedFertileSoil</texturePath>
+		<pathCost>7</pathCost>
+		<fertility>1.20</fertility>
+	</TerrainDef>
+
+	<TerrainDef ParentName="TerrainSoilBase">
+		<defName>DryFertileSoil</defName>
+		<label>dry fertile soil</label>
+		<texturePath>Terrain/Surfaces/Soil/DryFertileSoil</texturePath>
+		<pathCost>5</pathCost>
+		<fertility>1.20</fertility>
+	</TerrainDef>
+
+	<TerrainDef ParentName="TerrainSoilBase">
+		<defName>NormalFertileSoil</defName>
+		<label>fertile soil</label>
+		<texturePath>Terrain/Surfaces/Soil/NormalFertileSoil</texturePath>
+		<pathCost>4</pathCost>
+		<fertility>1.20</fertility>
+	</TerrainDef>
+
+	<TerrainDef ParentName="TerrainSoilBase">
+		<defName>WetFertileSoil</defName>
+		<label>wet fertile soil</label>
+		<texturePath>Terrain/Surfaces/Soil/WetFertileSoil</texturePath>
+		<pathCost>9</pathCost>
+		<fertility>1.20</fertility>
+	</TerrainDef>
+
+	<TerrainDef ParentName="TerrainFloodedBase">
+		<defName>FloodedFertileSoil</defName>
+		<label>flooded fertile soil</label>
+		<texturePath>Terrain/Surfaces/Soil/FloodedFertileSoil</texturePath>
+		<pathCost>13</pathCost>
+		<fertility>1.20</fertility>
+	</TerrainDef>
+
+	<TerrainDef ParentName="TerrainFrozenBase">
+		<defName>FrozenFloodedFertileSoil</defName>
+		<label>frozen flooded fertile soil</label>
+		<texturePath>Terrain/Surfaces/Soil/FrozenFloodedFertileSoil</texturePath>
+		<pathCost>6</pathCost>
+	</TerrainDef>
+
+</Defs>

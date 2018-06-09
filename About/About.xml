@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>Terra Framework</name>
+	<author>Lanilor</author>
+	<url>https://github.com/Lanilor/Terra-Framework</url>
+	<targetVersion>0.18.0</targetVersion>
+	<description>
+&lt;size=20&gt;Terra Framework&lt;/size&gt;
+
+Terrain and biome framework mod
+	</description>
+</ModMetaData>

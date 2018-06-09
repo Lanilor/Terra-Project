@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<TerrainDef ParentName="TerrainSoilBase">
+		<defName>ParchedBarrenSoil</defName>
+		<label>parched barren soil</label>
+		<texturePath>Terrain/Surfaces/Soil/ParchedBarrenSoil</texturePath>
+		<pathCost>7</pathCost>
+		<fertility>0.75</fertility>
+	</TerrainDef>
+
+	<TerrainDef ParentName="TerrainSoilBase">
+		<defName>DryBarrenSoil</defName>
+		<label>dry barren soil</label>
+		<texturePath>Terrain/Surfaces/Soil/DryBarrenSoil</texturePath>
+		<pathCost>5</pathCost>
+		<fertility>0.75</fertility>
+	</TerrainDef>
+
+	<TerrainDef ParentName="TerrainSoilBase">
+		<defName>NormalBarrenSoil</defName>
+		<label>barren soil</label>
+		<texturePath>Terrain/Surfaces/Soil/NormalBarrenSoil</texturePath>
+		<pathCost>4</pathCost>
+		<fertility>0.75</fertility>
+	</TerrainDef>
+
+	<TerrainDef ParentName="TerrainSoilBase">
+		<defName>WetBarrenSoil</defName>
+		<label>wet barren soil</label>
+		<texturePath>Terrain/Surfaces/Soil/WetBarrenSoil</texturePath>
+		<pathCost>9</pathCost>
+		<fertility>0.75</fertility>
+	</TerrainDef>
+
+	<TerrainDef ParentName="TerrainFloodedBase">
+		<defName>FloodedBarrenSoil</defName>
+		<label>flooded barren soil</label>
+		<texturePath>Terrain/Surfaces/Soil/FloodedBarrenSoil</texturePath>
+		<pathCost>13</pathCost>
+		<fertility>0.75</fertility>
+	</TerrainDef>
+
+	<TerrainDef ParentName="TerrainFrozenBase">
+		<defName>FrozenFloodedBarrenSoil</defName>
+		<label>frozen flooded barren soil</label>
+		<texturePath>Terrain/Surfaces/Soil/FrozenFloodedBarrenSoil</texturePath>
+		<pathCost>6</pathCost>
+	</TerrainDef>
+
+</Defs>

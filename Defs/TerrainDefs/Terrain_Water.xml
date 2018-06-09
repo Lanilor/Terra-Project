@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--============================= Water sloping =============================-->
+  
+	<TerrainDef ParentName="WaterBase">
+		<defName>WaterSloping</defName>
+		<label>water</label>
+		<texturePath>Terrain/Surfaces/WaterSlopingRamp</texturePath>
+		<renderPrecedence>395</renderPrecedence>
+		<pathCost>9999</pathCost>
+	</TerrainDef>
+  
+	<TerrainDef ParentName="WaterBase">
+		<defName>WaterOceanSloping</defName>
+		<label>ocean water</label>
+		<texturePath>Terrain/Surfaces/WaterSlopingRamp</texturePath>
+		<renderPrecedence>397</renderPrecedence>
+		<pathCost>9999</pathCost>
+	</TerrainDef>
+  
+	<TerrainDef ParentName="WaterBase">
+		<defName>WaterMovingSloping</defName>
+		<label>moving water</label>
+		<texturePath>Terrain/Surfaces/WaterSlopingRamp</texturePath>
+		<waterDepthShaderParameters>
+			<_UseWaterOffset>1</_UseWaterOffset>
+		</waterDepthShaderParameters>
+		<renderPrecedence>399</renderPrecedence>
+		<pathCost>9999</pathCost>
+	</TerrainDef>
+
+</Defs>

@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<TerrainDef ParentName="TerrainSandBase">
+		<defName>ParchedSand</defName>
+		<label>desert sand (parched)</label>
+		<texturePath>Terrain/Surfaces/Soil/ParchedSand</texturePath>
+		<pathCost>6</pathCost>
+		<fertility>0.10</fertility>
+	</TerrainDef>
+
+	<TerrainDef ParentName="TerrainSandBase">
+		<defName>DrySand</defName>
+		<label>desert sand</label>
+		<texturePath>Terrain/Surfaces/Soil/DrySand</texturePath>
+		<pathCost>6</pathCost>
+		<fertility>0.10</fertility>
+	</TerrainDef>
+
+	<TerrainDef ParentName="TerrainSandBase">
+		<defName>NormalSand</defName>
+		<label>sand</label>
+		<texturePath>Terrain/Surfaces/Soil/NormalSand</texturePath>
+		<pathCost>5</pathCost>
+		<fertility>0.10</fertility>
+	</TerrainDef>
+
+	<TerrainDef ParentName="TerrainSandBase">
+		<defName>WetSand</defName>
+		<label>wet sand</label>
+		<texturePath>Terrain/Surfaces/Soil/WetSand</texturePath>
+		<pathCost>7</pathCost>
+		<fertility>0.10</fertility>
+	</TerrainDef>
+
+	<TerrainDef ParentName="TerrainFloodedBase">
+		<defName>FloodedSand</defName>
+		<label>flooded sand</label>
+		<texturePath>Terrain/Surfaces/Soil/FloodedSand</texturePath>
+		<pathCost>11</pathCost>
+		<fertility>0.10</fertility>
+	</TerrainDef>
+
+	<TerrainDef ParentName="TerrainFrozenBase">
+		<defName>FrozenFloodedSand</defName>
+		<label>frozen flooded sand</label>
+		<texturePath>Terrain/Surfaces/Soil/FrozenFloodedSand</texturePath>
+		<pathCost>6</pathCost>
+	</TerrainDef>
+
+</Defs>
