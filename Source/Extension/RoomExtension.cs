@@ -7,7 +7,7 @@ using Verse;
 namespace TerraFW
 {
 
-	public static class RoomUtility
+	public static class RoomExtension
     {
 
         public static bool OutdoorsByRCType(this Room room, RoomCalculationType rcType)
