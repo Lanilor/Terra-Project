@@ -7,6 +7,7 @@ using System.Reflection;
 using System.Text;
 using Verse;
 using UnityEngine;
+using RimWorld.Planet;
 
 namespace TerraFW
 {
@@ -23,7 +24,9 @@ namespace TerraFW
             harmony.Patch(AccessTools.Method(AccessTools.TypeByName("BeachMaker"), "BeachTerrainAt"), null, null, new HarmonyMethod(typeof(Harmony_BeachMaker_BeachTerrainAt), "Transpiler"));
             harmony.Patch(AccessTools.Method(AccessTools.TypeByName("CachedTileTemperatureData"), "CalculateOutdoorTemperatureAtTile"), null, new HarmonyMethod(typeof(Harmony_CachedTileTemperatureData_CalculateOutdoorTemperatureAtTile), "Postfix"));
             harmony.Patch(AccessTools.Method(AccessTools.TypeByName("RiverMaker"), "ValidatePassage"), null, new HarmonyMethod(typeof(Harmony_RiverMaker_ValidatePassage), "Postfix"));
-            
+
+            harmony.Patch(AccessTools.Method(typeof(WorldLayer_Hills).GetNestedTypes(BindingFlags.Instance | BindingFlags.NonPublic).First(), "MoveNext"), null, null, new HarmonyMethod(typeof(Harmony_WorldLayer_Hills_Regenerate), "Transpiler"));
+
         }
 
     }

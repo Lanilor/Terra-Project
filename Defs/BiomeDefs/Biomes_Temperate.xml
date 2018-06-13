@@ -182,7 +182,7 @@
 		<defName>SpikeMountains</defName>
 		<label>spike mountains</label>
 		<description>An mountainous area filled with huge rock spires and a dense forest around them. Many years of physical erosion formed these strange looking rock spires. It can be hard to find good places to build larger buildings here.</description>
-		<workerClass>TerraFW.BiomeWorker_SpikeMountains</workerClass>
+		<workerClass>TerraFW.BiomeWorkerSpecial_SpikeMountains</workerClass>
 		<animalDensity>2.3</animalDensity>
 		<plantDensity>0.65</plantDensity>
 		<factionBaseSelectionWeight>0.01</factionBaseSelectionWeight>

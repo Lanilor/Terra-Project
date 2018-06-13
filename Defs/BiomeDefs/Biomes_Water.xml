@@ -5,7 +5,7 @@
 		<defName>Archipelago</defName>
 		<label>archipelago</label>
 		<description>A group of small islands in the ocean. Sometimes they are connected via shallow banks so people or animals can roam to another island. Mostly small animals and birds live here to fit the cramped environment.</description>
-		<workerClass>TerraFW.BiomeWorker_Archipelago</workerClass>
+		<workerClass>TerraFW.BiomeWorkerSpecial_Archipelago</workerClass>
 		<animalDensity>1.9</animalDensity>
 		<plantDensity>0.45</plantDensity>
 		<factionBaseSelectionWeight>0.01</factionBaseSelectionWeight>
@@ -13,7 +13,7 @@
 		<pathCost_summer>1200</pathCost_summer>
 		<pathCost_fall>1200</pathCost_fall>
 		<pathCost_winter>1200</pathCost_winter>
-		<texture>World/Biomes/Archipelago</texture>
+		<texture>World/Biomes/Base_Island</texture>
 		<soundsAmbient>
 			<li>AmbientNightInsects_Standard</li>
 		</soundsAmbient>
@@ -212,8 +212,8 @@
 	<BiomeDef>
 		<defName>VolcanicIsland</defName>
 		<label>volcanic island</label>
-		<description>A sleeping volcano reaching out of the water. A small costal area is buildable, then that the mountain starts reaches into the sky. A mixed variety of plants live here together with many different smaller animaly in a balanced ecosystem.</description>
-		<workerClass>TerraFW.BiomeWorker_VolcanicIsland</workerClass>
+		<description>A dormant volcano reaching out of the water. A small costal area is buildable, then that the mountain starts reaches into the sky. A mixed variety of plants live here together with many different smaller animals in a balanced ecosystem.</description>
+		<workerClass>TerraFW.BiomeWorkerSpecial_VolcanicIsland</workerClass>
 		<animalDensity>1.6</animalDensity>
 		<plantDensity>0.30</plantDensity>
 		<factionBaseSelectionWeight>0.01</factionBaseSelectionWeight>
@@ -221,7 +221,7 @@
 		<pathCost_summer>2600</pathCost_summer>
 		<pathCost_fall>2600</pathCost_fall>
 		<pathCost_winter>2600</pathCost_winter>
-		<texture>World/Biomes/VolcanicIsland</texture>
+		<texture>World/Biomes/Base_Island</texture>
 		<diseaseMtbDays>55</diseaseMtbDays>
 		<diseases>
 			<li>
@@ -407,7 +407,7 @@
 		<defName>TundraSkerries</defName>
 		<label>tundra skerries</label>
 		<description>An archipelago of many skerries and smaller islands. There is not really much going on here. A few islands have some soil and a decent vegetation, other are just composed of sand or ice in the winter. Mostly small animals and birds live here to fit the cramped environment.</description>
-		<workerClass>TerraFW.BiomeWorker_TundraSkerries</workerClass>
+		<workerClass>TerraFW.BiomeWorkerSpecial_TundraSkerries</workerClass>
 		<animalDensity>0.9</animalDensity>
 		<plantDensity>0.30</plantDensity>
 		<factionBaseSelectionWeight>0.01</factionBaseSelectionWeight>
@@ -415,7 +415,7 @@
 		<pathCost_summer>800</pathCost_summer>
 		<pathCost_fall>800</pathCost_fall>
 		<pathCost_winter>4000</pathCost_winter>
-		<texture>World/Biomes/TundraSkerries</texture>
+		<texture>World/Biomes/Base_Island</texture>
 		<diseaseMtbDays>80</diseaseMtbDays>
 		<diseases>
 			<li>
@@ -560,7 +560,7 @@
 		<defName>Atoll</defName>
 		<label>atoll</label>
 		<description>An often ring-shaped coral island or group of islands that onces was a volcano which has eroded over time. The form can vary much, from one round island to many small that are connected via shallow banks. Mostly tropical plants and small animals live here to fit the environment.</description>
-		<workerClass>TerraFW.BiomeWorker_Atoll</workerClass>
+		<workerClass>TerraFW.BiomeWorkerSpecial_Atoll</workerClass>
 		<animalDensity>1.5</animalDensity>
 		<plantDensity>0.35</plantDensity>
 		<factionBaseSelectionWeight>0.01</factionBaseSelectionWeight>
@@ -568,7 +568,7 @@
 		<pathCost_summer>1200</pathCost_summer>
 		<pathCost_fall>1200</pathCost_fall>
 		<pathCost_winter>1200</pathCost_winter>
-		<texture>World/Biomes/Atoll</texture>
+		<texture>World/Biomes/Base_Island</texture>
 		<diseaseMtbDays>55</diseaseMtbDays>
 		<diseases>
 			<li>

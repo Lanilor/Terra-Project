@@ -32,12 +32,13 @@ namespace TerraFW
         public static BiomeDef ExtremeDesert;
         public static BiomeDef Desert;
         public static BiomeDef AridShrubland;
-        public static BiomeDef DeepRavine;
         public static BiomeDef Oasis;
 
-        public static BiomeDef TunnelworldCave;
         public static BiomeDef CaveOasis;
+        public static BiomeDef TunnelworldCave;
+        public static BiomeDef CaveEntrance;
         public static BiomeDef InfestedMountains;
+        public static BiomeDef DeepRavine;
 
         public static BiomeDef Archipelago;
         public static BiomeDef VolcanicIsland;

@@ -5,7 +5,7 @@
 		<defName>Oasis</defName>
 		<label>oasis</label>
 		<description>An oasis somewhere in the seemingly endless deserts. Plants grow around water spots and animals gather near them to drink and search for a shaded place.</description>
-		<workerClass>TerraFW.BiomeWorker_Oasis</workerClass>
+		<workerClass>TerraFW.BiomeWorkerSpecial_Oasis</workerClass>
 		<animalDensity>1.5</animalDensity>
 		<plantDensity>0.21</plantDensity>
 		<factionBaseSelectionWeight>0.01</factionBaseSelectionWeight>

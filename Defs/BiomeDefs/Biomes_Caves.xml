@@ -5,7 +5,7 @@
 		<defName>CaveOasis</defName>
 		<label>cave oasis</label>
 		<description>An underground cave system. Some geological activities a long time ago formed these huge cave cambers and tunnels deep under the surface where no light reaches. Now the chambers are partly filled with water which sustains an unique ecosystem of mushrooms and animals that are adaped to live deep under the surface.</description>
-		<workerClass>TerraFW.BiomeWorker_CaveOasis</workerClass>
+		<workerClass>TerraFW.BiomeWorkerSpecial_CaveOasis</workerClass>
 		<animalDensity>0.14</animalDensity>
 		<plantDensity>0.16</plantDensity>
 		<factionBaseSelectionWeight>0.01</factionBaseSelectionWeight>
@@ -203,7 +203,7 @@
 		<defName>TunnelworldCave</defName>
 		<label>tunnelworld cave</label>
 		<description>An underground cave system of many interconnected tunnels. These areas were mostly formed naturally due to plate tectonics or other geological activity. These tunnels are deep under a solid rock ceiling, so no sunlight will every reach here. Therefore plants are non-existent, instead various mushrooms inhabitate the caves, some of them even provide a little light for animals to live in this region.</description>
-		<workerClass>TerraFW.BiomeWorker_TunnelworldCave</workerClass>
+		<workerClass>TerraFW.BiomeWorkerSpecial_TunnelworldCave</workerClass>
 		<animalDensity>0.10</animalDensity>
 		<plantDensity>0.075</plantDensity>
 		<factionBaseSelectionWeight>0.01</factionBaseSelectionWeight>
@@ -374,10 +374,214 @@
 	</BiomeDef>
 
 	<BiomeDef>
+		<defName>CaveEntrance</defName>
+		<label>cave entrance</label>
+		<description>The entrance area to an underground cave system on the side of a mountain. Various tunnels are heading deep into the mountain, some of them may lead to another exit or exotic underground biotopes. The outside area is very rocky, so only plants and animals accustomed to the harsh terrain live here.</description>
+		<workerClass>TerraFW.BiomeWorkerSpecial_CaveEntrance</workerClass>
+		<animalDensity>0.05</animalDensity>
+		<plantDensity>0.12</plantDensity>
+		<factionBaseSelectionWeight>0.01</factionBaseSelectionWeight>
+		<pathCost_spring>2400</pathCost_spring>
+		<pathCost_summer>2400</pathCost_summer>
+		<pathCost_fall>2400</pathCost_fall>
+		<pathCost_winter>2400</pathCost_winter>
+		<texture>World/Biomes/CaveEntrance</texture>
+		<diseaseMtbDays>70</diseaseMtbDays>
+		<diseases>
+			<li>
+				<diseaseInc>Disease_Flu</diseaseInc>
+				<commonality>90</commonality>
+			</li>
+			<li>
+				<diseaseInc>Disease_Plague</diseaseInc>
+				<commonality>80</commonality>
+			</li>
+			<li>
+				<diseaseInc>Disease_FibrousMechanites</diseaseInc>
+				<commonality>30</commonality>
+			</li>
+			<li>
+				<diseaseInc>Disease_SensoryMechanites</diseaseInc>
+				<commonality>30</commonality>
+			</li>
+			<li>
+				<diseaseInc>Disease_GutWorms</diseaseInc>
+				<commonality>50</commonality>
+			</li>
+			<li>
+				<diseaseInc>Disease_MuscleParasites</diseaseInc>
+				<commonality>60</commonality>
+			</li>
+		</diseases>
+		<terrainsByFertility>
+			<li>
+				<terrain>NormalBarrenGravel</terrain>
+				<min>-999</min>
+				<max>0.20</max>
+			</li>
+			<li>
+				<terrain>NormalGravel</terrain>
+				<min>0.20</min>
+				<max>999</max>
+			</li>
+		</terrainsByFertility>
+		<terrainPatchMakers>
+			<li>
+				<perlinFrequency>0.030</perlinFrequency>
+				<thresholds>
+					<li>
+						<terrain>NormalBarrenGravel</terrain>
+						<min>0.68</min>
+						<max>999</max>
+					</li>
+				</thresholds>
+			</li>
+			<li>
+				<perlinFrequency>0.035</perlinFrequency>
+				<thresholds>
+					<li>
+						<terrain>NormalGravel</terrain>
+						<min>0.71</min>
+						<max>999</max>
+					</li>
+				</thresholds>
+			</li>
+		</terrainPatchMakers>
+		<baseWeatherCommonalities>
+			<Clear>18</Clear>
+			<Fog>1</Fog>
+			<Rain>2</Rain>
+			<DryThunderstorm>1</DryThunderstorm>
+			<RainyThunderstorm>1</RainyThunderstorm>
+			<FoggyRain>1</FoggyRain>
+			<SnowGentle>4</SnowGentle>
+			<SnowHard>4</SnowHard>
+		</baseWeatherCommonalities>
+		<wildPlants>
+			<PlantGrass>3.0</PlantGrass>
+			<PlantTallGrass>1.8</PlantTallGrass>
+			<PlantBrambles>0.6</PlantBrambles>
+			<PlantDandelion>0.2</PlantDandelion>
+			<PlantBush>0.9</PlantBush>
+			<PlantTreePoplar>0.1</PlantTreePoplar>
+			<PlantTreePine>0.3</PlantTreePine>
+			<PlantTreeBirch>0.1</PlantTreeBirch>
+		</wildPlants>
+		<wildAnimals>
+			<Hare>1.0</Hare>
+			<Squirrel>1.0</Squirrel>
+			<Rat>1.8</Rat>
+			<Deer>0.2</Deer>
+			<WildBoar>0.5</WildBoar>
+			<Iguana>0.2</Iguana>
+			<Turkey>0.1</Turkey>
+			<Raccoon>0.3</Raccoon>
+			<Boomrat>0.25</Boomrat>
+			<Muffalo>0.1</Muffalo>
+			<WolfTimber>0.06</WolfTimber>
+			<FoxRed>0.11</FoxRed>
+			<GrizzlyBear>0.09</GrizzlyBear>
+			<Warg>0.02</Warg>
+			<Lynx>0.03</Lynx>
+		</wildAnimals>
+		<allowedPackAnimals>
+			<li>Alpaca</li>
+			<li>Muffalo</li>
+		</allowedPackAnimals>
+		<modExtensions>
+			<li Class="TerraFW.ModExt_Biome_Replacement">
+				<replaceHilliness>Mountainous</replaceHilliness>
+				<sandReplacement>NormalSand</sandReplacement>
+				<gravelRelacement>NormalBarrenGravel</gravelRelacement>
+			</li>
+			<li Class="TerraFW.ModExt_Biome_FeatureControl">
+				<overwriteCaves>Remove</overwriteCaves>
+				<overwriteHives>Remove</overwriteHives>
+				<overwriteRoof>DeepOnlyStable</overwriteRoof>
+				<overwriteRockChunks>AddToCaves</overwriteRockChunks>
+			</li>
+			<li Class="TerraFW.ModExt_Biome_GenStep_Spikes">
+				<baseFrequency>0.030</baseFrequency>
+				<sineX>17</sineX>
+				<sineZ>18</sineZ>
+				<sineScale>0.35</sineScale>
+				<sineOffset>0.73</sineOffset>
+				<calcElevationType>Set</calcElevationType>
+				<noiseElevationPreScale>1.0</noiseElevationPreScale>
+				<noiseElevationPreOffset>0.65</noiseElevationPreOffset>
+				<elevationPostOffset>0</elevationPostOffset>
+			</li>
+			<li Class="TerraFW.ModExt_Biome_GenStep_Ravine">
+				<ravineWidthMin>0.25</ravineWidthMin>
+				<ravineWidthMax>0.30</ravineWidthMax>
+				<slopeFactor>1.7</slopeFactor>
+				<invert>false</invert>
+				<relativeOffsetVariance>0.05</relativeOffsetVariance>
+				<relativeOffsetFixed>-0.6</relativeOffsetFixed>
+				<rotationVariance>35</rotationVariance>
+				<modAMin>-0.003</modAMin>
+				<modAMax>0.003</modAMax>
+				<modBMin>-0.5</modBMin>
+				<modBMax>0.5</modBMax>
+				<calcElevationType>Add</calcElevationType>
+				<noiseElevationPreScale>0.6</noiseElevationPreScale>
+				<noiseElevationPreOffset>0</noiseElevationPreOffset>
+				<elevationPostOffset>-0.08</elevationPostOffset>
+			</li>
+			<li Class="TerraFW.ModExt_Biome_GenStep_BetterCaves">
+				<startTunnelsPer10k>4.1</startTunnelsPer10k>
+				<maxStartTunnelsPerRockGroup>9</maxStartTunnelsPerRockGroup>
+				<tunnelStartWidthFactorMin>0.45</tunnelStartWidthFactorMin>
+				<tunnelStartWidthFactorMax>0.65</tunnelStartWidthFactorMax>
+				<allowBranchingAfterSteps>25</allowBranchingAfterSteps>
+				<minDistToOutsideForBranching>11</minDistToOutsideForBranching>
+				<branchChance>0.018</branchChance>
+				<branchChanceTypeRoom>0.1</branchChanceTypeRoom>
+				<branchChanceTypeTunnel>0.1</branchChanceTypeTunnel>
+				<minTunnelWidth>2.9</minTunnelWidth>
+				<widthOffsetPerCellMin>0.015</widthOffsetPerCellMin>
+				<widthOffsetPerCellMax>0.029</widthOffsetPerCellMax>
+				<widthOffsetPerCellTunnelFactor>0.2</widthOffsetPerCellTunnelFactor>
+				<branchWidthFactorMin>0.70</branchWidthFactorMin>
+				<branchWidthFactorMax>0.95</branchWidthFactorMax>
+				<branchRoomFixedWidthMin>26</branchRoomFixedWidthMin>
+				<branchRoomFixedWidthMax>32</branchRoomFixedWidthMax>
+				<branchRoomMaxLength>24</branchRoomMaxLength>
+				<terrainPatchMakerFrequencyCaveWater>0.06</terrainPatchMakerFrequencyCaveWater>
+				<terrainPatchMakerCaveWater>
+					<li>
+						<terrain>WaterShallow</terrain>
+						<min>0.96</min>
+						<max>999</max>
+					</li>
+				</terrainPatchMakerCaveWater>
+				<terrainPatchMakerFrequencyCaveGravel>0.13</terrainPatchMakerFrequencyCaveGravel>
+				<terrainPatchMakerCaveGravel>
+					<li>
+						<terrain>NormalBarrenGravel</terrain>
+						<min>0.28</min>
+						<max>0.56</max>
+					</li>
+					<li>
+						<terrain>NormalGravel</terrain>
+						<min>0.56</min>
+						<max>0.98</max>
+					</li>
+					<li>
+						<terrain>WetGravel</terrain>
+						<min>0.98</min>
+						<max>999</max>
+					</li>
+				</terrainPatchMakerCaveGravel>
+			</li>
+		</modExtensions>
+	</BiomeDef>
+
+	<BiomeDef>
 		<defName>InfestedMountains</defName>
 		<label>infested mountains</label>
 		<description>An underground cave system interconnecting many sinkholes of various sizes. The sinkholes are of natural origin, the cave tunnels not so much. Gigant insectoids dug these tunnels over years and now live in them. Don't get tempted by the peaceful look of the overgrown sinkholes, this area is dangerous!</description>
-		<workerClass>TerraFW.BiomeWorker_InfestedMountains</workerClass>
+		<workerClass>TerraFW.BiomeWorkerSpecial_InfestedMountains</workerClass>
 		<animalDensity>0.4</animalDensity>
 		<plantDensity>0.35</plantDensity>
 		<factionBaseSelectionWeight>0.01</factionBaseSelectionWeight>
@@ -541,8 +745,8 @@
 	<BiomeDef>
 		<defName>DeepRavine</defName>
 		<label>deep ravine</label>
-		<description>A deep ravine formed by a river over many millenials. Various tunnels, partly natural and partly made by living creatures, are starting in the ravine and head deep into the mountain. The are is now dry after the river dried up, so plants are rare and only animals adapted to the environment live here.</description>
-		<workerClass>TerraFW.BiomeWorker_DeepRavine</workerClass>
+		<description>A deep ravine formed by a river over many millenials. Various tunnels, partly natural and partly made by living creatures, are starting in the ravine and head deep into the mountain. The area is now dry after the river dried up, so plants are rare and only animals adapted to the environment live here.</description>
+		<workerClass>TerraFW.BiomeWorkerSpecial_DeepRavine</workerClass>
 		<animalDensity>0.9</animalDensity>
 		<plantDensity>0.10</plantDensity>
 		<factionBaseSelectionWeight>0.01</factionBaseSelectionWeight>
@@ -693,7 +897,7 @@
 		</allowedPackAnimals>
 		<modExtensions>
 			<li Class="TerraFW.ModExt_Biome_Replacement">
-				<replaceHilliness>Mountainous</replaceHilliness>
+				<replaceHilliness>LargeHills</replaceHilliness>
 				<sandReplacement>DrySand</sandReplacement>
 				<gravelRelacement>ParchedBarrenGravel</gravelRelacement>
 			</li>
@@ -701,6 +905,11 @@
 				<overwriteCaves>Remove</overwriteCaves>
 				<overwriteRoof>DeepOnlyStable</overwriteRoof>
 				<overwriteRockChunks>AddToCaves</overwriteRockChunks>
+			</li>
+			<li Class="TerraFW.ModExt_Biome_Temperature">
+				<tempStableValue>16</tempStableValue>
+				<tempStableWeight>0.2</tempStableWeight>
+				<tempOffset>0</tempOffset>
 			</li>
 			<li Class="TerraFW.ModExt_Biome_GenStep_Spikes">
 				<baseFrequency>0.040</baseFrequency>

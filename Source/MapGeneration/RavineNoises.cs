@@ -43,7 +43,7 @@ namespace TerraFW
             //NoiseDebugUI.StoreNoiseRender(moduleBase, noiseLabel + " base clamp");
             NoiseDebugUI.StoreNoiseRender(moduleBase, noiseLabel + " base");
             // Add offset variance
-            float offsetVariance = (Rand.Value - 0.5f) * extRavine.relativeOffsetVariance;
+            float offsetVariance = (Rand.Value - 0.5f) * extRavine.relativeOffsetVariance + extRavine.relativeOffsetFixed;
             xOffset += map.Size.x * offsetVariance;
             zOffset += map.Size.z * offsetVariance;
             // Add random rotation variance
@@ -55,12 +55,22 @@ namespace TerraFW
                 random = Rot4.Random;
             }
             while (random == Find.World.CoastDirectionAt(map.Tile));
-            if (random == Rot4.North || random == Rot4.South)
+            if (random == Rot4.North)
+            {
+                moduleBase = new Rotate(0.0, 270.0 + rotVariance, 0.0, moduleBase);
+                moduleBase = new Translate(0.0, 0.0, zOffset, moduleBase);
+            }
+            else if (random == Rot4.West)
+            {
+                moduleBase = new Rotate(0.0, 180.0 + rotVariance, 0.0, moduleBase);
+                moduleBase = new Translate(xOffset, 0.0, 0.0, moduleBase);
+            }
+            else if (random == Rot4.South)
             {
                 moduleBase = new Rotate(0.0, 90.0 + rotVariance, 0.0, moduleBase);
                 moduleBase = new Translate(0.0, 0.0, (-zOffset), moduleBase);
             }
-            else if (random == Rot4.East || random == Rot4.West)
+            else if (random == Rot4.East)
             {
                 moduleBase = new Rotate(0.0, 0.0 + rotVariance, 0.0, moduleBase);
                 moduleBase = new Translate((-xOffset), 0.0, 0.0, moduleBase);

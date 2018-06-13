@@ -15,6 +15,7 @@ namespace TerraFW
         public float slopeFactor = 1.0f;
         public bool invert = false;
         public float relativeOffsetVariance = 0f;
+        public float relativeOffsetFixed = 0f;
         public int rotationVariance = 0;
 
         public float modAMin = 0f;
