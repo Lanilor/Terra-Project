@@ -1,5 +1,5 @@
 # Terra Framework
-Terrain and biome framework mod for Rimworld
+Biome and terrain framework mod for Rimworld
 
 This mod extends the map generator with various new features to generate more biome types. Currently 13 new biomes are added, including different caves and islands.
 Other mods can also use this as a framework to create their own extended biomes.

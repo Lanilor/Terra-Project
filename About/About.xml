@@ -7,6 +7,14 @@
 	<description>
 &lt;size=20&gt;Terra Framework&lt;/size&gt;
 
-Terrain and biome framework mod
+This mod extends the map generator with various new features to generate more biome types. Currently 13 new biomes are added, including different caves and islands.
+Other mods can also use this as a framework to create their own extended biomes.
+
+Features:
+- New biomes! (click the link for more details)
+- Improved displaying of mountain ranges, caves, islands and other special biomes and world features on the world map.
+- More natural terrains are added for smoother transitions and as a common base to work on by other mods. (For example this will give the possibility to add dynamic terrain features by an extension mod currently in development.)
+- Made with the intention of being a framework so others can reuse many of the features with simple XML modding.
+
 	</description>
 </ModMetaData>
