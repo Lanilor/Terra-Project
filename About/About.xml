@@ -16,5 +16,7 @@ Features:
 - More natural terrains are added for smoother transitions and as a common base to work on by other mods. (For example this will give the possibility to add dynamic terrain features by an extension mod currently in development.)
 - Made with the intention of being a framework so others can reuse many of the features with simple XML modding.
 
+Incompatible with:
+- Rainbeaus Configurable Maps
 	</description>
 </ModMetaData>
