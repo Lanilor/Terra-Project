@@ -23,15 +23,12 @@ namespace TerraFW
                 return;
             }
             ModExt_Biome_FeatureControl extFtControl = map.Biome.GetModExtension<ModExt_Biome_FeatureControl>();
-            if (extFtControl == null)
+            if (extFtControl == null || extFtControl.overwriteRoof != RoofOverwriteType.FullStable)
             {
                 return;
             }
             // Force standing spawn type if roof is full overwritten
-            if (extFtControl.overwriteRoof == RoofOverwriteType.FullStable)
-            {
-                Traverse.Create(__instance).Field("method").SetValue(PlayerPawnsArriveMethod.Standing);
-            }
+            Traverse.Create(__instance).Field("method").SetValue(PlayerPawnsArriveMethod.Standing);
         }
 
     }
