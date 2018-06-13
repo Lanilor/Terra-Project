@@ -324,9 +324,9 @@
 				<centerHeightValue>2.0</centerHeightValue>
 				<invertUnder>0.2</invertUnder>
 				<calcElevationType>Set</calcElevationType>
-				<noiseElevationPreScale>0.4</noiseElevationPreScale>
+				<noiseElevationPreScale>0.38</noiseElevationPreScale>
 				<noiseElevationPreOffset>0</noiseElevationPreOffset>
-				<elevationPostOffset>0.5</elevationPostOffset>
+				<elevationPostOffset>0.55</elevationPostOffset>
 			</li>
 			<li Class="TerraFW.ModExt_Biome_GenStep_BetterCaves">
 				<startTunnelsPer10k>1.9</startTunnelsPer10k>
