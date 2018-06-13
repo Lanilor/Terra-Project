@@ -4,7 +4,7 @@
 	<BiomeDef>
 		<defName>Savanna</defName>
 		<label>savanna</label>
-		<description>A mildly dry region, but not dry enough to become an arid shrubland. Plains covered with a thick grass layer, bushes and trees that re sufficiently widely spaced to maintain an open canopy dominate this area. Despite the good abount of plants the soil is mostly dry and animals roam the area on the search for food and water.</description>
+		<description>A mildly dry region, but not dry enough to become an arid shrubland. The plains are covered with a thick grass layer. Bushes and trees are widely spaced to maintain an open canopy but enough to give this area a light foresty though. Despite the good abount of plants the soil is mostly dry and animals roam the area on the search for food and water.</description>
 		<workerClass>TerraFW.BiomeWorker_Savanna</workerClass>
 		<animalDensity>2.0</animalDensity>
 		<plantDensity>0.20</plantDensity>
