@@ -4,10 +4,12 @@ Biome and terrain framework mod for Rimworld
 This mod extends the map generator with various new features to generate more biome types. Currently 13 new biomes are added, including different caves and islands.
 Other mods can also use this as a framework to create their own extended biomes.
 
+#### New biomes - New playstyle
 The two big parts of new biomes are caves and islands. Because these biomes are very different from the vanilla biomes the playstyle will also change a lot and you may have to think of new strategies but you will be rewarded with a whole new game experience.
 - Caves lack a lot of natural resources that are otherwise very common. You need to get your colony going without much wood and light
 - Infested Mountains have the constant danger of many insectoids, but you can also use them to your advantage in various ways if you manage it right
 - Islands are often isolated and may not provide much space to build. Keep that limitations of building and caravaning in mind. Although isolated doesn't mean raiders won't come other shallow water passages.
+- Some islands (especially atolls and skerries) don't have much rock to mine, so clever management and trading is necessary until you can deep-mine ores or get them from mechanoid raids.
 
 ## Features
 - New biomes! (see below)
@@ -15,7 +17,7 @@ The two big parts of new biomes are caves and islands. Because these biomes are 
 - More natural terrains are added for smoother transitions and as a common base to work on by other mods. (For example this will give the possibility to add dynamic terrain features by an extension mod currently in development.)
 - Made with the intention of being a framework so others can reuse many of the features with simple XML modding.
 
-### Incompatible mods
+#### Incompatible mods
 - Rainbeaus Configurable Maps
 (Let me know if you find more, I will see if I can patch it.)
 

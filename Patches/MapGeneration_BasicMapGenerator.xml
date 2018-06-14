@@ -6,4 +6,16 @@
 		<value>12</value>
 	</Operation>
 
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/GenStepDef[defName="SteamGeysers"]/genStep/validators</xpath>
+		<value>
+			<li Class="TerraFW.ScattererValidator_ExcludeBiomes">
+				<biomes>
+					<li>TundraSkerries</li>
+					<li>Atoll</li>
+				</biomes>
+			</li>
+		</value>
+	</Operation>
+
 </Patch>
