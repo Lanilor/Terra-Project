@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="Glowstool"]/plant/fertilityMin/text()</xpath>
+		<value>0.05</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="Glowstool"]/plant/growDays/text()</xpath>
+		<value>18</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="Glowstool"]/plant/harvestYield/text()</xpath>
+		<value>15</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThingDef[defName="Glowstool"]/plant</xpath>
+		<value>
+			<sowTags>
+				<li>Ground</li>
+			</sowTags>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="Agarilux"]/plant/fertilityMin/text()</xpath>
+		<value>0.30</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="Agarilux"]/plant/fertilitySensitivity/text()</xpath>
+		<value>0.20</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="Agarilux"]/plant/growDays/text()</xpath>
+		<value>29</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="Agarilux"]/plant/harvestYield/text()</xpath>
+		<value>30</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThingDef[defName="Agarilux"]/plant</xpath>
+		<value>
+			<sowTags>
+				<li>Ground</li>
+			</sowTags>
+		</value>
+	</Operation>
+
+</Patch>
