@@ -673,9 +673,9 @@
 			</li>
 			<li Class="TerraFW.ModExt_Biome_FeatureControl">
 				<removeBeach>true</removeBeach>
+				<overwriteRockChunks>Remove</overwriteRockChunks>
 				<removeRuinsSimple>true</removeRuinsSimple>
 				<removeShrines>true</removeShrines>
-				<overwriteRockChunks>Remove</overwriteRockChunks>
 			</li>
 			<li Class="TerraFW.ModExt_Biome_GenStep_Ravine">
 				<ravineWidthMin>0.07</ravineWidthMin>

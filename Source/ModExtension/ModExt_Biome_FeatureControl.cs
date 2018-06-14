@@ -20,10 +20,9 @@ namespace TerraFW
 
         public bool removeBeach = false;
 
+        public RockChunksOverwriteType overwriteRockChunks = RockChunksOverwriteType.Default;
         public bool removeRuinsSimple = false;
         public bool removeShrines = false;
-
-        public RockChunksOverwriteType overwriteRockChunks = RockChunksOverwriteType.Default;
 
     }
     
