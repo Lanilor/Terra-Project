@@ -68,8 +68,9 @@ namespace TerraFW
             int atlasX;
             int atlasZ;
             Vector3 rotVector;
-            grid.GetTileGraphicDataFromNeighbors(tileID, out atlasX, out atlasZ, out rotVector, (Tile tileFrom, Tile neighbor) => (tileFrom.biome == neighbor.biome));
-            return new WLTileGraphicData(WorldMaterials.InfestedMountains, atlasX, atlasZ, rotVector);
+            //grid.GetTileGraphicDataFromNeighbors(tileID, out atlasX, out atlasZ, out rotVector, (Tile tileFrom, Tile neighbor) => (tileFrom.biome == neighbor.biome));
+            //return new WLTileGraphicData(WorldMaterials.InfestedMountains, atlasX, atlasZ, rotVector);
+            return null;
         }
 
     }

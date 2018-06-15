@@ -22,6 +22,7 @@ namespace TerraFW
         public static void Postfix(ref Tile __result)
         {
             GenWorldGen.UpdateTileByBiomeModExts(__result);
+            __result.hilliness = Hilliness.Impassable;
         }
 
     }

@@ -94,11 +94,12 @@ namespace TerraFW
             }
         }
 
-        public static void GetTileGraphicDataFromNeighbors(this WorldGrid grid, int tileID, out int atlasX, out int atlasZ, out Vector3 rotVector, TileNeightborPredicate validator)
+        public static void GetTileGraphicDataFromNeighbors(this WorldGrid grid, int tileID, out int atlasX, out int atlasZ, out int rotVector, TileNeightborPredicate validator)
         {
             atlasX = 0;
             atlasZ = 0;
-            rotVector = Vector3.up;
+            rotVector = 0;
+            //rotVector = Vector3.up;
             List<int> neighborDirs = new List<int>();
             List<int> adjacentIds = new List<int>();
             grid.GetTileDirsOfNeighborsByValidator(tileID, neighborDirs, adjacentIds, validator);
@@ -133,6 +134,7 @@ namespace TerraFW
                 else if (dirCount == 3)
                 {
                     atlasX = 3;
+                    if (neighborDirs.Count <= 2) { Log.Error("neighborDirs[2] out of range"); }
                     int diff1 = Math.Abs(neighborDirs[0] - neighborDirs[1]);
                     int diff2 = Math.Abs(neighborDirs[1] - neighborDirs[2]);
                     int diff3 = Math.Abs(neighborDirs[0] - neighborDirs[2]);
@@ -166,6 +168,7 @@ namespace TerraFW
                 else if (dirCount == 4)
                 {
                     atlasX = 5;
+                    if (neighborDirs.Count <= 3) { Log.Error("neighborDirs[3] out of range"); }
                     int diff1 = Math.Abs(neighborDirs[0] - neighborDirs[1]);
                     int diff2 = Math.Abs(neighborDirs[0] - neighborDirs[2]);
                     int diff3 = Math.Abs(neighborDirs[0] - neighborDirs[3]);
@@ -191,15 +194,9 @@ namespace TerraFW
                     }
                     else
                     {
-                        int miss = 15 - dirSum;
-                        if (dirMin <= 1) { }
-                        else if (miss == 8) { rotTargetDir = 4; }
-                        else if (miss == 6) { rotTargetDir = 3; }
-                        else
-                        {
-                            if (neighborDirs.Contains(0)) { rotTargetDir = 2; }
-                            else { rotTargetDir = 5; }
-                        }
+                        if (!neighborDirs.Contains(5) && !neighborDirs.Contains(1)) { }
+                        else if (!neighborDirs.Contains(4) && !neighborDirs.Contains(0)) { rotTargetDir = 5; }
+                        else { rotTargetDir = (15 - dirSum) / 2; }
                     }
                 }
                 else if (dirCount == 5)
@@ -213,12 +210,38 @@ namespace TerraFW
                     atlasX = 2;
                     atlasZ = 1;
                 }
+                rotVector = rotTargetDir;
                 int neighborIndex = neighborDirs.IndexOf(rotTargetDir);
                 if (neighborIndex >= 0)
                 {
+                    if (adjacentIds.Count <= neighborIndex) { Log.Error("adjacentIds[neighborIndex] out of range"); }
                     int rotTargetAdjId = adjacentIds[neighborIndex];
-                    Vector3 rotTargetPos = grid.GetTileCenter(grid.GetTileNeighbor(tileID, rotTargetAdjId));
-                    rotVector = (rotTargetPos - grid.GetTileCenter(tileID)).normalized;
+
+                    List<Vector3> tmpVertsSelf = new List<Vector3>();
+                    List<Vector3> tmpVertsNeighbor = new List<Vector3>();
+                    List<int> sameIndex = new List<int>();
+                    grid.GetTileVertices(tileID, tmpVertsSelf);
+                    grid.GetTileVertices(grid.GetTileNeighbor(tileID, rotTargetAdjId), tmpVertsNeighbor);
+                    for (int i = 0; i < tmpVertsSelf.Count; i++)
+                    {
+                        if (tmpVertsSelf.Count <= i) { Log.Error("tmpVertsSelf[i] out of range"); }
+                        if (tmpVertsNeighbor.Contains(tmpVertsSelf[i]))
+                        {
+                            sameIndex.Add(i);
+                        }
+                    }
+                    if (sameIndex.Contains(0) && sameIndex.Contains(5))
+                    {
+                        rotVector = 1;
+                    }
+                    else
+                    {
+                        rotVector = sameIndex.Max() + 1;
+                    }
+                    rotVector = rotVector % 6;
+
+                    //Vector3 rotTargetPos = grid.GetTileCenter(grid.GetTileNeighbor(tileID, rotTargetAdjId));
+                    //rotVector = (rotTargetPos - grid.GetTileCenter(tileID)).normalized;
                 }
             }
         }

@@ -67,7 +67,7 @@ namespace TerraFW
                 RimWorld.Planet.WorldRendererUtility.PrintTextureAtlasUVs(tileData.atlasX, tileData.atlasZ, tileData.texturesInAtlasX, tileData.texturesInAtlasZ, subMesh);
             }
 			Rand.PopState();
-			base.FinalizeMesh(MeshParts.All);
+			FinalizeMesh(MeshParts.All);
 			yield break;
 		}
 
