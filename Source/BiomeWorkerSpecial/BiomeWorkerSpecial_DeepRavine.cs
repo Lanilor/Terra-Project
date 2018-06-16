@@ -13,7 +13,8 @@ namespace TerraFW
     public class BiomeWorkerSpecial_DeepRavine : BiomeWorkerSpecial
     {
 
-        private static readonly IntRange biomeChangeDigLenth = new IntRange(2, 10);
+        private const int BiomeChangeDigLengthMin = 2;
+        private static readonly IntRange BiomeChangeDigLengthMax = new IntRange(3, 11);
 
         protected override float InitialGenChance
         {
@@ -53,8 +54,8 @@ namespace TerraFW
 
         public override void PostGeneration(int tileID)
         {
-            int digLength = biomeChangeDigLenth.RandomInRange;
-            DigTilesForBiomeChange(tileID, digLength, 1);
+            int digLengthMax = BiomeChangeDigLengthMax.RandomInRange;
+            DigTilesForBiomeChange(tileID, BiomeChangeDigLengthMin, digLengthMax, 1);
         }
 
         protected override void ChangeTileAfterSuccessfulDig(Tile tile, bool end)

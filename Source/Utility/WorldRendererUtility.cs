@@ -19,9 +19,8 @@ namespace TerraFW
             int totalVertCount = subMesh.verts.Count;
             grid.GetTileVertices(tileID, tmpVerts);
             int tileVertCount = tmpVerts.Count;
-            if (tileVertCount != 6) { Log.Error("id: " + tileID + ", tileVertCount: " + tileVertCount); }
-            if (rotDir < 0) { Log.Error("id: " + tileID + ", dir: " + rotDir); }
-
+            //if (tileVertCount != 6) { Log.Error("id: " + tileID + ", tileVertCount: " + tileVertCount); }
+            //if (rotDir < 0) { Log.Error("id: " + tileID + ", dir: " + rotDir); }
             if (rotDir < 0)
             {
                 rotDir += tileVertCount;

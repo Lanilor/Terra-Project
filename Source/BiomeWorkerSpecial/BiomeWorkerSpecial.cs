@@ -48,6 +48,11 @@ namespace TerraFW
             return -100f;
         }
 
+        public virtual bool MinPreRequirements(Tile tile)
+        {
+            return !tile.WaterCovered;
+        }
+
         public virtual bool PreRequirements(Tile tile)
         {
             return false;
@@ -76,20 +81,20 @@ namespace TerraFW
 
         protected virtual void ChangeTileAfterSuccessfulDig(Tile tile, bool end) { }
 
-        protected void DigTilesForBiomeChange(int startTileID, int digLength, int maxDirChange, bool digBothDirections = true)
+        protected void DigTilesForBiomeChange(int startTileID, int digLengthMin, int digLengthMax, int maxDirChange, bool digBothDirections = true)
         {
             WorldGrid worldGrid = Find.WorldGrid;
             bool goOtherWay = false;
             int currTileID = startTileID;
             int dirBase = Rand.RangeInclusive(0, 5);
-            for (int i = 0; i < digLength; i++)
+            for (int i = 0; i < digLengthMax; i++)
             {
                 // Get good neighbor tile for next step
                 int dir = GenWorldGen.NextRandomDigDir(dirBase, maxDirChange);
                 currTileID = worldGrid.GetTileNeighborByDirection6WayInt(currTileID, dir);
                 Tile tile = worldGrid[currTileID];
                 // Check if prerequirements for the biome are still met
-                if (!PreRequirements(tile))
+                if (!((i < digLengthMin && MinPreRequirements(tile)) || PreRequirements(tile)))
                 {
                     // Try to dig in the other way from the start first, otherwise abort
                     if (goOtherWay)
@@ -108,11 +113,11 @@ namespace TerraFW
                 // Set new biome (only when there is no special biome on the tile)
                 if (tile.biome.WorkerSpecial() == null)
                 {
-                    bool endTile = (i == digLength - 1);
+                    bool endTile = (i == digLengthMax - 1);
                     ChangeTileAfterSuccessfulDig(tile, endTile);
                 }
                 // Go the other way if end is reached
-                if (digBothDirections && i == digLength - 1 && !goOtherWay)
+                if (digBothDirections && i == digLengthMax - 1 && !goOtherWay)
                 {
                     currTileID = startTileID;
                     dirBase = GenWorldGen.InvertDigDir(dirBase);

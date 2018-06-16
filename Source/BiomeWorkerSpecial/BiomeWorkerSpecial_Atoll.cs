@@ -15,8 +15,9 @@ namespace TerraFW
         public static readonly FloatRange WLSizeFactor = new FloatRange(0.95f, 1.25f);
         public static readonly FloatRange WLPosOffset = new FloatRange(0f, 0.02f);
 
-        private static readonly IntRange biomeChangeDigLenth = new IntRange(10, 20);
-        private const float biomeChangeChance = 0.3f;
+        private const int BiomeChangeDigLengthMin = 5;
+        private static readonly IntRange BiomeChangeDigLengthMax = new IntRange(10, 20);
+        private const float BiomeChangeChance = 0.3f;
 
         protected override float InitialGenChance
         {
@@ -31,6 +32,11 @@ namespace TerraFW
         protected override float GenChancePerHitFactor
         {
             get { return 0.38f; }
+        }
+
+        public override bool MinPreRequirements(Tile tile)
+        {
+            return tile.WaterCovered;
         }
 
         public override bool PreRequirements(Tile tile)
@@ -48,13 +54,13 @@ namespace TerraFW
 
         public override void PostGeneration(int tileID)
         {
-            int digLength = biomeChangeDigLenth.RandomInRange;
-            DigTilesForBiomeChange(tileID, digLength, 1);
+            int digLengthMax = BiomeChangeDigLengthMax.RandomInRange;
+            DigTilesForBiomeChange(tileID, BiomeChangeDigLengthMin, digLengthMax, 1);
         }
 
         protected override void ChangeTileAfterSuccessfulDig(Tile tile, bool end)
         {
-            if (Rand.Value < biomeChangeChance)
+            if (Rand.Value < BiomeChangeChance)
             {
                 tile.biome = BiomeDefOf.Atoll;
                 GenWorldGen.UpdateTileByBiomeModExts(tile);

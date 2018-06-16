@@ -12,6 +12,12 @@ namespace TerraFW
     public class WorldGenStep_SpecialTerrain : WorldGenStep
     {
 
+        private const float ImpassableChangeChance = 0.8f;
+        private const float ImpassableChangeRecursiveChance = 0.2f;
+        private const int MaxImpassableChangeDepth = 3;
+
+        private static List<int> tmpNeighbors = new List<int>();
+
         public override void GenerateFresh(string seed)
         {
             Rand.Seed = GenText.StableStringHash(seed);
@@ -56,41 +62,57 @@ namespace TerraFW
             }
 
             // Change hilliness around caves to make them appear deeper in mountains
-            List<int> tmpNeighbors = new List<int>();
             for (int i = 0; i < tilesCount; i++)
             {
                 Tile currTile = tiles[i];
                 if (currTile.biome == BiomeDefOf.CaveOasis || currTile.biome == BiomeDefOf.TunnelworldCave)
                 {
-                    bool entranceFlag = false;
-                    grid.GetTileNeighbors(i, tmpNeighbors);
-                    // Check if any neighbor is a cave entrance
-                    for (int j = 0; j < tmpNeighbors.Count; j++)
-                    {
-                        if (grid[tmpNeighbors[j]].biome == BiomeDefOf.CaveEntrance)
-                        {
-                            entranceFlag = true;
-                            break;
-                        }
-                    }
-                    // Change hilliness of neighbors if there is no cave entrance nearby
-                    if (!entranceFlag)
-                    {
-                        for (int j = 0; j < tmpNeighbors.Count; j++)
-                        {
-                            Tile nTile = grid[tmpNeighbors[j]];
-                            // Change only non-special biomes
-                            if (specialBiomes.Contains(nTile.biome) || nTile.biome == RimWorld.BiomeDefOf.SeaIce || nTile.biome == RimWorld.BiomeDefOf.Lake || nTile.biome == RimWorld.BiomeDefOf.Ocean)
-                            {
-                                continue;
-                            }
-                            nTile.hilliness = Hilliness.Impassable;
-                        }
-                    }
+                    List<BiomeDef> excludeBiomes = new List<BiomeDef>(specialBiomes);
+                    excludeBiomes.Add(RimWorld.BiomeDefOf.SeaIce);
+                    excludeBiomes.Add(RimWorld.BiomeDefOf.Lake);
+                    excludeBiomes.Add(RimWorld.BiomeDefOf.Ocean);
+                    MakeImpassableHillsAroundTile(grid, i, excludeBiomes, 1);
                 }
             }
 
             Rand.RandomizeStateFromTime();
+        }
+
+        private void MakeImpassableHillsAroundTile(WorldGrid grid, int tileID, List<BiomeDef> excludeBiomes, int currDepth)
+        {
+            bool entranceFlag = false;
+            grid.GetTileNeighbors(tileID, tmpNeighbors);
+            // Check if any neighbor is a cave entrance
+            for (int j = 0; j < tmpNeighbors.Count; j++)
+            {
+                if (grid[tmpNeighbors[j]].biome == BiomeDefOf.CaveEntrance)
+                {
+                    entranceFlag = true;
+                    break;
+                }
+            }
+            // Change hilliness of neighbors if there is no cave entrance nearby
+            if (!entranceFlag)
+            {
+                for (int j = 0; j < tmpNeighbors.Count; j++)
+                {
+                    Tile nTile = grid[tmpNeighbors[j]];
+                    // Change only non-special biomes and non-baseexcluded biomes (mainly water tiles)
+                    if (excludeBiomes.Contains(nTile.biome))
+                    {
+                        continue;
+                    }
+                    if (Rand.Value < ImpassableChangeChance)
+                    {
+                        nTile.hilliness = Hilliness.Impassable;
+                        // Change recursive around this tile if conditions are met
+                        if (currDepth < MaxImpassableChangeDepth && Rand.Value < ImpassableChangeRecursiveChance)
+                        {
+                            MakeImpassableHillsAroundTile(grid, tmpNeighbors[j], excludeBiomes, currDepth + 1);
+                        }
+                    }
+                }
+            }
         }
 
     }

@@ -15,7 +15,8 @@ namespace TerraFW
         public static readonly FloatRange WLSizeFactor = new FloatRange(1f, 1.2f);
         public static readonly FloatRange WLPosOffset = new FloatRange(0f, 0.1f);
 
-        private static readonly IntRange biomeChangeDigLenth = new IntRange(3, 11);
+        private const int BiomeChangeDigLengthMin = 0;
+        private static readonly IntRange BiomeChangeDigLengthMax = new IntRange(3, 11);
 
         protected override float InitialGenChance
         {
@@ -59,8 +60,8 @@ namespace TerraFW
 
         public override void PostGeneration(int tileID)
         {
-            int digLength = biomeChangeDigLenth.RandomInRange;
-            DigTilesForBiomeChange(tileID, digLength, 2);
+            int digLengthMax = BiomeChangeDigLengthMax.RandomInRange;
+            DigTilesForBiomeChange(tileID, BiomeChangeDigLengthMin, digLengthMax, 2);
         }
 
         protected override void ChangeTileAfterSuccessfulDig(Tile tile, bool end)

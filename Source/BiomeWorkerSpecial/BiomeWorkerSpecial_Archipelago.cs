@@ -15,8 +15,9 @@ namespace TerraFW
         public static readonly FloatRange WLSizeFactor = new FloatRange(0.85f, 1f);
         public static readonly FloatRange WLPosOffset = new FloatRange(0f, 0.15f);
 
-        private static readonly IntRange biomeChangeDigLenth = new IntRange(9, 24);
-        private const float biomeChangeChance = 0.2f;
+        private const int BiomeChangeDigLengthMin = 5;
+        private static readonly IntRange BiomeChangeDigLengthMax = new IntRange(9, 24);
+        private const float BiomeChangeChance = 0.2f;
 
         protected override float InitialGenChance
         {
@@ -25,12 +26,17 @@ namespace TerraFW
 
         protected override float GenChanceOffsetAfterFirstHit
         {
-            get { return 0.043f; }
+            get { return 0.045f; }
         }
 
         protected override float GenChancePerHitFactor
         {
             get { return 0.6f; }
+        }
+
+        public override bool MinPreRequirements(Tile tile)
+        {
+            return tile.WaterCovered;
         }
 
         public override bool PreRequirements(Tile tile)
@@ -48,13 +54,13 @@ namespace TerraFW
 
         public override void PostGeneration(int tileID)
         {
-            int digLength = biomeChangeDigLenth.RandomInRange;
-            DigTilesForBiomeChange(tileID, digLength, 2);
+            int digLengthMax = BiomeChangeDigLengthMax.RandomInRange;
+            DigTilesForBiomeChange(tileID, BiomeChangeDigLengthMin, digLengthMax, 2);
         }
 
         protected override void ChangeTileAfterSuccessfulDig(Tile tile, bool end)
         {
-            if (Rand.Value < biomeChangeChance)
+            if (Rand.Value < BiomeChangeChance)
             {
                 tile.biome = BiomeDefOf.Archipelago;
                 GenWorldGen.UpdateTileByBiomeModExts(tile);

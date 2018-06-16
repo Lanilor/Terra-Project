@@ -13,7 +13,8 @@ namespace TerraFW
     public class BiomeWorkerSpecial_InfestedMountains : BiomeWorkerSpecial
     {
 
-        private static readonly IntRange biomeChangeDigLenth = new IntRange(3, 14);
+        private const int BiomeChangeDigLengthMin = 1;
+        private static readonly IntRange BiomeChangeDigLengthMax = new IntRange(3, 14);
 
         protected override float InitialGenChance
         {
@@ -53,8 +54,8 @@ namespace TerraFW
 
         public override void PostGeneration(int tileID)
         {
-            int digLength = biomeChangeDigLenth.RandomInRange;
-            DigTilesForBiomeChange(tileID, digLength, 2);
+            int digLengthMax = BiomeChangeDigLengthMax.RandomInRange;
+            DigTilesForBiomeChange(tileID, BiomeChangeDigLengthMin , digLengthMax, 2);
         }
 
         protected override void ChangeTileAfterSuccessfulDig(Tile tile, bool end)

@@ -20,7 +20,7 @@ The two big parts of new biomes are caves and islands. Because these biomes are 
 #### Incompatible mods
 - Rainbeaus Configurable Maps
 
-(let me know if you find more, I will see if I can patch it.)
+(Let me know if you find more, I will see if I can patch it.)
 
 ## New biomes
 
