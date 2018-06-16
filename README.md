@@ -15,11 +15,12 @@ The two big parts of new biomes are caves and islands. Because these biomes are 
 - New biomes! (see below)
 - Improved displaying of mountain ranges, caves, islands and other special biomes and world features on the world map.
 - More natural terrains are added for smoother transitions and as a common base to work on by other mods. (For example this will give the possibility to add dynamic terrain features by an extension mod currently in development.)
-- Made with the intention of being a framework so others can reuse many of the features with simple XML modding.
+- Made with the intention of also being a framework so others can reuse many of the features with simple XML modding and create their own new biomes.
 
 #### Incompatible mods
 - Rainbeaus Configurable Maps
-(Let me know if you find more, I will see if I can patch it.)
+
+(let me know if you find more, I will see if I can patch it.)
 
 ## New biomes
 

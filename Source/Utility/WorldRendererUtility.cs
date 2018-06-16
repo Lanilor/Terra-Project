@@ -4,12 +4,44 @@ using System.Text;
 using Verse;
 using UnityEngine;
 using System.Collections.Generic;
+using RimWorld.Planet;
 
 namespace TerraFW
 {
 
     public static class WorldRendererUtility
     {
+
+        private static List<Vector3> tmpVerts = new List<Vector3>();
+
+        public static void DrawTileTangentialToPlanetWithRodation(WorldGrid grid, LayerSubMesh subMesh, int tileID, int atlasX, int atlasZ, IntVec2 texturesInAtlas, int rotDir)
+        {
+            int totalVertCount = subMesh.verts.Count;
+            grid.GetTileVertices(tileID, tmpVerts);
+            int tileVertCount = tmpVerts.Count;
+            if (tileVertCount != 6) { Log.Error("id: " + tileID + ", tileVertCount: " + tileVertCount); }
+            if (rotDir < 0) { Log.Error("id: " + tileID + ", dir: " + rotDir); }
+
+            if (rotDir < 0)
+            {
+                rotDir += tileVertCount;
+            }
+            for (int i = 0; i < tileVertCount; i++)
+            {
+                int vertIndex = (i + rotDir) % tileVertCount;
+                subMesh.verts.Add(tmpVerts[vertIndex] + tmpVerts[vertIndex].normalized * 0.012f);
+                Vector2 posAtlasUV = (GenGeo.RegularPolygonVertexPosition(tileVertCount, i) + Vector2.one) / 2f;
+                posAtlasUV.x = (posAtlasUV.x + atlasX) / texturesInAtlas.x;
+                posAtlasUV.y = (posAtlasUV.y + atlasZ) / texturesInAtlas.z;
+                subMesh.uvs.Add(posAtlasUV);
+                if (i < tileVertCount - 2)
+                {
+                    subMesh.tris.Add(totalVertCount + i + 2);
+                    subMesh.tris.Add(totalVertCount + i + 1);
+                    subMesh.tris.Add(totalVertCount);
+                }
+            }
+        }
 
         public static void PrintQuadTangentialToPlanetWithRodation(Vector3 pos, Vector3 posForTangents, float size, float altOffset, LayerSubMesh subMesh, Vector3 rotVec)
         {

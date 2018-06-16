@@ -17,7 +17,9 @@ namespace TerraFW
         public int atlasZ = 0;
         public float sizeFactor = 1f;
         public float posOffset = 0f;
+        public int rotDir = 0;
         public Vector3 rotVector = Vector3.up;
+        public bool drawAsQuad = true;
 
         public WLTileGraphicData()
         {
@@ -34,18 +36,20 @@ namespace TerraFW
             this.posOffset = posOffset.RandomInRange;
             if (randomRotation)
             {
+                //this.rotDir = Rand.RangeInclusive(0, 5);
                 this.rotVector = Rand.UnitVector3;
             }
         }
 
-        public WLTileGraphicData(Material material, int atlasX, int atlasZ, Vector3 rotVector)
+        public WLTileGraphicData(Material material, int atlasX, int atlasZ, int rotDir)
         {
             this.material = material;
             this.texturesInAtlasX = material.mainTexture.width / 256;
             this.texturesInAtlasZ = material.mainTexture.height / 256;
             this.atlasX = atlasX;
             this.atlasZ = atlasZ;
-            this.rotVector = rotVector;
+            this.rotDir = rotDir;
+            this.drawAsQuad = false;
         }
 
     }

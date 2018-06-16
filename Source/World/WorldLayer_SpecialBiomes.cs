@@ -14,13 +14,6 @@ namespace TerraFW
     public class WorldLayer_SpecialBiomes : WorldLayer
     {
 
-        private static readonly FloatRange BaseSizeRange = new FloatRange(0.85f, 1.0f);
-        private static readonly IntVec2 TexturesInAtlas = new IntVec2(2, 2);
-        private static readonly IntVec2 TexturesInAtlas_Full = new IntVec2(7, 2);
-        private static readonly FloatRange BasePosOffsetRange = new FloatRange(0f, 0.06f);
-        private static readonly FloatRange BasePosOffsetRange_Oasis = new FloatRange(0f, 0.15f);
-        private const bool RandomizeRotation_Oasis = true;
-
 		public override IEnumerable Regenerate()
 		{
 			IEnumerator enumerator = base.Regenerate().GetEnumerator();
@@ -43,7 +36,6 @@ namespace TerraFW
 			Rand.PushState();
 			Rand.Seed = Find.World.info.Seed;
 			WorldGrid grid = Find.WorldGrid;
-            List<int> tmpNeighbors = new List<int>();
 			int tilesCount = grid.TilesCount;
             for (int i = 0; i < tilesCount; i++)
             {
@@ -60,14 +52,21 @@ namespace TerraFW
                 }
                 // Draw mesh
                 LayerSubMesh subMesh = GetSubMesh(tileData.material);
-                Vector3 tileCenter = grid.GetTileCenter(i);
-                float magnitude = tileCenter.magnitude;
-                Vector3 drawPos = (tileCenter + Rand.UnitVector3 * tileData.posOffset * grid.averageTileSize).normalized * magnitude;
-                WorldRendererUtility.PrintQuadTangentialToPlanetWithRodation(drawPos, tileCenter, tileData.sizeFactor * grid.averageTileSize, 0.005f, subMesh, tileData.rotVector);
-                RimWorld.Planet.WorldRendererUtility.PrintTextureAtlasUVs(tileData.atlasX, tileData.atlasZ, tileData.texturesInAtlasX, tileData.texturesInAtlasZ, subMesh);
+                if (tileData.drawAsQuad)
+                {
+                    Vector3 tileCenter = grid.GetTileCenter(i);
+                    Vector3 drawPos = (tileCenter + Rand.UnitVector3 * tileData.posOffset * grid.averageTileSize).normalized * tileCenter.magnitude;
+                    WorldRendererUtility.PrintQuadTangentialToPlanetWithRodation(drawPos, tileCenter, tileData.sizeFactor * grid.averageTileSize, 0.005f, subMesh, tileData.rotVector);
+                    RimWorld.Planet.WorldRendererUtility.PrintTextureAtlasUVs(tileData.atlasX, tileData.atlasZ, tileData.texturesInAtlasX, tileData.texturesInAtlasZ, subMesh);
+                }
+                else
+                {
+                    IntVec2 texturesInAtlas = new IntVec2(tileData.texturesInAtlasX, tileData.texturesInAtlasZ);
+                    WorldRendererUtility.DrawTileTangentialToPlanetWithRodation(grid, subMesh, i, tileData.atlasX, tileData.atlasZ, texturesInAtlas, tileData.rotDir);
+                }
             }
 			Rand.PopState();
-			base.FinalizeMesh(MeshParts.All);
+			FinalizeMesh(MeshParts.All);
 			yield break;
 		}
 

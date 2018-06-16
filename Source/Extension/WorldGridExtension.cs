@@ -14,6 +14,8 @@ namespace TerraFW
     {
 
         private static List<int> tmpNeighbors = new List<int>();
+        private static List<Vector3> tmpVertsSelf = new List<Vector3>();
+        private static List<Vector3> tmpVertsNeighbor = new List<Vector3>();
 
         public static int GetDirection6WayIntFromTo(this WorldGrid grid, int fromTileID, int toTileID)
         {
@@ -94,11 +96,11 @@ namespace TerraFW
             }
         }
 
-        public static void GetTileGraphicDataFromNeighbors(this WorldGrid grid, int tileID, out int atlasX, out int atlasZ, out Vector3 rotVector, TileNeightborPredicate validator)
+        public static void GetTileGraphicDataFromNeighbors(this WorldGrid grid, int tileID, out int atlasX, out int atlasZ, out int rotDir, TileNeightborPredicate validator)
         {
             atlasX = 0;
             atlasZ = 0;
-            rotVector = Vector3.up;
+            rotDir = 0;
             List<int> neighborDirs = new List<int>();
             List<int> adjacentIds = new List<int>();
             grid.GetTileDirsOfNeighborsByValidator(tileID, neighborDirs, adjacentIds, validator);
@@ -191,15 +193,9 @@ namespace TerraFW
                     }
                     else
                     {
-                        int miss = 15 - dirSum;
-                        if (dirMin <= 1) { }
-                        else if (miss == 8) { rotTargetDir = 4; }
-                        else if (miss == 6) { rotTargetDir = 3; }
-                        else
-                        {
-                            if (neighborDirs.Contains(0)) { rotTargetDir = 2; }
-                            else { rotTargetDir = 5; }
-                        }
+                        if (!neighborDirs.Contains(5) && !neighborDirs.Contains(1)) { }
+                        else if (!neighborDirs.Contains(4) && !neighborDirs.Contains(0)) { rotTargetDir = 5; }
+                        else { rotTargetDir = (15 - dirSum) / 2; }
                     }
                 }
                 else if (dirCount == 5)
@@ -213,12 +209,32 @@ namespace TerraFW
                     atlasX = 2;
                     atlasZ = 1;
                 }
+                // Get real rotation dir on planet surface
                 int neighborIndex = neighborDirs.IndexOf(rotTargetDir);
                 if (neighborIndex >= 0)
                 {
+                    if (adjacentIds.Count <= neighborIndex) { Log.Error("GetTileGraphicDataFromNeighbors: adjacentIds[neighborIndex] out of range"); }
                     int rotTargetAdjId = adjacentIds[neighborIndex];
-                    Vector3 rotTargetPos = grid.GetTileCenter(grid.GetTileNeighbor(tileID, rotTargetAdjId));
-                    rotVector = (rotTargetPos - grid.GetTileCenter(tileID)).normalized;
+                    List<int> sameIndex = new List<int>();
+                    grid.GetTileVertices(tileID, tmpVertsSelf);
+                    grid.GetTileVertices(grid.GetTileNeighbor(tileID, rotTargetAdjId), tmpVertsNeighbor);
+                    for (int i = 0; i < tmpVertsSelf.Count; i++)
+                    {
+                        if (tmpVertsSelf.Count <= i) { Log.Error("GetTileGraphicDataFromNeighbors: tmpVertsSelf[i] out of range"); }
+                        if (tmpVertsNeighbor.Contains(tmpVertsSelf[i]))
+                        {
+                            sameIndex.Add(i);
+                        }
+                    }
+                    if (sameIndex.Contains(0) && sameIndex.Contains(5))
+                    {
+                        rotDir = 1;
+                    }
+                    else
+                    {
+                        rotDir = sameIndex.Max() + 1;
+                    }
+                    rotDir = rotDir % 6;
                 }
             }
         }

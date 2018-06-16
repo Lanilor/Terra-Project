@@ -48,32 +48,23 @@ namespace TerraFW
                     Material material = WorldMaterials.HillinessImpassable;
                     int atlasX = 0;
                     int atlasZ = 0;
-                    Vector3 rotVector = Vector3.up;
-                    grid.GetTileGraphicDataFromNeighbors(i, out atlasX, out atlasZ, out rotVector, (Tile tileFrom, Tile neighbor) => (neighbor.hilliness == Hilliness.Impassable || neighbor.biome == BiomeDefOf.CaveOasis || neighbor.biome == BiomeDefOf.CaveEntrance || neighbor.biome == BiomeDefOf.TunnelworldCave));
-                    DrawTile(grid, i, material, atlasX, atlasZ, 1.14f, rotVector);
+                    int rotDir = 0;
+                    grid.GetTileGraphicDataFromNeighbors(i, out atlasX, out atlasZ, out rotDir, (Tile tileFrom, Tile neighbor) => (neighbor.hilliness == Hilliness.Impassable || neighbor.biome == BiomeDefOf.CaveOasis || neighbor.biome == BiomeDefOf.CaveEntrance || neighbor.biome == BiomeDefOf.TunnelworldCave));
+                    WorldRendererUtility.DrawTileTangentialToPlanetWithRodation(grid, GetSubMesh(material), i, atlasX, atlasZ, TexturesInAtlas, rotDir);
 
                     // Draw cave system afterwards if a cave exists on that tile
                     if (tile.hilliness != Hilliness.Impassable)
                     {
                         material = WorldMaterials.CaveSystem;
-                        grid.GetTileGraphicDataFromNeighbors(i, out atlasX, out atlasZ, out rotVector, (Tile tileFrom, Tile neighbor) => (neighbor.biome == BiomeDefOf.CaveOasis || neighbor.biome == BiomeDefOf.CaveEntrance || neighbor.biome == BiomeDefOf.TunnelworldCave));
-                        DrawTile(grid, i, material, atlasX, atlasZ, 1.0f, rotVector);
+                        grid.GetTileGraphicDataFromNeighbors(i, out atlasX, out atlasZ, out rotDir, (Tile tileFrom, Tile neighbor) => (neighbor.biome == BiomeDefOf.CaveOasis || neighbor.biome == BiomeDefOf.CaveEntrance || neighbor.biome == BiomeDefOf.TunnelworldCave));
+                        WorldRendererUtility.DrawTileTangentialToPlanetWithRodation(grid, GetSubMesh(material), i, atlasX, atlasZ, TexturesInAtlas, rotDir);
                     }
                 }
             }
 			Rand.PopState();
-			base.FinalizeMesh(MeshParts.All);
+			FinalizeMesh(MeshParts.All);
 			yield break;
 		}
-
-        private void DrawTile(WorldGrid grid, int tileID, Material material, int atlasX, int atlasZ, float sizeFactor, Vector3 rotVector)
-        {
-            LayerSubMesh subMesh = GetSubMesh(material);
-            Vector3 tileCenter = grid.GetTileCenter(tileID);
-            Vector3 drawPos = tileCenter.normalized * tileCenter.magnitude;
-            WorldRendererUtility.PrintQuadTangentialToPlanetWithRodation(drawPos, tileCenter, sizeFactor * grid.averageTileSize, 0.005f, subMesh, rotVector);
-            RimWorld.Planet.WorldRendererUtility.PrintTextureAtlasUVs(atlasX, atlasZ, TexturesInAtlas.x, TexturesInAtlas.z, subMesh);
-        }
 
 	}
 
