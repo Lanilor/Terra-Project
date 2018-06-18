@@ -18,11 +18,12 @@
 		<scatterType>SoftDry</scatterType>
 		<affordances>
 			<li>Light</li>
+			<li>Medium</li>
 			<li>Heavy</li>
 			<li>GrowSoil</li>
 			<li>Diggable</li>
 		</affordances>
-		<terrainFilthDef>FilthSand</terrainFilthDef>
+		<generatedFilth>Filth_Sand</generatedFilth>
 		<takeFootprints>True</takeFootprints>
 	</TerrainDef>
 	
@@ -34,11 +35,12 @@
 		<scatterType>Rocky</scatterType>
 		<affordances>
 			<li>Light</li>
+			<li>Medium</li>
 			<li>Heavy</li>
 			<li>GrowSoil</li>
 			<li>Diggable</li>
 		</affordances>
-		<terrainFilthDef>FilthDirt</terrainFilthDef>
+		<generatedFilth>Filth_Dirt</generatedFilth>
 		<takeFootprints>True</takeFootprints>
 	</TerrainDef>
 	
@@ -46,6 +48,7 @@
 		<edgeType>FadeRough</edgeType>
 		<affordances>
 			<li>Light</li>
+			<li>Medium</li>
 			<li>Heavy</li>
 			<li>GrowSoil</li>
 			<li>Diggable</li>
@@ -64,7 +67,7 @@
 			<li>Diggable</li>
 		</affordances>
 		<changeable>false</changeable>
-		<terrainFilthDef>FilthDirt</terrainFilthDef>
+		<generatedFilth>Filth_Dirt</generatedFilth>
 	</TerrainDef>
 	
 	<TerrainDef Name="TerrainFrozenBase" ParentName="TerrainBase" Abstract="True">
@@ -74,11 +77,12 @@
 		<scatterType>SoftGray</scatterType>
 		<affordances>
 			<li>Light</li>
+			<li>Medium</li>
 			<li>Heavy</li>
 			<li>Diggable</li>
 		</affordances>
 		<changeable>false</changeable>
-		<terrainFilthDef>FilthDirt</terrainFilthDef>
+		<generatedFilth>Filth_Dirt</generatedFilth>
 		<takeFootprints>True</takeFootprints>
 	</TerrainDef>
 
@@ -95,10 +99,11 @@
 		<scatterType>SoftGray</scatterType>
 		<affordances>
 			<li>Light</li>
+			<li>Medium</li>
 			<li>Heavy</li>
 			<li>Diggable</li>
 		</affordances>
-		<terrainFilthDef>FilthDirt</terrainFilthDef>
+		<generatedFilth>Filth_Dirt</generatedFilth>
 		<fertility>0.00</fertility>
 		<changeable>false</changeable>
 		<takeFootprints>True</takeFootprints>
@@ -120,6 +125,17 @@
 		<tags>
 			<li>Water</li>
 		</tags>
+		<tools>
+			<li>
+				<label>water</label>
+				<capacities>
+					<li>KickMaterialInEyes</li>
+				</capacities>
+				<hediff>WaterInEyes</hediff>
+				<power>2</power>
+				<cooldownTime>15</cooldownTime>
+			</li>
+		</tools>
 	</TerrainDef>
 
 </Defs>

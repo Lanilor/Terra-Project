@@ -22,7 +22,7 @@ namespace TerraFW
             TerrainDef[] grid = map.terrainGrid.topGrid;
             for (int i = 0, iLen = grid.Count(); i < iLen; i++)
             {
-                if (grid[i] == TerrainDefOf.WaterMovingDeep)
+                if (grid[i] == TerrainDefOf.WaterMovingChestDeep)
                 {
                     IntVec3 currCell = map.cellIndices.IndexToCell(i);
                     for (int j = 0; j < 4; j++)

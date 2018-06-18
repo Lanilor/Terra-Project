@@ -3,7 +3,7 @@
 
 	<TerrainDef ParentName="TerrainSandBase">
 		<defName>ParchedSand</defName>
-		<label>desert sand (parched)</label>
+		<label>soft sand (parched)</label>
 		<texturePath>Terrain/Surfaces/Soil/ParchedSand</texturePath>
 		<pathCost>6</pathCost>
 		<fertility>0.10</fertility>
@@ -11,7 +11,7 @@
 
 	<TerrainDef ParentName="TerrainSandBase">
 		<defName>DrySand</defName>
-		<label>desert sand</label>
+		<label>soft sand</label>
 		<texturePath>Terrain/Surfaces/Soil/DrySand</texturePath>
 		<pathCost>6</pathCost>
 		<fertility>0.10</fertility>

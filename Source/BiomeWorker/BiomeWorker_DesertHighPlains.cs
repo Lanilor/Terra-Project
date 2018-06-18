@@ -12,7 +12,7 @@ namespace TerraFW
     public class BiomeWorker_DesertHighPlains : BiomeWorker
     {
 
-        public override float GetScore(Tile tile)
+        public override float GetScore(Tile tile, int tileID)
         {
             if (tile.WaterCovered)
             {

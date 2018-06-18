@@ -19,6 +19,14 @@ namespace TerraFW
 		private const float RubbleProbability = 0.2f;
         private static readonly IntRange MaxRockChunksPerGroup = new IntRange(1, 6);
 
+        public override int SeedPart
+        {
+            get
+            {
+                return 488758298;
+            }
+        }
+
 		public override void Generate(Map map)
 		{
 			if (map.TileInfo.WaterCovered)
@@ -47,7 +55,7 @@ namespace TerraFW
 
 		private void GrowLowRockFormationFrom(IntVec3 root, Map map)
 		{
-			ThingDef rockRubble = ThingDefOf.RockRubble;
+			ThingDef rockRubble = ThingDefOf.Filth_RubbleRock;
 			ThingDef mineableThing = Find.World.NaturalRockTypesIn(map.Tile).RandomElement<ThingDef>().building.mineableThing;
 			Rot4 excludedDir = Rot4.Random;
 			MapGenFloatGrid elevation = MapGenerator.Elevation;
@@ -65,7 +73,8 @@ namespace TerraFW
                 {
                     break;
                 }
-                if (!map.terrainGrid.TerrainAt(cell).affordances.Contains(TerrainAffordance.Heavy))
+                List<TerrainAffordanceDef> affordances = map.terrainGrid.TerrainAt(cell).affordances;
+                if (!(affordances.Contains(TerrainAffordanceDefOf.Medium) || affordances.Contains(TerrainAffordanceDefOf.Heavy)))
                 {
                     break;
                 }

@@ -28,7 +28,7 @@ namespace TerraFW
             ModExt_Biome_GenStep_BetterCaves extCaves = map.Biome.GetModExtension<ModExt_Biome_GenStep_BetterCaves>();
             if (extCaves == null || (extCaves.terrainPatchMakerCaveWater == null && extCaves.terrainPatchMakerCaveGravel == null))
             {
-                return false;
+                return true;
             }
             ModuleBase noiseWater = new Perlin(extCaves.terrainPatchMakerFrequencyCaveWater, 2.0, 0.5, 6, Rand.Int, QualityMode.Medium);
             ModuleBase noiseGravel = new Perlin(extCaves.terrainPatchMakerFrequencyCaveGravel, 2.0, 0.5, 6, Rand.Int, QualityMode.Medium);
@@ -38,7 +38,7 @@ namespace TerraFW
                 if (caves[c] > 0f)
                 {
                     TerrainDef terrain = c.GetTerrain(map);
-                    if (terrain != TerrainDefOf.WaterMovingShallow && terrain != TerrainDefOf.WaterMovingSloping && terrain != TerrainDefOf.WaterMovingDeep)
+                    if (terrain != TerrainDefOf.WaterMovingShallow && terrain != TerrainDefOf.WaterMovingSloping && terrain != TerrainDefOf.WaterMovingChestDeep)
                     {
                         // Try set water terrain
                         float valWater = (float)noiseWater.GetValue(c);

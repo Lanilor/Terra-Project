@@ -43,7 +43,7 @@ namespace TerraFW
             }
         }
 
-        public override float GetScore(Tile tile)
+        public override float GetScore(Tile tile, int tileID)
         {
             return -100f;
         }

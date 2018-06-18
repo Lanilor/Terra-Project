@@ -44,6 +44,14 @@ namespace TerraFW
         private static List<IntVec3> tmpCells = new List<IntVec3>();
         private static HashSet<IntVec3> tmpGroupSet = new HashSet<IntVec3>();
 
+        public override int SeedPart
+        {
+            get
+            {
+                return 235321433;
+            }
+        }
+
 		public override void Generate(Map map)
 		{
 			if (!Find.World.HasCaves(map.Tile))

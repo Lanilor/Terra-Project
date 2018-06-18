@@ -12,6 +12,14 @@ namespace TerraFW
 	public class GenStep_ElevationFertilityPost : GenStep
     {
 
+        public override int SeedPart
+        {
+            get
+            {
+                return 220686156;
+            }
+        }
+
         public override void Generate(Map map)
         {
             BiomeDef biome = map.Biome;

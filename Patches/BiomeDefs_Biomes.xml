@@ -863,8 +863,8 @@
 			</terrainsByFertility>
 		</value>
 	</Operation>
-	<Operation Class="PatchOperationAdd">
-		<xpath>/Defs/BiomeDef[defName="Desert"]</xpath>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/BiomeDef[defName="Desert"]/terrainPatchMakers</xpath>
 		<value>
 			<terrainPatchMakers>
 				<li>
@@ -920,8 +920,8 @@
 			</terrainsByFertility>
 		</value>
 	</Operation>
-	<Operation Class="PatchOperationAdd">
-		<xpath>/Defs/BiomeDef[defName="ExtremeDesert"]</xpath>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/BiomeDef[defName="ExtremeDesert"]/terrainPatchMakers</xpath>
 		<value>
 			<terrainPatchMakers>
 				<li>

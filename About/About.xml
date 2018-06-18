@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-	<name>Terra Framework</name>
+	<name>Terra Core/Framework</name>
 	<author>Lanilor</author>
 	<url>https://github.com/Lanilor/Terra-Framework</url>
-	<targetVersion>0.18.0</targetVersion>
+	<targetVersion>1.0.0</targetVersion>
 	<description>
-&lt;size=20&gt;Terra Framework&lt;/size&gt;
+&lt;size=20&gt;Terra Core/Framework&lt;/size&gt;
 
 This mod extends the map generator with various new features to generate more biome types. Currently 13 new biomes are added, including different caves and islands.
 Other mods can also use this as a framework to create their own extended biomes.

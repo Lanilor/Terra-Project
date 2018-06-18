@@ -83,7 +83,7 @@ namespace TerraFW
 
         public static TerrainDef WaterDeep;
         public static TerrainDef WaterOceanDeep;
-        public static TerrainDef WaterMovingDeep;
+        public static TerrainDef WaterMovingChestDeep;
         
         public static TerrainDef WaterSloping;
         public static TerrainDef WaterOceanSloping;

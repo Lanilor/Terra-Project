@@ -116,7 +116,7 @@ namespace TerraFW
             // Replace filler stone
             if (__result == TerrainDefOf.FillerStone)
             {
-                __result = GenStep_RocksFromGrid.RockDefAt(c).naturalTerrain;
+                __result = GenStep_RocksFromGrid.RockDefAt(c).building.naturalTerrain;
             }
         }
 

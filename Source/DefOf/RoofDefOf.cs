@@ -9,7 +9,7 @@ namespace TerraFW
 {
 
     [DefOf]
-    class RoofDefOf
+    public static class RoofDefOf
     {
 
         public static RoofDef RoofRockUncollapsable;

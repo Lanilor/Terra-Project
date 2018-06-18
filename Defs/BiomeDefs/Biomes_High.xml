@@ -7,14 +7,17 @@
 		<description>A deserty elevated plain which is often more rocky than the common sand deserts. These remote areas have little to no vegetation because of the weather and soil conditions, even through the climate is quite humid. Some animals live in these harsh conditions or roam for fresh water.</description>
 		<workerClass>TerraFW.BiomeWorker_DesertHighPlains</workerClass>
 		<animalDensity>0.15</animalDensity>
-		<plantDensity>0.005</plantDensity>
+		<plantDensity>0.006</plantDensity>
+		<hasVirtualPlants>false</hasVirtualPlants>
 		<factionBaseSelectionWeight>0.50</factionBaseSelectionWeight>
-		<pathCost_spring>3500</pathCost_spring>
-		<pathCost_summer>3500</pathCost_summer>
-		<pathCost_fall>3500</pathCost_fall>
-		<pathCost_winter>6500</pathCost_winter>
+		<movementDifficulty>1</movementDifficulty>
 		<texture>World/Biomes/DesertHighPlains</texture>
-		<diseaseMtbDays>90</diseaseMtbDays>
+		<forageability>0</forageability>
+		<wildPlantRegrowDays>40</wildPlantRegrowDays>
+		<soundsAmbient>
+			<li>Ambient_Wind_Desolate</li>
+		</soundsAmbient>
+		<diseaseMtbDays>80</diseaseMtbDays>
 		<diseases>
 			<li>
 				<diseaseInc>Disease_Flu</diseaseInc>
@@ -25,6 +28,14 @@
 				<commonality>60</commonality>
 			</li>
 			<li>
+				<diseaseInc>Disease_GutWorms</diseaseInc>
+				<commonality>40</commonality>
+			</li>
+			<li>
+				<diseaseInc>Disease_MuscleParasites</diseaseInc>
+				<commonality>70</commonality>
+			</li>
+			<li>
 				<diseaseInc>Disease_FibrousMechanites</diseaseInc>
 				<commonality>40</commonality>
 			</li>
@@ -33,11 +44,11 @@
 				<commonality>40</commonality>
 			</li>
 			<li>
-				<diseaseInc>Disease_GutWorms</diseaseInc>
-				<commonality>40</commonality>
+				<diseaseInc>Disease_AnimalFlu</diseaseInc>
+				<commonality>100</commonality>
 			</li>
 			<li>
-				<diseaseInc>Disease_MuscleParasites</diseaseInc>
+				<diseaseInc>Disease_AnimalPlague</diseaseInc>
 				<commonality>70</commonality>
 			</li>
 		</diseases>
@@ -87,24 +98,19 @@
 		</terrainPatchMakers>
 		<baseWeatherCommonalities>
 			<Clear>18</Clear>
-			<Fog>1</Fog>
-			<Rain>1</Rain>
-			<DryThunderstorm>1</DryThunderstorm>
-			<RainyThunderstorm>0.5</RainyThunderstorm>
-			<FoggyRain>0.5</FoggyRain>
+			<Fog>4</Fog>
+			<FoggyRain>1</FoggyRain>
 			<SnowGentle>1</SnowGentle>
 			<SnowHard>0.5</SnowHard>
 		</baseWeatherCommonalities>
 		<wildPlants>
-			<PlantGrass>3.5</PlantGrass>
-			<PlantMoss>0.5</PlantMoss>
-			<PlantBush>0.3</PlantBush>
-			<PlantTreePine>0.05</PlantTreePine>
-			<PlantTreeBirch>0.05</PlantTreeBirch>
-			<PlantAstragalus>0.1</PlantAstragalus>
-			<PlantDandelion>0.1</PlantDandelion>
-			<PlantRaspberry>0.1</PlantRaspberry>
-			<PlantWildHealroot>0.05</PlantWildHealroot>
+			<Plant_Grass>3.5</Plant_Grass>
+			<Plant_Moss>0.5</Plant_Moss>
+			<Plant_Bush>0.3</Plant_Bush>
+			<Plant_TreePine>0.05</Plant_TreePine>
+			<Plant_TreeBirch>0.05</Plant_TreeBirch>
+			<Plant_Astragalus>0.1</Plant_Astragalus>
+			<Plant_Dandelion>0.1</Plant_Dandelion>
 		</wildPlants>
 		<wildAnimals>
 			<Caribou>0.4</Caribou>
@@ -119,15 +125,15 @@
 			<WildBoar>0.35</WildBoar>
 			<Turkey>0.25</Turkey>
 			<Emu>0.25</Emu>
-			<FoxArctic>0.2</FoxArctic>
+			<Fox_Arctic>0.2</Fox_Arctic>
 			<Megasloth>0.03</Megasloth>
-			<WolfArctic>0.1</WolfArctic>
+			<Wolf_Arctic>0.1</Wolf_Arctic>
 			<Warg>0.08</Warg>
 			<Lynx>0.04</Lynx>
-			<PolarBear>0.03</PolarBear>
-			<GrizzlyBear>0.05</GrizzlyBear>
-			<WolfTimber>0.06</WolfTimber>
-			<FoxRed>0.15</FoxRed>
+			<Bear_Polar>0.03</Bear_Polar>
+			<Bear_Grizzly>0.05</Bear_Grizzly>
+			<Wolf_Timber>0.06</Wolf_Timber>
+			<Fox_Red>0.15</Fox_Red>
 			<Husky>0.1</Husky>
 		</wildAnimals>
 		<allowedPackAnimals>

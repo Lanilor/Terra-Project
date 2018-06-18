@@ -9,7 +9,7 @@ namespace TerraFW
 {
 
     [DefOf]
-    class BiomeDefOf
+    public static class BiomeDefOf
     {
 
         public static BiomeDef SeaIce;

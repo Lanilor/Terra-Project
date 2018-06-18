@@ -7,7 +7,7 @@
     <isThickRoof>true</isThickRoof>
     <isNatural>true</isNatural>
     <collapseLeavingThingDef>CollapsedRocks</collapseLeavingThingDef>
-    <filthLeaving>RockRubble</filthLeaving>
+    <filthLeaving>Filth_RubbleRock</filthLeaving>
   </RoofDef>
 
 </Defs>

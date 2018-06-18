@@ -18,9 +18,16 @@ namespace TerraFW
 
         private static List<int> tmpNeighbors = new List<int>();
 
+        public override int SeedPart
+        {
+            get
+            {
+                return 144374476;
+            }
+        }
+
         public override void GenerateFresh(string seed)
         {
-            Rand.Seed = GenText.StableStringHash(seed);
             // Get list of biomes and filter for only ones with special worker
             List<BiomeDef> biomes = DefDatabase<BiomeDef>.AllDefsListForReading;
             List<BiomeDef> specialBiomes = new List<BiomeDef>();
@@ -74,8 +81,6 @@ namespace TerraFW
                     MakeImpassableHillsAroundTile(grid, i, excludeBiomes, 1);
                 }
             }
-
-            Rand.RandomizeStateFromTime();
         }
 
         private void MakeImpassableHillsAroundTile(WorldGrid grid, int tileID, List<BiomeDef> excludeBiomes, int currDepth)

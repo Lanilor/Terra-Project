@@ -8,12 +8,12 @@
 		<workerClass>TerraFW.BiomeWorkerSpecial_CaveOasis</workerClass>
 		<animalDensity>0.14</animalDensity>
 		<plantDensity>0.16</plantDensity>
-		<factionBaseSelectionWeight>0.01</factionBaseSelectionWeight>
-		<pathCost_spring>6800</pathCost_spring>
-		<pathCost_summer>6800</pathCost_summer>
-		<pathCost_fall>6800</pathCost_fall>
-		<pathCost_winter>6800</pathCost_winter>
+		<factionBaseSelectionWeight>0</factionBaseSelectionWeight>
+		<movementDifficulty>3</movementDifficulty>
 		<texture>World/Biomes/CaveOasis</texture>
+		<forageability>0.75</forageability>
+		<foragedFood>RawFungus</foragedFood>
+		<wildPlantRegrowDays>40</wildPlantRegrowDays>
 		<diseaseMtbDays>65</diseaseMtbDays>
 		<diseases>
 			<li>
@@ -25,6 +25,14 @@
 				<commonality>100</commonality>
 			</li>
 			<li>
+				<diseaseInc>Disease_GutWorms</diseaseInc>
+				<commonality>30</commonality>
+			</li>
+			<li>
+				<diseaseInc>Disease_MuscleParasites</diseaseInc>
+				<commonality>30</commonality>
+			</li>
+			<li>
 				<diseaseInc>Disease_FibrousMechanites</diseaseInc>
 				<commonality>30</commonality>
 			</li>
@@ -33,12 +41,12 @@
 				<commonality>30</commonality>
 			</li>
 			<li>
-				<diseaseInc>Disease_GutWorms</diseaseInc>
-				<commonality>60</commonality>
+				<diseaseInc>Disease_AnimalFlu</diseaseInc>
+				<commonality>80</commonality>
 			</li>
 			<li>
-				<diseaseInc>Disease_MuscleParasites</diseaseInc>
-				<commonality>60</commonality>
+				<diseaseInc>Disease_AnimalPlague</diseaseInc>
+				<commonality>100</commonality>
 			</li>
 		</diseases>
 		<terrainsByFertility>
@@ -95,7 +103,7 @@
 			<WildBoar>0.15</WildBoar>
 			<Boomrat>0.5</Boomrat>
 			<Boomalope>0.05</Boomalope>
-			<GrizzlyBear>0.07</GrizzlyBear>
+			<Bear_Grizzly>0.07</Bear_Grizzly>
 			<Cobra>0.04</Cobra>
 		</wildAnimals>
 		<allowedPackAnimals>
@@ -206,21 +214,29 @@
 		<workerClass>TerraFW.BiomeWorkerSpecial_TunnelworldCave</workerClass>
 		<animalDensity>0.10</animalDensity>
 		<plantDensity>0.075</plantDensity>
-		<factionBaseSelectionWeight>0.01</factionBaseSelectionWeight>
-		<pathCost_spring>2400</pathCost_spring>
-		<pathCost_summer>2400</pathCost_summer>
-		<pathCost_fall>2400</pathCost_fall>
-		<pathCost_winter>2400</pathCost_winter>
+		<factionBaseSelectionWeight>0</factionBaseSelectionWeight>
+		<movementDifficulty>3</movementDifficulty>
 		<texture>World/Biomes/TunnelworldCave</texture>
+		<forageability>0.5</forageability>
+		<foragedFood>RawFungus</foragedFood>
+		<wildPlantRegrowDays>40</wildPlantRegrowDays>
 		<diseaseMtbDays>70</diseaseMtbDays>
 		<diseases>
 			<li>
 				<diseaseInc>Disease_Flu</diseaseInc>
-				<commonality>90</commonality>
+				<commonality>70</commonality>
 			</li>
 			<li>
 				<diseaseInc>Disease_Plague</diseaseInc>
-				<commonality>80</commonality>
+				<commonality>100</commonality>
+			</li>
+			<li>
+				<diseaseInc>Disease_GutWorms</diseaseInc>
+				<commonality>30</commonality>
+			</li>
+			<li>
+				<diseaseInc>Disease_MuscleParasites</diseaseInc>
+				<commonality>30</commonality>
 			</li>
 			<li>
 				<diseaseInc>Disease_FibrousMechanites</diseaseInc>
@@ -231,12 +247,12 @@
 				<commonality>30</commonality>
 			</li>
 			<li>
-				<diseaseInc>Disease_GutWorms</diseaseInc>
-				<commonality>50</commonality>
+				<diseaseInc>Disease_AnimalFlu</diseaseInc>
+				<commonality>80</commonality>
 			</li>
 			<li>
-				<diseaseInc>Disease_MuscleParasites</diseaseInc>
-				<commonality>60</commonality>
+				<diseaseInc>Disease_AnimalPlague</diseaseInc>
+				<commonality>100</commonality>
 			</li>
 		</diseases>
 		<terrainsByFertility>
@@ -288,7 +304,7 @@
 			<WildBoar>0.15</WildBoar>
 			<Boomrat>0.5</Boomrat>
 			<Boomalope>0.05</Boomalope>
-			<GrizzlyBear>0.07</GrizzlyBear>
+			<Bear_Grizzly>0.07</Bear_Grizzly>
 			<Cobra>0.04</Cobra>
 		</wildAnimals>
 		<allowedPackAnimals>
@@ -380,12 +396,12 @@
 		<workerClass>TerraFW.BiomeWorkerSpecial_CaveEntrance</workerClass>
 		<animalDensity>0.05</animalDensity>
 		<plantDensity>0.12</plantDensity>
-		<factionBaseSelectionWeight>0.01</factionBaseSelectionWeight>
-		<pathCost_spring>2400</pathCost_spring>
-		<pathCost_summer>2400</pathCost_summer>
-		<pathCost_fall>2400</pathCost_fall>
-		<pathCost_winter>2400</pathCost_winter>
+		<factionBaseSelectionWeight>0</factionBaseSelectionWeight>
+		<movementDifficulty>3</movementDifficulty>
 		<texture>World/Biomes/CaveEntrance</texture>
+		<forageability>0.5</forageability>
+		<foragedFood>RawBerries</foragedFood>
+		<wildPlantRegrowDays>30</wildPlantRegrowDays>
 		<diseaseMtbDays>70</diseaseMtbDays>
 		<diseases>
 			<li>
@@ -394,7 +410,15 @@
 			</li>
 			<li>
 				<diseaseInc>Disease_Plague</diseaseInc>
-				<commonality>80</commonality>
+				<commonality>100</commonality>
+			</li>
+			<li>
+				<diseaseInc>Disease_GutWorms</diseaseInc>
+				<commonality>30</commonality>
+			</li>
+			<li>
+				<diseaseInc>Disease_MuscleParasites</diseaseInc>
+				<commonality>60</commonality>
 			</li>
 			<li>
 				<diseaseInc>Disease_FibrousMechanites</diseaseInc>
@@ -405,12 +429,12 @@
 				<commonality>30</commonality>
 			</li>
 			<li>
-				<diseaseInc>Disease_GutWorms</diseaseInc>
-				<commonality>50</commonality>
+				<diseaseInc>Disease_AnimalFlu</diseaseInc>
+				<commonality>100</commonality>
 			</li>
 			<li>
-				<diseaseInc>Disease_MuscleParasites</diseaseInc>
-				<commonality>60</commonality>
+				<diseaseInc>Disease_AnimalPlague</diseaseInc>
+				<commonality>90</commonality>
 			</li>
 		</diseases>
 		<terrainsByFertility>
@@ -458,14 +482,16 @@
 			<SnowHard>4</SnowHard>
 		</baseWeatherCommonalities>
 		<wildPlants>
-			<PlantGrass>3.0</PlantGrass>
-			<PlantTallGrass>1.8</PlantTallGrass>
-			<PlantBrambles>0.6</PlantBrambles>
-			<PlantDandelion>0.2</PlantDandelion>
-			<PlantBush>0.9</PlantBush>
-			<PlantTreePoplar>0.1</PlantTreePoplar>
-			<PlantTreePine>0.3</PlantTreePine>
-			<PlantTreeBirch>0.1</PlantTreeBirch>
+			<Plant_Grass>3.0</Plant_Grass>
+			<Plant_TallGrass>1.8</Plant_TallGrass>
+			<Plant_Brambles>0.6</Plant_Brambles>
+			<Plant_Dandelion>0.2</Plant_Dandelion>
+			<Plant_Bush>0.9</Plant_Bush>
+			<Plant_TreePoplar>0.1</Plant_TreePoplar>
+			<Plant_TreePine>0.3</Plant_TreePine>
+			<Plant_TreeBirch>0.1</Plant_TreeBirch>
+			<Plant_Raspberry>0.01</Plant_Raspberry>
+			<Plant_HealrootWild>0.005</Plant_HealrootWild>
 		</wildPlants>
 		<wildAnimals>
 			<Hare>1.0</Hare>
@@ -478,9 +504,9 @@
 			<Raccoon>0.3</Raccoon>
 			<Boomrat>0.25</Boomrat>
 			<Muffalo>0.1</Muffalo>
-			<WolfTimber>0.06</WolfTimber>
-			<FoxRed>0.11</FoxRed>
-			<GrizzlyBear>0.09</GrizzlyBear>
+			<Wolf_Timber>0.06</Wolf_Timber>
+			<Fox_Red>0.11</Fox_Red>
+			<Bear_Grizzly>0.09</Bear_Grizzly>
 			<Warg>0.02</Warg>
 			<Lynx>0.03</Lynx>
 		</wildAnimals>
@@ -584,21 +610,29 @@
 		<workerClass>TerraFW.BiomeWorkerSpecial_InfestedMountains</workerClass>
 		<animalDensity>0.4</animalDensity>
 		<plantDensity>0.35</plantDensity>
-		<factionBaseSelectionWeight>0.01</factionBaseSelectionWeight>
-		<pathCost_spring>13000</pathCost_spring>
-		<pathCost_summer>13000</pathCost_summer>
-		<pathCost_fall>13000</pathCost_fall>
-		<pathCost_winter>16000</pathCost_winter>
+		<factionBaseSelectionWeight>0</factionBaseSelectionWeight>
+		<movementDifficulty>4</movementDifficulty>
 		<texture>World/Biomes/InfestedMountains</texture>
+		<forageability>0.5</forageability>
+		<foragedFood>RawBerries</foragedFood>
+		<wildPlantRegrowDays>30</wildPlantRegrowDays>
 		<diseaseMtbDays>50</diseaseMtbDays>
 		<diseases>
 			<li>
 				<diseaseInc>Disease_Flu</diseaseInc>
-				<commonality>80</commonality>
+				<commonality>70</commonality>
 			</li>
 			<li>
 				<diseaseInc>Disease_Plague</diseaseInc>
-				<commonality>100</commonality>
+				<commonality>120</commonality>
+			</li>
+			<li>
+				<diseaseInc>Disease_GutWorms</diseaseInc>
+				<commonality>50</commonality>
+			</li>
+			<li>
+				<diseaseInc>Disease_MuscleParasites</diseaseInc>
+				<commonality>30</commonality>
 			</li>
 			<li>
 				<diseaseInc>Disease_FibrousMechanites</diseaseInc>
@@ -609,12 +643,12 @@
 				<commonality>30</commonality>
 			</li>
 			<li>
-				<diseaseInc>Disease_GutWorms</diseaseInc>
-				<commonality>50</commonality>
+				<diseaseInc>Disease_AnimalFlu</diseaseInc>
+				<commonality>80</commonality>
 			</li>
 			<li>
-				<diseaseInc>Disease_MuscleParasites</diseaseInc>
-				<commonality>60</commonality>
+				<diseaseInc>Disease_AnimalPlague</diseaseInc>
+				<commonality>110</commonality>
 			</li>
 		</diseases>
 		<terrainsByFertility>
@@ -645,17 +679,19 @@
 			<SnowHard>4</SnowHard>
 		</baseWeatherCommonalities>
 		<wildPlants>
-			<PlantGrass>0.5</PlantGrass>
-			<PlantTallGrass>1.4</PlantTallGrass>
-			<PlantShrubLow>2.0</PlantShrubLow>
-			<PlantChokevine>0.8</PlantChokevine>
-			<PlantAlocasia>0.8</PlantAlocasia>
-			<PlantTreeCecropia>0.4</PlantTreeCecropia>
-			<PlantTreeBamboo>0.8</PlantTreeBamboo>
-			<PlantTreeWillow>0.1</PlantTreeWillow>
-			<PlantBush>0.3</PlantBush>
-			<PlantClivia>0.1</PlantClivia>
-			<PlantRafflesia>0.02</PlantRafflesia>
+			<Plant_Grass>0.5</Plant_Grass>
+			<Plant_TallGrass>1.4</Plant_TallGrass>
+			<Plant_ShrubLow>2.0</Plant_ShrubLow>
+			<Plant_Chokevine>0.8</Plant_Chokevine>
+			<Plant_Alocasia>0.8</Plant_Alocasia>
+			<Plant_TreeCecropia>0.4</Plant_TreeCecropia>
+			<Plant_TreeBamboo>0.8</Plant_TreeBamboo>
+			<Plant_TreeWillow>0.1</Plant_TreeWillow>
+			<Plant_Bush>0.3</Plant_Bush>
+			<Plant_Clivia>0.1</Plant_Clivia>
+			<Plant_Rafflesia>0.02</Plant_Rafflesia>
+			<Plant_Raspberry>0.01</Plant_Raspberry>
+			<Plant_HealrootWild>0.005</Plant_HealrootWild>
 		</wildPlants>
 		<wildAnimals>
 			<Hare>0.9</Hare>
@@ -665,7 +701,7 @@
 			<Capybara>0.2</Capybara>
 			<Boomrat>0.5</Boomrat>
 			<Boomalope>0.05</Boomalope>
-			<GrizzlyBear>0.06</GrizzlyBear>
+			<Bear_Grizzly>0.06</Bear_Grizzly>
 			<Cobra>0.04</Cobra>
 		</wildAnimals>
 		<allowedPackAnimals>
@@ -749,12 +785,13 @@
 		<workerClass>TerraFW.BiomeWorkerSpecial_DeepRavine</workerClass>
 		<animalDensity>0.9</animalDensity>
 		<plantDensity>0.10</plantDensity>
-		<factionBaseSelectionWeight>0.01</factionBaseSelectionWeight>
-		<pathCost_spring>600</pathCost_spring>
-		<pathCost_summer>600</pathCost_summer>
-		<pathCost_fall>600</pathCost_fall>
-		<pathCost_winter>600</pathCost_winter>
+		<factionBaseSelectionWeight>0</factionBaseSelectionWeight>
+		<movementDifficulty>2</movementDifficulty>
 		<texture>World/Biomes/DeepRavine</texture>
+		<forageability>0.25</forageability>
+		<foragedFood>RawAgave</foragedFood>
+		<wildPlantsCareAboutLocalFertility>false</wildPlantsCareAboutLocalFertility>
+		<wildPlantRegrowDays>35</wildPlantRegrowDays>
 		<diseaseMtbDays>55</diseaseMtbDays>
 		<diseases>
 			<li>
@@ -766,6 +803,14 @@
 				<commonality>90</commonality>
 			</li>
 			<li>
+				<diseaseInc>Disease_GutWorms</diseaseInc>
+				<commonality>60</commonality>
+			</li>
+			<li>
+				<diseaseInc>Disease_MuscleParasites</diseaseInc>
+				<commonality>60</commonality>
+			</li>
+			<li>
 				<diseaseInc>Disease_FibrousMechanites</diseaseInc>
 				<commonality>30</commonality>
 			</li>
@@ -774,12 +819,12 @@
 				<commonality>30</commonality>
 			</li>
 			<li>
-				<diseaseInc>Disease_GutWorms</diseaseInc>
-				<commonality>60</commonality>
+				<diseaseInc>Disease_AnimalFlu</diseaseInc>
+				<commonality>90</commonality>
 			</li>
 			<li>
-				<diseaseInc>Disease_MuscleParasites</diseaseInc>
-				<commonality>60</commonality>
+				<diseaseInc>Disease_AnimalPlague</diseaseInc>
+				<commonality>90</commonality>
 			</li>
 		</diseases>
 		<terrainsByFertility>
@@ -855,17 +900,16 @@
 			<SnowHard>4</SnowHard>
 		</baseWeatherCommonalities>
 		<wildPlants>
-			<PlantGrass>6.0</PlantGrass>
-			<PlantTallGrass>2.0</PlantTallGrass>
-			<PlantPincushionCactus>1.0</PlantPincushionCactus>
-			<PlantSaguaroCactus>0.6</PlantSaguaroCactus>
-			<PlantDandelion>0.3</PlantDandelion>
-			<PlantBush>0.6</PlantBush>
-			<PlantTreeDrago>0.5</PlantTreeDrago>
-			<PlantTreePalm>0.7</PlantTreePalm>
-			<PlantTreePoplar>0.05</PlantTreePoplar>
-			<PlantAgave>0.25</PlantAgave>
-			<PlantRaspberry>0.1</PlantRaspberry>
+			<Plant_Grass>6.0</Plant_Grass>
+			<Plant_TallGrass>2.0</Plant_TallGrass>
+			<Plant_PincushionCactus>1.0</Plant_PincushionCactus>
+			<Plant_SaguaroCactus>0.6</Plant_SaguaroCactus>
+			<Plant_Dandelion>0.3</Plant_Dandelion>
+			<Plant_Bush>0.6</Plant_Bush>
+			<Plant_TreeDrago>0.5</Plant_TreeDrago>
+			<Plant_TreePalm>0.7</Plant_TreePalm>
+			<Plant_TreePoplar>0.05</Plant_TreePoplar>
+			<Plant_Agave>0.25</Plant_Agave>
 		</wildPlants>
 		<wildAnimals>
 			<Muffalo>0.3</Muffalo>
@@ -886,7 +930,7 @@
 			<Rat>1.0</Rat>
 			<Megasloth>0.06</Megasloth>
 			<Cougar>0.08</Cougar>
-			<GrizzlyBear>0.02</GrizzlyBear>
+			<Bear_Grizzly>0.02</Bear_Grizzly>
 			<Warg>0.09</Warg>
 			<Lynx>0.02</Lynx>
 		</wildAnimals>

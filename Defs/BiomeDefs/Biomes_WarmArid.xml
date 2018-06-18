@@ -2,18 +2,210 @@
 <Defs>
 
 	<BiomeDef>
+		<defName>Savanna</defName>
+		<label>savanna</label>
+		<description>A mildly dry region, but not dry enough to become an arid shrubland. The plains are covered with a thick grass layer. Bushes and trees are widely spaced to maintain an open canopy but enough to give this area a light foresty though. Despite the good abount of plants the soil is mostly dry and animals roam the area on the search for food and water.</description>
+		<workerClass>TerraFW.BiomeWorker_Savanna</workerClass>
+		<animalDensity>2.0</animalDensity>
+		<plantDensity>0.20</plantDensity>
+		<factionBaseSelectionWeight>0.95</factionBaseSelectionWeight>
+		<movementDifficulty>1</movementDifficulty>
+		<texture>World/Biomes/Savanna</texture>
+		<forageability>0.75</forageability>
+		<foragedFood>RawAgave</foragedFood>
+		<wildPlantRegrowDays>30</wildPlantRegrowDays>
+		<soundsAmbient>
+			<li>Ambient_NightInsects_Standard</li>
+		</soundsAmbient>
+		<diseaseMtbDays>50</diseaseMtbDays>
+		<diseases>
+			<li>
+				<diseaseInc>Disease_Flu</diseaseInc>
+				<commonality>100</commonality>
+			</li>
+			<li>
+				<diseaseInc>Disease_Plague</diseaseInc>
+				<commonality>100</commonality>
+			</li>
+			<li>
+				<diseaseInc>Disease_Malaria</diseaseInc>
+				<commonality>100</commonality>
+			</li>
+			<li>
+				<diseaseInc>Disease_SleepingSickness</diseaseInc>
+				<commonality>50</commonality>
+			</li>
+			<li>
+				<diseaseInc>Disease_GutWorms</diseaseInc>
+				<commonality>60</commonality>
+			</li>
+			<li>
+				<diseaseInc>Disease_MuscleParasites</diseaseInc>
+				<commonality>60</commonality>
+			</li>
+			<li>
+				<diseaseInc>Disease_FibrousMechanites</diseaseInc>
+				<commonality>30</commonality>
+			</li>
+			<li>
+				<diseaseInc>Disease_SensoryMechanites</diseaseInc>
+				<commonality>30</commonality>
+			</li>
+			<li>
+				<diseaseInc>Disease_AnimalFlu</diseaseInc>
+				<commonality>100</commonality>
+			</li>
+			<li>
+				<diseaseInc>Disease_AnimalPlague</diseaseInc>
+				<commonality>100</commonality>
+			</li>
+		</diseases>
+		<terrainsByFertility>
+			<li>
+				<terrain>DryBarrenSoil</terrain>
+				<min>-999</min>
+				<max>0.40</max>
+			</li>
+			<li>
+				<terrain>DrySoil</terrain>
+				<min>0.40</min>
+				<max>0.76</max>
+			</li>
+			<li>
+				<terrain>DryFertileSoil</terrain>
+				<min>0.76</min>
+				<max>999</max>
+			</li>
+		</terrainsByFertility>
+		<terrainPatchMakers>
+			<li>
+				<perlinFrequency>0.025</perlinFrequency>
+				<thresholds>
+					<li>
+						<terrain>DryLaterite</terrain>
+						<min>0.71</min>
+						<max>0.87</max>
+					</li>
+					<li>
+						<terrain>DrySand</terrain>
+						<min>0.87</min>
+						<max>1.02</max>
+					</li>
+					<li>
+						<terrain>ParchedSand</terrain>
+						<min>1.02</min>
+						<max>999</max>
+					</li>
+				</thresholds>
+			</li>
+			<li>
+				<perlinFrequency>0.015</perlinFrequency>
+				<thresholds>
+					<li>
+						<terrain>DrySoil</terrain>
+						<min>0.62</min>
+						<max>0.70</max>
+					</li>
+					<li>
+						<terrain>ParchedSoil</terrain>
+						<min>0.70</min>
+						<max>0.78</max>
+					</li>
+					<li>
+						<terrain>ParchedFertileSoil</terrain>
+						<min>0.78</min>
+						<max>0.99</max>
+					</li>
+					<li>
+						<terrain>ParchedRichSoil</terrain>
+						<min>0.99</min>
+						<max>999</max>
+					</li>
+				</thresholds>
+			</li>
+		</terrainPatchMakers>
+		<baseWeatherCommonalities>
+			<Clear>18</Clear>
+			<Fog>1</Fog>
+			<Rain>2</Rain>
+			<DryThunderstorm>1</DryThunderstorm>
+			<RainyThunderstorm>1</RainyThunderstorm>
+			<FoggyRain>0.5</FoggyRain>
+			<SnowGentle>4</SnowGentle>
+			<SnowHard>4</SnowHard>
+		</baseWeatherCommonalities>
+		<wildPlants>
+			<Plant_Grass>5.3</Plant_Grass>
+			<Plant_TallGrass>2.0</Plant_TallGrass>
+			<Plant_Dandelion>0.4</Plant_Dandelion>
+			<Plant_Bush>0.5</Plant_Bush>
+			<Plant_PincushionCactus>0.2</Plant_PincushionCactus>
+			<Plant_Agave>0.1</Plant_Agave>
+			<Plant_SaguaroCactus>0.2</Plant_SaguaroCactus>
+			<Plant_TreeDrago>0.8</Plant_TreeDrago>
+			<Plant_TreePoplar>0.15</Plant_TreePoplar>
+			<Plant_Raspberry>0.05</Plant_Raspberry>
+		</wildPlants>
+		<wildAnimals>
+			<Hare>0.3</Hare>
+			<Squirrel>0.2</Squirrel>
+			<Muffalo>0.4</Muffalo>
+			<Gazelle>0.6</Gazelle>
+			<Ibex>0.4</Ibex>
+			<Alpaca>0.25</Alpaca>
+			<Elephant>0.5</Elephant>
+			<Boomrat>0.65</Boomrat>
+			<Iguana>0.2</Iguana>
+			<Rhinoceros>0.15</Rhinoceros>
+			<WildBoar>0.35</WildBoar>
+			<Turkey>0.45</Turkey>
+			<Tortoise>0.3</Tortoise>
+			<Boomalope>0.4</Boomalope>
+			<Emu>0.4</Emu>
+			<Ostrich>0.55</Ostrich>
+			<Rat>0.6</Rat>
+			<Monkey>1.0</Monkey>
+			<Capybara>0.2</Capybara>
+			<Cassowary>0.6</Cassowary>
+			<Megasloth>0.03</Megasloth>
+			<Cobra>0.16</Cobra>
+			<Panther>0.12</Panther>
+			<Cougar>0.12</Cougar>
+			<Bear_Grizzly>0.02</Bear_Grizzly>
+			<Warg>0.04</Warg>
+			<Wolf_Timber>0.01</Wolf_Timber>
+			<Fox_Fennec>0.01</Fox_Fennec>
+			<Lynx>0.02</Lynx>
+		</wildAnimals>
+		<allowedPackAnimals>
+			<li>Muffalo</li>
+			<li>Elephant</li>
+			<li>Alpaca</li>
+		</allowedPackAnimals>
+		<modExtensions>
+			<li Class="TerraFW.ModExt_Biome_Replacement">
+				<sandReplacement>DrySand</sandReplacement>
+				<gravelRelacement>ParchedBarrenGravel</gravelRelacement>
+			</li>
+		</modExtensions>
+	</BiomeDef>
+
+	<BiomeDef>
 		<defName>Oasis</defName>
 		<label>oasis</label>
 		<description>An oasis somewhere in the seemingly endless deserts. Plants grow around water spots and animals gather near them to drink and search for a shaded place.</description>
 		<workerClass>TerraFW.BiomeWorkerSpecial_Oasis</workerClass>
 		<animalDensity>1.5</animalDensity>
 		<plantDensity>0.21</plantDensity>
-		<factionBaseSelectionWeight>0.01</factionBaseSelectionWeight>
-		<pathCost_spring>0</pathCost_spring>
-		<pathCost_summer>0</pathCost_summer>
-		<pathCost_fall>0</pathCost_fall>
-		<pathCost_winter>0</pathCost_winter>
+		<factionBaseSelectionWeight>0</factionBaseSelectionWeight>
+		<movementDifficulty>1</movementDifficulty>
 		<texture>World/Biomes/Oasis</texture>
+		<forageability>0.75</forageability>
+		<foragedFood>RawAgave</foragedFood>
+		<wildPlantRegrowDays>30</wildPlantRegrowDays>
+		<soundsAmbient>
+			<li>Ambient_NightInsects_Standard</li>
+		</soundsAmbient>
 		<diseaseMtbDays>70</diseaseMtbDays>
 		<diseases>
 			<li>
@@ -25,12 +217,8 @@
 				<commonality>80</commonality>
 			</li>
 			<li>
-				<diseaseInc>Disease_FibrousMechanites</diseaseInc>
-				<commonality>30</commonality>
-			</li>
-			<li>
-				<diseaseInc>Disease_SensoryMechanites</diseaseInc>
-				<commonality>30</commonality>
+				<diseaseInc>Disease_Malaria</diseaseInc>
+				<commonality>60</commonality>
 			</li>
 			<li>
 				<diseaseInc>Disease_GutWorms</diseaseInc>
@@ -39,6 +227,22 @@
 			<li>
 				<diseaseInc>Disease_MuscleParasites</diseaseInc>
 				<commonality>60</commonality>
+			</li>
+			<li>
+				<diseaseInc>Disease_FibrousMechanites</diseaseInc>
+				<commonality>30</commonality>
+			</li>
+			<li>
+				<diseaseInc>Disease_SensoryMechanites</diseaseInc>
+				<commonality>30</commonality>
+			</li>
+			<li>
+				<diseaseInc>Disease_AnimalFlu</diseaseInc>
+				<commonality>100</commonality>
+			</li>
+			<li>
+				<diseaseInc>Disease_AnimalPlague</diseaseInc>
+				<commonality>100</commonality>
 			</li>
 		</diseases>
 		<terrainsByFertility>
@@ -139,17 +343,17 @@
 			<SnowHard>4</SnowHard>
 		</baseWeatherCommonalities>
 		<wildPlants>
-			<PlantGrass>3.5</PlantGrass>
-			<PlantTallGrass>1.4</PlantTallGrass>
-			<PlantPincushionCactus>0.9</PlantPincushionCactus>
-			<PlantSaguaroCactus>0.6</PlantSaguaroCactus>
-			<PlantDandelion>0.2</PlantDandelion>
-			<PlantBush>0.4</PlantBush>
-			<PlantTreeDrago>0.5</PlantTreeDrago>
-			<PlantTreePalm>0.8</PlantTreePalm>
-			<PlantTreePoplar>0.05</PlantTreePoplar>
-			<PlantAgave>0.2</PlantAgave>
-			<PlantRaspberry>0.1</PlantRaspberry>
+			<Plant_Grass>3.5</Plant_Grass>
+			<Plant_TallGrass>1.4</Plant_TallGrass>
+			<Plant_PincushionCactus>0.9</Plant_PincushionCactus>
+			<Plant_SaguaroCactus>0.6</Plant_SaguaroCactus>
+			<Plant_Dandelion>0.2</Plant_Dandelion>
+			<Plant_Bush>0.4</Plant_Bush>
+			<Plant_TreeDrago>0.5</Plant_TreeDrago>
+			<Plant_TreePalm>0.8</Plant_TreePalm>
+			<Plant_TreePoplar>0.05</Plant_TreePoplar>
+			<Plant_Agave>0.2</Plant_Agave>
+			<Plant_Raspberry>0.1</Plant_Raspberry>
 		</wildPlants>
 		<wildAnimals>
 			<Muffalo>0.2</Muffalo>

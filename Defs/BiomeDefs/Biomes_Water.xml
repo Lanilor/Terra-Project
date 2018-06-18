@@ -8,14 +8,14 @@
 		<workerClass>TerraFW.BiomeWorkerSpecial_Archipelago</workerClass>
 		<animalDensity>1.9</animalDensity>
 		<plantDensity>0.45</plantDensity>
-		<factionBaseSelectionWeight>0.01</factionBaseSelectionWeight>
-		<pathCost_spring>1200</pathCost_spring>
-		<pathCost_summer>1200</pathCost_summer>
-		<pathCost_fall>1200</pathCost_fall>
-		<pathCost_winter>1200</pathCost_winter>
+		<factionBaseSelectionWeight>0</factionBaseSelectionWeight>
+		<movementDifficulty>1.5</movementDifficulty>
 		<texture>World/Biomes/Base_Island</texture>
+		<forageability>1</forageability>
+		<foragedFood>RawBerries</foragedFood>
+		<wildPlantRegrowDays>25</wildPlantRegrowDays>
 		<soundsAmbient>
-			<li>AmbientNightInsects_Standard</li>
+			<li>Ambient_NightInsects_Standard</li>
 		</soundsAmbient>
 		<diseaseMtbDays>70</diseaseMtbDays>
 		<diseases>
@@ -32,6 +32,14 @@
 				<commonality>90</commonality>
 			</li>
 			<li>
+				<diseaseInc>Disease_GutWorms</diseaseInc>
+				<commonality>40</commonality>
+			</li>
+			<li>
+				<diseaseInc>Disease_MuscleParasites</diseaseInc>
+				<commonality>40</commonality>
+			</li>
+			<li>
 				<diseaseInc>Disease_FibrousMechanites</diseaseInc>
 				<commonality>30</commonality>
 			</li>
@@ -40,12 +48,12 @@
 				<commonality>30</commonality>
 			</li>
 			<li>
-				<diseaseInc>Disease_GutWorms</diseaseInc>
-				<commonality>40</commonality>
+				<diseaseInc>Disease_AnimalFlu</diseaseInc>
+				<commonality>100</commonality>
 			</li>
 			<li>
-				<diseaseInc>Disease_MuscleParasites</diseaseInc>
-				<commonality>40</commonality>
+				<diseaseInc>Disease_AnimalPlague</diseaseInc>
+				<commonality>60</commonality>
 			</li>
 		</diseases>
 		<terrainsByFertility>
@@ -78,23 +86,24 @@
 			</li>
 		</terrainPatchMakers>
 		<baseWeatherCommonalities>
-			<Clear>18</Clear>
+			<Clear>15</Clear>
+			<Fog>3</Fog>
 			<Rain>2</Rain>
-			<DryThunderstorm>1</DryThunderstorm>
-			<RainyThunderstorm>1</RainyThunderstorm>
+			<DryThunderstorm>1.5</DryThunderstorm>
+			<RainyThunderstorm>1.5</RainyThunderstorm>
 			<SnowGentle>4</SnowGentle>
 			<SnowHard>4</SnowHard>
 		</baseWeatherCommonalities>
 		<wildPlants>
-			<PlantGrass>5.0</PlantGrass>
-			<PlantTallGrass>2.0</PlantTallGrass>
-			<PlantBrambles>1.0</PlantBrambles>
-			<PlantDandelion>0.5</PlantDandelion>
-			<PlantBush>0.6</PlantBush>
-			<PlantTreeOak>0.5</PlantTreeOak>
-			<PlantTreePoplar>0.5</PlantTreePoplar>
-			<PlantRaspberry>0.1</PlantRaspberry>
-			<PlantWildHealroot>0.05</PlantWildHealroot>
+			<Plant_Grass>5.0</Plant_Grass>
+			<Plant_TallGrass>2.0</Plant_TallGrass>
+			<Plant_Brambles>1.0</Plant_Brambles>
+			<Plant_Dandelion>0.5</Plant_Dandelion>
+			<Plant_Bush>0.6</Plant_Bush>
+			<Plant_TreeOak>0.5</Plant_TreeOak>
+			<Plant_TreePoplar>0.5</Plant_TreePoplar>
+			<Plant_Raspberry>0.1</Plant_Raspberry>
+			<Plant_HealrootWild>0.05</Plant_HealrootWild>
 		</wildPlants>
 		<wildAnimals>
 			<Hare>1.0</Hare>
@@ -115,7 +124,7 @@
 			<Chinchilla>0.2</Chinchilla>
 			<Cobra>0.02</Cobra>
 			<Panther>0.04</Panther>
-			<FoxRed>0.06</FoxRed>
+			<Fox_Red>0.06</Fox_Red>
 			<Warg>0.09</Warg>
 			<Cougar>0.01</Cougar>
 			<Lynx>0.06</Lynx>
@@ -216,12 +225,15 @@
 		<workerClass>TerraFW.BiomeWorkerSpecial_VolcanicIsland</workerClass>
 		<animalDensity>1.6</animalDensity>
 		<plantDensity>0.30</plantDensity>
-		<factionBaseSelectionWeight>0.01</factionBaseSelectionWeight>
-		<pathCost_spring>2600</pathCost_spring>
-		<pathCost_summer>2600</pathCost_summer>
-		<pathCost_fall>2600</pathCost_fall>
-		<pathCost_winter>2600</pathCost_winter>
+		<factionBaseSelectionWeight>0</factionBaseSelectionWeight>
+		<movementDifficulty>1.5</movementDifficulty>
 		<texture>World/Biomes/Base_Island</texture>
+		<forageability>1</forageability>
+		<foragedFood>RawBerries</foragedFood>
+		<wildPlantRegrowDays>25</wildPlantRegrowDays>
+		<soundsAmbient>
+			<li>Ambient_NightInsects_Standard</li>
+		</soundsAmbient>
 		<diseaseMtbDays>55</diseaseMtbDays>
 		<diseases>
 			<li>
@@ -237,6 +249,14 @@
 				<commonality>90</commonality>
 			</li>
 			<li>
+				<diseaseInc>Disease_GutWorms</diseaseInc>
+				<commonality>40</commonality>
+			</li>
+			<li>
+				<diseaseInc>Disease_MuscleParasites</diseaseInc>
+				<commonality>40</commonality>
+			</li>
+			<li>
 				<diseaseInc>Disease_FibrousMechanites</diseaseInc>
 				<commonality>30</commonality>
 			</li>
@@ -245,12 +265,12 @@
 				<commonality>30</commonality>
 			</li>
 			<li>
-				<diseaseInc>Disease_GutWorms</diseaseInc>
-				<commonality>40</commonality>
+				<diseaseInc>Disease_AnimalFlu</diseaseInc>
+				<commonality>100</commonality>
 			</li>
 			<li>
-				<diseaseInc>Disease_MuscleParasites</diseaseInc>
-				<commonality>40</commonality>
+				<diseaseInc>Disease_AnimalPlague</diseaseInc>
+				<commonality>60</commonality>
 			</li>
 		</diseases>
 		<terrainsByFertility>
@@ -272,6 +292,7 @@
 		</terrainsByFertility>
 		<baseWeatherCommonalities>
 			<Clear>14</Clear>
+			<Fog>2</Fog>
 			<Rain>4</Rain>
 			<DryThunderstorm>2</DryThunderstorm>
 			<RainyThunderstorm>2</RainyThunderstorm>
@@ -279,15 +300,15 @@
 			<SnowHard>4</SnowHard>
 		</baseWeatherCommonalities>
 		<wildPlants>
-			<PlantGrass>3.0</PlantGrass>
-			<PlantTallGrass>1.7</PlantTallGrass>
-			<PlantBrambles>0.8</PlantBrambles>
-			<PlantDandelion>0.3</PlantDandelion>
-			<PlantBush>0.6</PlantBush>
-			<PlantTreeOak>0.7</PlantTreeOak>
-			<PlantTreePoplar>0.9</PlantTreePoplar>
-			<PlantRaspberry>0.1</PlantRaspberry>
-			<PlantWildHealroot>0.05</PlantWildHealroot>
+			<Plant_Grass>3.0</Plant_Grass>
+			<Plant_TallGrass>1.7</Plant_TallGrass>
+			<Plant_Brambles>0.8</Plant_Brambles>
+			<Plant_Dandelion>0.3</Plant_Dandelion>
+			<Plant_Bush>0.6</Plant_Bush>
+			<Plant_TreeOak>0.7</Plant_TreeOak>
+			<Plant_TreePoplar>0.9</Plant_TreePoplar>
+			<Plant_Raspberry>0.1</Plant_Raspberry>
+			<Plant_HealrootWild>0.05</Plant_HealrootWild>
 		</wildPlants>
 		<wildAnimals>
 			<Hare>1.0</Hare>
@@ -308,7 +329,7 @@
 			<Chinchilla>0.15</Chinchilla>
 			<Cobra>0.01</Cobra>
 			<Panther>0.03</Panther>
-			<FoxRed>0.07</FoxRed>
+			<Fox_Red>0.07</Fox_Red>
 			<Warg>0.09</Warg>
 			<Cougar>0.01</Cougar>
 			<Lynx>0.07</Lynx>
@@ -410,13 +431,16 @@
 		<workerClass>TerraFW.BiomeWorkerSpecial_TundraSkerries</workerClass>
 		<animalDensity>0.9</animalDensity>
 		<plantDensity>0.30</plantDensity>
-		<factionBaseSelectionWeight>0.01</factionBaseSelectionWeight>
-		<pathCost_spring>800</pathCost_spring>
-		<pathCost_summer>800</pathCost_summer>
-		<pathCost_fall>800</pathCost_fall>
-		<pathCost_winter>4000</pathCost_winter>
+		<factionBaseSelectionWeight>0</factionBaseSelectionWeight>
+		<movementDifficulty>1.5</movementDifficulty>
 		<texture>World/Biomes/Base_Island</texture>
-		<diseaseMtbDays>80</diseaseMtbDays>
+		<forageability>0.5</forageability>
+		<foragedFood>RawBerries</foragedFood>
+		<wildPlantRegrowDays>30</wildPlantRegrowDays>
+		<soundsAmbient>
+			<li>Ambient_NightInsects_Standard</li>
+		</soundsAmbient>
+		<diseaseMtbDays>75</diseaseMtbDays>
 		<diseases>
 			<li>
 				<diseaseInc>Disease_Flu</diseaseInc>
@@ -431,6 +455,14 @@
 				<commonality>80</commonality>
 			</li>
 			<li>
+				<diseaseInc>Disease_GutWorms</diseaseInc>
+				<commonality>40</commonality>
+			</li>
+			<li>
+				<diseaseInc>Disease_MuscleParasites</diseaseInc>
+				<commonality>60</commonality>
+			</li>
+			<li>
 				<diseaseInc>Disease_FibrousMechanites</diseaseInc>
 				<commonality>30</commonality>
 			</li>
@@ -439,11 +471,11 @@
 				<commonality>30</commonality>
 			</li>
 			<li>
-				<diseaseInc>Disease_GutWorms</diseaseInc>
-				<commonality>40</commonality>
+				<diseaseInc>Disease_AnimalFlu</diseaseInc>
+				<commonality>100</commonality>
 			</li>
 			<li>
-				<diseaseInc>Disease_MuscleParasites</diseaseInc>
+				<diseaseInc>Disease_AnimalPlague</diseaseInc>
 				<commonality>60</commonality>
 			</li>
 		</diseases>
@@ -485,8 +517,8 @@
 			</li>
 		</terrainsByFertility>
 		<baseWeatherCommonalities>
-			<Clear>18</Clear>
-			<Fog>1</Fog>
+			<Clear>16</Clear>
+			<Fog>3</Fog>
 			<Rain>2</Rain>
 			<DryThunderstorm>1</DryThunderstorm>
 			<RainyThunderstorm>1</RainyThunderstorm>
@@ -495,17 +527,17 @@
 			<SnowHard>4</SnowHard>
 		</baseWeatherCommonalities>
 		<wildPlants>
-			<PlantGrass>4.0</PlantGrass>
-			<PlantTallGrass>2.0</PlantTallGrass>
-			<PlantBrambles>1.0</PlantBrambles>
-			<PlantDandelion>0.4</PlantDandelion>
-			<PlantBush>1.0</PlantBush>
-			<PlantTreeOak>0.2</PlantTreeOak>
-			<PlantTreePoplar>0.3</PlantTreePoplar>
-			<PlantTreePine>0.6</PlantTreePine>
-			<PlantTreeBirch>0.4</PlantTreeBirch>
-			<PlantRaspberry>0.1</PlantRaspberry>
-			<PlantWildHealroot>0.05</PlantWildHealroot>
+			<Plant_Grass>4.0</Plant_Grass>
+			<Plant_TallGrass>2.0</Plant_TallGrass>
+			<Plant_Brambles>1.0</Plant_Brambles>
+			<Plant_Dandelion>0.4</Plant_Dandelion>
+			<Plant_Bush>1.0</Plant_Bush>
+			<Plant_TreeOak>0.2</Plant_TreeOak>
+			<Plant_TreePoplar>0.3</Plant_TreePoplar>
+			<Plant_TreePine>0.6</Plant_TreePine>
+			<Plant_TreeBirch>0.4</Plant_TreeBirch>
+			<Plant_Raspberry>0.1</Plant_Raspberry>
+			<Plant_HealrootWild>0.05</Plant_HealrootWild>
 		</wildPlants>
 		<wildAnimals>
 			<Hare>1.00</Hare>
@@ -517,9 +549,9 @@
 			<Raccoon>0.6</Raccoon>
 			<Emu>0.05</Emu>
 			<Ostrich>0.05</Ostrich>
-			<WolfTimber>0.12</WolfTimber>
-			<FoxRed>0.11</FoxRed>
-			<GrizzlyBear>0.09</GrizzlyBear>
+			<Wolf_Timber>0.12</Wolf_Timber>
+			<Fox_Red>0.11</Fox_Red>
+			<Bear_Grizzly>0.09</Bear_Grizzly>
 			<Warg>0.02</Warg>
 		</wildAnimals>
 		<allowedPackAnimals>
@@ -563,12 +595,16 @@
 		<workerClass>TerraFW.BiomeWorkerSpecial_Atoll</workerClass>
 		<animalDensity>1.5</animalDensity>
 		<plantDensity>0.35</plantDensity>
-		<factionBaseSelectionWeight>0.01</factionBaseSelectionWeight>
-		<pathCost_spring>1200</pathCost_spring>
-		<pathCost_summer>1200</pathCost_summer>
-		<pathCost_fall>1200</pathCost_fall>
-		<pathCost_winter>1200</pathCost_winter>
+		<hasBedrock>false</hasBedrock>
+		<factionBaseSelectionWeight>0</factionBaseSelectionWeight>
+		<movementDifficulty>1</movementDifficulty>
 		<texture>World/Biomes/Base_Island</texture>
+		<forageability>0.5</forageability>
+		<foragedFood>RawBerries</foragedFood>
+		<wildPlantRegrowDays>25</wildPlantRegrowDays>
+		<soundsAmbient>
+			<li>Ambient_NightInsects_Standard</li>
+		</soundsAmbient>
 		<diseaseMtbDays>55</diseaseMtbDays>
 		<diseases>
 			<li>
@@ -584,6 +620,14 @@
 				<commonality>100</commonality>
 			</li>
 			<li>
+				<diseaseInc>Disease_GutWorms</diseaseInc>
+				<commonality>40</commonality>
+			</li>
+			<li>
+				<diseaseInc>Disease_MuscleParasites</diseaseInc>
+				<commonality>40</commonality>
+			</li>
+			<li>
 				<diseaseInc>Disease_FibrousMechanites</diseaseInc>
 				<commonality>30</commonality>
 			</li>
@@ -592,12 +636,12 @@
 				<commonality>30</commonality>
 			</li>
 			<li>
-				<diseaseInc>Disease_GutWorms</diseaseInc>
-				<commonality>40</commonality>
+				<diseaseInc>Disease_AnimalFlu</diseaseInc>
+				<commonality>100</commonality>
 			</li>
 			<li>
-				<diseaseInc>Disease_MuscleParasites</diseaseInc>
-				<commonality>40</commonality>
+				<diseaseInc>Disease_AnimalPlague</diseaseInc>
+				<commonality>60</commonality>
 			</li>
 		</diseases>
 		<terrainsByFertility>
@@ -626,16 +670,16 @@
 			<SnowHard>4</SnowHard>
 		</baseWeatherCommonalities>
 		<wildPlants>
-			<PlantGrass>1.2</PlantGrass>
-			<PlantTallGrass>0.5</PlantTallGrass>
-			<PlantDandelion>0.1</PlantDandelion>
-			<PlantAlocasia>0.6</PlantAlocasia>
-			<PlantTreeCecropia>0.1</PlantTreeCecropia>
-			<PlantTreePalm>2.0</PlantTreePalm>
-			<PlantTreeBamboo>0.25</PlantTreeBamboo>
-			<PlantBush>0.1</PlantBush>
-			<PlantClivia>0.07</PlantClivia>
-			<PlantRaspberry>0.1</PlantRaspberry>
+			<Plant_Grass>1.2</Plant_Grass>
+			<Plant_TallGrass>0.5</Plant_TallGrass>
+			<Plant_Dandelion>0.1</Plant_Dandelion>
+			<Plant_Alocasia>0.6</Plant_Alocasia>
+			<Plant_TreeCecropia>0.1</Plant_TreeCecropia>
+			<Plant_TreePalm>2.0</Plant_TreePalm>
+			<Plant_TreeBamboo>0.25</Plant_TreeBamboo>
+			<Plant_Bush>0.1</Plant_Bush>
+			<Plant_Clivia>0.07</Plant_Clivia>
+			<Plant_Raspberry>0.1</Plant_Raspberry>
 		</wildPlants>
 		<wildAnimals>
 			<Hare>0.6</Hare>
