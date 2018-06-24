@@ -472,8 +472,8 @@
 			</li>
 		</terrainPatchMakers>
 		<baseWeatherCommonalities>
-			<Clear>18</Clear>
-			<Fog>1</Fog>
+			<Clear>16</Clear>
+			<Fog>4</Fog>
 			<Rain>2</Rain>
 			<DryThunderstorm>1</DryThunderstorm>
 			<RainyThunderstorm>1</RainyThunderstorm>
