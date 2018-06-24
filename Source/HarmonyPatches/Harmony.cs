@@ -26,7 +26,6 @@ namespace TerraFW
             harmony.Patch(AccessTools.Method(AccessTools.TypeByName("RiverMaker"), "ValidatePassage"), null, new HarmonyMethod(typeof(Harmony_RiverMaker_ValidatePassage), "Postfix"));
 
             harmony.Patch(AccessTools.Method(typeof(WorldLayer_Hills).GetNestedTypes(BindingFlags.Instance | BindingFlags.NonPublic).First(), "MoveNext"), null, null, new HarmonyMethod(typeof(Harmony_WorldLayer_Hills_Regenerate), "Transpiler"));
-
         }
 
     }
