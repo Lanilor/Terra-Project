@@ -25,7 +25,7 @@
 		<fertility>0.75</fertility>
 	</TerrainDef>
 
-	<TerrainDef ParentName="TerrainSoilBase">
+	<TerrainDef ParentName="TerrainWetBase">
 		<defName>WetBarrenSoil</defName>
 		<label>wet barren soil</label>
 		<texturePath>Terrain/Surfaces/Soil/WetBarrenSoil</texturePath>

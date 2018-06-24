@@ -25,6 +25,45 @@
 		</affordances>
 		<generatedFilth>Filth_Sand</generatedFilth>
 		<takeFootprints>True</takeFootprints>
+		<tools>
+			<li>
+				<label>sand</label>
+				<capacities>
+					<li>KickMaterialInEyes</li>
+				</capacities>
+				<hediff>SandInEyes</hediff>
+				<power>1</power>
+				<cooldownTime>15</cooldownTime>
+			</li>
+		</tools>
+	</TerrainDef>
+	
+	<TerrainDef Name="TerrainGravelBase" ParentName="TerrainBase" Abstract="True">
+		<statBases>
+			<Beauty>-1</Beauty>
+			<Cleanliness>-1</Cleanliness>
+		</statBases>
+		<scatterType>Rocky</scatterType>
+		<affordances>
+			<li>Light</li>
+			<li>Medium</li>
+			<li>Heavy</li>
+			<li>GrowSoil</li>
+			<li>Diggable</li>
+		</affordances>
+		<generatedFilth>Filth_Dirt</generatedFilth>
+		<takeFootprints>True</takeFootprints>
+		<tools>
+			<li>
+				<label>gravel</label>
+				<capacities>
+					<li>KickMaterialInEyes</li>
+				</capacities>
+				<hediff>GravelInEyes</hediff>
+				<power>0.4</power>
+				<cooldownTime>15</cooldownTime>
+			</li>
+		</tools>
 	</TerrainDef>
 	
 	<TerrainDef Name="TerrainSoilBase" ParentName="TerrainBase" Abstract="True">
@@ -42,10 +81,25 @@
 		</affordances>
 		<generatedFilth>Filth_Dirt</generatedFilth>
 		<takeFootprints>True</takeFootprints>
+		<tools>
+			<li>
+				<label>dirt</label>
+				<capacities>
+					<li>KickMaterialInEyes</li>
+				</capacities>
+				<hediff>DirtInEyes</hediff>
+				<power>0.6</power>
+				<cooldownTime>15</cooldownTime>
+			</li>
+		</tools>
 	</TerrainDef>
 	
-	<TerrainDef Name="TerrainGravelBase" ParentName="TerrainSoilBase" Abstract="True">
-		<edgeType>FadeRough</edgeType>
+	<TerrainDef Name="TerrainWetBase" ParentName="TerrainBase" Abstract="True">
+		<statBases>
+			<Beauty>-1</Beauty>
+			<Cleanliness>-1</Cleanliness>
+		</statBases>
+		<scatterType>Rocky</scatterType>
 		<affordances>
 			<li>Light</li>
 			<li>Medium</li>
@@ -53,6 +107,19 @@
 			<li>GrowSoil</li>
 			<li>Diggable</li>
 		</affordances>
+		<generatedFilth>Filth_Dirt</generatedFilth>
+		<takeFootprints>True</takeFootprints>
+		<tools>
+			<li>
+				<label>mud</label>
+				<capacities>
+					<li>KickMaterialInEyes</li>
+				</capacities>
+				<hediff>MudInEyes</hediff>
+				<power>1</power>
+				<cooldownTime>15</cooldownTime>
+			</li>
+		</tools>
 	</TerrainDef>
 	
 	<TerrainDef Name="TerrainFloodedBase" ParentName="TerrainBase" Abstract="True">
@@ -65,9 +132,25 @@
 			<li>Light</li>
 			<li>GrowSoil</li>
 			<li>Diggable</li>
+			<li>Bridgeable</li>
 		</affordances>
 		<changeable>false</changeable>
 		<generatedFilth>Filth_Dirt</generatedFilth>
+		<takeFootprints>True</takeFootprints>
+		<acceptFilth>false</acceptFilth>
+		<extinguishesFire>true</extinguishesFire>
+		<extraDeteriorationFactor>2</extraDeteriorationFactor>
+		<tools>
+			<li>
+				<label>water</label>
+				<capacities>
+					<li>KickMaterialInEyes</li>
+				</capacities>
+				<hediff>WaterInEyes</hediff>
+				<power>2</power>
+				<cooldownTime>15</cooldownTime>
+			</li>
+		</tools>
 	</TerrainDef>
 	
 	<TerrainDef Name="TerrainFrozenBase" ParentName="TerrainBase" Abstract="True">
@@ -107,35 +190,6 @@
 		<fertility>0.00</fertility>
 		<changeable>false</changeable>
 		<takeFootprints>True</takeFootprints>
-	</TerrainDef>
-
-  <!--============================= Water =============================-->
-
-	<TerrainDef Name="WaterBase" Abstract="True">
-		<waterDepthShader>Map/WaterDepth</waterDepthShader>
-		<edgeType>Water</edgeType>
-		<pathCost>300</pathCost>
-		<acceptFilth>false</acceptFilth>
-		<fertility>0</fertility>
-		<avoidWander>true</avoidWander>
-		<changeable>false</changeable>
-		<holdSnow>false</holdSnow>
-		<takeSplashes>true</takeSplashes>
-		<extinguishesFire>true</extinguishesFire>
-		<tags>
-			<li>Water</li>
-		</tags>
-		<tools>
-			<li>
-				<label>water</label>
-				<capacities>
-					<li>KickMaterialInEyes</li>
-				</capacities>
-				<hediff>WaterInEyes</hediff>
-				<power>2</power>
-				<cooldownTime>15</cooldownTime>
-			</li>
-		</tools>
 	</TerrainDef>
 
 </Defs>

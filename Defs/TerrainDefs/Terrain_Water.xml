@@ -2,23 +2,31 @@
 <Defs>
 
   <!--============================= Water sloping =============================-->
-  
+
 	<TerrainDef ParentName="WaterBase">
 		<defName>WaterSloping</defName>
 		<label>water</label>
 		<texturePath>Terrain/Surfaces/WaterSlopingRamp</texturePath>
 		<renderPrecedence>395</renderPrecedence>
-		<pathCost>9999</pathCost>
+		<pathCost>300</pathCost>
+		<changeable>false</changeable>
+		<affordances>
+			<li>Bridgeable</li>
+		</affordances>
 	</TerrainDef>
-  
+
 	<TerrainDef ParentName="WaterBase">
 		<defName>WaterOceanSloping</defName>
 		<label>ocean water</label>
 		<texturePath>Terrain/Surfaces/WaterSlopingRamp</texturePath>
 		<renderPrecedence>397</renderPrecedence>
-		<pathCost>9999</pathCost>
+		<pathCost>300</pathCost>
+		<changeable>false</changeable>
+		<affordances>
+			<li>Bridgeable</li>
+		</affordances>
 	</TerrainDef>
-  
+
 	<TerrainDef ParentName="WaterBase">
 		<defName>WaterMovingSloping</defName>
 		<label>moving water</label>
@@ -27,7 +35,15 @@
 			<_UseWaterOffset>1</_UseWaterOffset>
 		</waterDepthShaderParameters>
 		<renderPrecedence>399</renderPrecedence>
-		<pathCost>9999</pathCost>
+		<pathCost>300</pathCost>
+		<changeable>false</changeable>
+		<tags>
+			<li>River</li>
+		</tags>
+		<affordances>
+			<li>MovingFluid</li>
+			<li>Bridgeable</li>
+		</affordances>
 	</TerrainDef>
 
 </Defs>
