@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[@Name="PlantBase"]/plant/fertilityMin/text()</xpath>
+		<value>0.3</value>
+	</Operation>
+
+</Patch>

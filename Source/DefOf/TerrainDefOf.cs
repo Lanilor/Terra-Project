@@ -1,16 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using RimWorld;
+﻿using RimWorld;
 using Verse;
 
-namespace TerraFW
+namespace TerraCore
 {
 
     [DefOf]
     public static class TerrainDefOf
     {
+
+        static TerrainDefOf()
+		{
+            DefOfHelper.EnsureInitializedInCtor(typeof(TerrainDefOf));
+		}
 
         // Gravel
 
@@ -79,32 +80,76 @@ namespace TerraFW
         public static TerrainDef FloodedRichSoil;
         public static TerrainDef FrozenFloodedRichSoil;
 
+        // Plown soil
+
+        public static TerrainDef ParchedSandPlown;
+        public static TerrainDef DrySandPlown;
+        public static TerrainDef NormalSandPlown;
+        public static TerrainDef WetSandPlown;
+
+        public static TerrainDef ParchedLateritePlown;
+        public static TerrainDef DryLateritePlown;
+        public static TerrainDef NormalLateritePlown;
+        public static TerrainDef WetLateritePlown;
+
+        public static TerrainDef ParchedBarrenSoilPlown;
+        public static TerrainDef DryBarrenSoilPlown;
+        public static TerrainDef NormalBarrenSoilPlown;
+        public static TerrainDef WetBarrenSoilPlown;
+
+        public static TerrainDef ParchedSoilPlown;
+        public static TerrainDef DrySoilPlown;
+        public static TerrainDef NormalSoilPlown;
+        public static TerrainDef WetSoilPlown;
+
+        public static TerrainDef ParchedFertileSoilPlown;
+        public static TerrainDef DryFertileSoilPlown;
+        public static TerrainDef NormalFertileSoilPlown;
+        public static TerrainDef WetFertileSoilPlown;
+
+        public static TerrainDef ParchedRichSoilPlown;
+        public static TerrainDef DryRichSoilPlown;
+        public static TerrainDef NormalRichSoilPlown;
+        public static TerrainDef WetRichSoilPlown;
+
         // Water
 
         public static TerrainDef WaterDeep;
-        public static TerrainDef WaterOceanDeep;
-        public static TerrainDef WaterMovingChestDeep;
-        
         public static TerrainDef WaterSloping;
-        public static TerrainDef WaterOceanSloping;
-        public static TerrainDef WaterMovingSloping;
-
+        public static TerrainDef WaterChestDeep;
+        public static TerrainDef WaterHipDeep;
         public static TerrainDef WaterShallow;
+
+        public static TerrainDef WaterOceanDeep;
+        public static TerrainDef WaterOceanSloping;
+        public static TerrainDef WaterOceanChestDeep;
+        public static TerrainDef WaterOceanHipDeep;
         public static TerrainDef WaterOceanShallow;
+
+        public static TerrainDef WaterMovingDeep;
+        public static TerrainDef WaterMovingSloping;
+        public static TerrainDef WaterMovingChestDeep;
+        public static TerrainDef WaterMovingHipDeep;
         public static TerrainDef WaterMovingShallow;
 
         // Ice
 
         public static TerrainDef IceDeep;
-        public static TerrainDef IceOceanDeep;
-        public static TerrainDef IceMovingDeep;
-
         public static TerrainDef IceSloping;
-        public static TerrainDef IceOceanSloping;
-        public static TerrainDef IceMovingSloping;
-
+        public static TerrainDef IceChestDeep;
+        public static TerrainDef IceHipDeep;
         public static TerrainDef IceShallow;
+
+        public static TerrainDef IceOceanDeep;
+        public static TerrainDef IceOceanSloping;
+        public static TerrainDef IceOceanChestDeep;
+        public static TerrainDef IceOceanHipDeep;
         public static TerrainDef IceOceanShallow;
+
+        public static TerrainDef IceMovingDeep;
+        public static TerrainDef IceMovingSloping;
+        public static TerrainDef IceMovingChestDeep;
+        public static TerrainDef IceMovingHipDeep;
         public static TerrainDef IceMovingShallow;
 
         // Stone
@@ -121,7 +166,31 @@ namespace TerraFW
         public static TerrainDef Slate_Smooth;
         public static TerrainDef Marble_Smooth;
 
+        public static TerrainDef FloodedSandstone;
+        public static TerrainDef FrozenFloodedSandstone;
+
+        public static TerrainDef FloodedGranite;
+        public static TerrainDef FrozenFloodedGranite;
+
+        public static TerrainDef FloodedLimestone;
+        public static TerrainDef FrozenFloodedLimestone;
+
+        public static TerrainDef FloodedSlate;
+        public static TerrainDef FrozenFloodedSlate;
+
+        public static TerrainDef FloodedMarble;
+        public static TerrainDef FrozenFloodedMarble;
+
+        // Various
+
+        public static TerrainDef FloodedTerrain;
+
+        // Filler
+
+        public static TerrainDef FillerTerrain;
+        public static TerrainDef FillerFloodedTerrain;
         public static TerrainDef FillerStone;
+        public static TerrainDef FillerWater;
 
     }
 }

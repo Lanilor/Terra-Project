@@ -5,10 +5,10 @@
 		<defName>SpikeMountains</defName>
 		<label>spike mountains</label>
 		<description>An mountainous area filled with huge rock spires and a dense forest around them. Many years of physical erosion formed these strange looking rock spires. It can be hard to find good places to build larger buildings here.</description>
-		<workerClass>TerraFW.BiomeWorkerSpecial_SpikeMountains</workerClass>
+		<workerClass>TerraCore.BiomeWorkerSpecial_SpikeMountains</workerClass>
 		<animalDensity>2.3</animalDensity>
 		<plantDensity>0.65</plantDensity>
-		<factionBaseSelectionWeight>0</factionBaseSelectionWeight>
+		<settlementSelectionWeight>0</settlementSelectionWeight>
 		<movementDifficulty>2</movementDifficulty>
 		<texture>World/Biomes/SpikeMountains</texture>
 		<forageability>1</forageability>
@@ -115,11 +115,16 @@
 					<li>
 						<terrain>WaterShallow</terrain>
 						<min>0.93</min>
-						<max>1.06</max>
+						<max>1.03</max>
+					</li>
+					<li>
+						<terrain>WaterChestDeep</terrain>
+						<min>1.03</min>
+						<max>1.09</max>
 					</li>
 					<li>
 						<terrain>WaterDeep</terrain>
-						<min>1.06</min>
+						<min>1.09</min>
 						<max>999</max>
 					</li>
 				</thresholds>
@@ -145,7 +150,7 @@
 			<Plant_TreePoplar>0.7</Plant_TreePoplar>
 			<Plant_TreePine>0.4</Plant_TreePine>
 			<Plant_TreeBirch>0.2</Plant_TreeBirch>
-			<Plant_Raspberry>0.1</Plant_Raspberry>
+			<Plant_Berry>0.1</Plant_Berry>
 			<Plant_HealrootWild>0.05</Plant_HealrootWild>
 		</wildPlants>
 		<wildAnimals>
@@ -174,12 +179,12 @@
 			<li>Alpaca</li>
 		</allowedPackAnimals>
 		<modExtensions>
-			<li Class="TerraFW.ModExt_Biome_Replacement">
+			<li Class="TerraCore.ModExt_Biome_Replacement">
 				<replaceHilliness>LargeHills</replaceHilliness>
 				<sandReplacement>NormalSand</sandReplacement>
-				<gravelRelacement>DryGravel</gravelRelacement>
+				<gravelReplacement>DryGravel</gravelReplacement>
 			</li>
-			<li Class="TerraFW.ModExt_Biome_GenStep_Spikes">
+			<li Class="TerraCore.ModExt_Biome_GenStep_Spikes">
 				<baseFrequency>0.0647</baseFrequency>
 				<sineX>7</sineX>
 				<sineZ>8</sineZ>

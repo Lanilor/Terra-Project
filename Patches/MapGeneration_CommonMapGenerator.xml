@@ -18,7 +18,7 @@
 	<Operation Class="PatchOperationAdd">
 		<xpath>/Defs/GenStepDef[defName="SteamGeysers"]/genStep/validators</xpath>
 		<value>
-			<li Class="TerraFW.ScattererValidator_ExcludeBiomes">
+			<li Class="TerraCore.ScattererValidator_ExcludeBiomes">
 				<biomes>
 					<li>TundraSkerries</li>
 					<li>Atoll</li>

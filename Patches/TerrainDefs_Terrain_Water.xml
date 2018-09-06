@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/TerrainDef[@Name="WaterShallowBase"]/pathCost/text()</xpath>
+		<value>20</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/TerrainDef[defName="WaterDeep"]</xpath>
+		<value>
+			<modExtensions>
+				<li Class="TerraCore.ModExt_Terrain">
+					<waterByKey>Deep</waterByKey>
+					<moistureByKey>Max</moistureByKey>
+					<ebbTo>WaterSloping</ebbTo>
+					<ebbAtByKey>DeepMin</ebbAtByKey>
+					<freezeTo>IceDeep</freezeTo>
+					<freezeThawOffset>-7</freezeThawOffset>
+				</li>
+			</modExtensions>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/TerrainDef[defName="WaterOceanDeep"]</xpath>
+		<value>
+			<tags>
+				<li>Ocean</li>
+			</tags>
+			<modExtensions>
+				<li Class="TerraCore.ModExt_Terrain">
+					<waterByKey>Deep</waterByKey>
+					<moistureByKey>Max</moistureByKey>
+					<ebbTo>WaterOceanSloping</ebbTo>
+					<ebbAtByKey>DeepMin</ebbAtByKey>
+					<freezeTo>IceOceanDeep</freezeTo>
+					<freezeThawOffset>-19</freezeThawOffset>
+				</li>
+			</modExtensions>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/TerrainDef[defName="WaterMovingChestDeep"]</xpath>
+		<value>
+			<modExtensions>
+				<li Class="TerraCore.ModExt_Terrain">
+					<waterByKey>ChestDeep</waterByKey>
+					<moistureByKey>Max</moistureByKey>
+					<ebbTo>WaterMovingHipDeep</ebbTo>
+					<ebbAtByKey>ChestDeepMin</ebbAtByKey>
+					<floodTo>WaterMovingSloping</floodTo>
+					<floodAtByKey>ChestDeepMax</floodAtByKey>
+					<freezeTo>IceMovingChestDeep</freezeTo>
+					<freezeThawOffset>-9</freezeThawOffset>
+				</li>
+			</modExtensions>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/TerrainDef[defName="WaterShallow"]</xpath>
+		<value>
+			<modExtensions>
+				<li Class="TerraCore.ModExt_Terrain">
+					<waterByKey>Shallow</waterByKey>
+					<moistureByKey>Max</moistureByKey>
+					<ebbTo>FillerFloodedTerrain</ebbTo>
+					<ebbAtByKey>ShallowMin</ebbAtByKey>
+					<floodTo>WaterHipDeep</floodTo>
+					<floodAtByKey>ShallowMax</floodAtByKey>
+					<freezeTo>IceShallow</freezeTo>
+				</li>
+			</modExtensions>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/TerrainDef[defName="WaterOceanShallow"]</xpath>
+		<value>
+			<tags>
+				<li>Ocean</li>
+			</tags>
+			<modExtensions>
+				<li Class="TerraCore.ModExt_Terrain">
+					<waterByKey>Shallow</waterByKey>
+					<moistureByKey>Max</moistureByKey>
+					<ebbTo>FillerFloodedTerrain</ebbTo>
+					<ebbAtByKey>ShallowMin</ebbAtByKey>
+					<floodTo>WaterOceanHipDeep</floodTo>
+					<floodAtByKey>ShallowMax</floodAtByKey>
+					<freezeTo>IceOceanShallow</freezeTo>
+					<freezeThawOffset>-8</freezeThawOffset>
+				</li>
+			</modExtensions>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/TerrainDef[defName="WaterMovingShallow"]</xpath>
+		<value>
+			<modExtensions>
+				<li Class="TerraCore.ModExt_Terrain">
+					<waterByKey>Shallow</waterByKey>
+					<moistureByKey>Max</moistureByKey>
+					<ebbTo>FillerFloodedTerrain</ebbTo>
+					<ebbAtByKey>ShallowMin</ebbAtByKey>
+					<floodTo>WaterMovingHipDeep</floodTo>
+					<floodAtByKey>ShallowMax</floodAtByKey>
+					<freezeTo>IceMovingShallow</freezeTo>
+					<freezeThawOffset>-5</freezeThawOffset>
+				</li>
+			</modExtensions>
+		</value>
+	</Operation>
+  
+</Patch>

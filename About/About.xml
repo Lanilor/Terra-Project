@@ -1,22 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-	<name>Terra Core/Framework</name>
+	<name>Terra Project (Core)</name>
 	<author>Lanilor</author>
 	<url>https://github.com/Lanilor/Terra-Framework</url>
-	<targetVersion>1.0.0</targetVersion>
+	<targetVersion>0.19.0</targetVersion>
 	<description>
-&lt;size=20&gt;Terra Core/Framework&lt;/size&gt;
+&lt;size=20&gt;Terra Project (Core)&lt;/size&gt;
 
 This mod extends the map generator with various new features to generate more biome types. Currently 13 new biomes are added, including different caves and islands.
 Other mods can also use this as a framework to create their own extended biomes.
 
 Features:
-- New biomes! (click the link for more details)
+- New biomes!
 - Improved displaying of mountain ranges, caves, islands and other special biomes and world features on the world map.
 - More natural terrains are added for smoother transitions and as a common base to work on by other mods. (For example this will give the possibility to add dynamic terrain features by an extension mod currently in development.)
 - Made with the intention of being a framework so others can reuse many of the features with simple XML modding.
-
-Incompatible with:
-- Rainbeaus Configurable Maps
 	</description>
 </ModMetaData>

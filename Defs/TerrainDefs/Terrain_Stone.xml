@@ -1,15 +1,179 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-	<TerrainDef>
-		<defName>FillerStone</defName>
-		<label>filler stone</label>
-		<texturePath>Terrain/Surfaces/RoughStone</texturePath>
-		<color>(255,0,0)</color>
-		<renderPrecedence>399</renderPrecedence>
-		<edgeType>Hard</edgeType>
-		<pathCost>9999</pathCost>
-		<fertility>0</fertility>
+  <!--============================= Sandstone =============================-->
+
+	<TerrainDef ParentName="TerrainFloodedBase">
+		<defName>FloodedSandstone</defName>
+		<label>flooded sandstone</label>
+		<texturePath>Terrain/Surfaces/FloodedStone</texturePath>
+		<color>(205,186,190)</color>
+		<pathCost>10</pathCost>
+		<modExtensions>
+			<li Class="TerraCore.ModExt_Terrain">
+				<waterByKey>Flooded</waterByKey>
+				<moistureByKey>Max</moistureByKey>
+				<ebbTo>Sandstone_Rough</ebbTo>
+				<ebbAtByKey>FloodedMin</ebbAtByKey>
+				<floodTo>FillerWater</floodTo>
+				<floodAtByKey>FloodedMax</floodAtByKey>
+				<freezeTo>FrozenFloodedSandstone</freezeTo>
+			</li>
+		</modExtensions>
+	</TerrainDef>
+
+	<TerrainDef ParentName="TerrainFrozenBase">
+		<defName>FrozenFloodedSandstone</defName>
+		<label>frozen flooded sandstone</label>
+		<texturePath>Terrain/Surfaces/FrozenFloodedStone</texturePath>
+		<color>(230,208,212)</color>
+		<modExtensions>
+			<li Class="TerraCore.ModExt_Terrain">
+				<waterByKey>Flooded</waterByKey>
+				<moistureByKey>Max</moistureByKey>
+				<thawTo>FloodedSandstone</thawTo>
+			</li>
+		</modExtensions>
+	</TerrainDef>
+
+  <!--============================= Granite =============================-->
+
+	<TerrainDef ParentName="TerrainFloodedBase">
+		<defName>FloodedGranite</defName>
+		<label>flooded granite</label>
+		<texturePath>Terrain/Surfaces/FloodedStone</texturePath>
+		<color>(205,186,190)</color>
+		<pathCost>10</pathCost>
+		<modExtensions>
+			<li Class="TerraCore.ModExt_Terrain">
+				<waterByKey>Flooded</waterByKey>
+				<moistureByKey>Max</moistureByKey>
+				<ebbTo>Granite_Rough</ebbTo>
+				<ebbAtByKey>FloodedMin</ebbAtByKey>
+				<floodTo>FillerWater</floodTo>
+				<floodAtByKey>FloodedMax</floodAtByKey>
+				<freezeTo>FrozenFloodedGranite</freezeTo>
+			</li>
+		</modExtensions>
+	</TerrainDef>
+
+	<TerrainDef ParentName="TerrainFrozenBase">
+		<defName>FrozenFloodedGranite</defName>
+		<label>frozen flooded granite</label>
+		<texturePath>Terrain/Surfaces/FrozenFloodedStone</texturePath>
+		<color>(230,208,212)</color>
+		<modExtensions>
+			<li Class="TerraCore.ModExt_Terrain">
+				<waterByKey>Flooded</waterByKey>
+				<moistureByKey>Max</moistureByKey>
+				<thawTo>FloodedGranite</thawTo>
+			</li>
+		</modExtensions>
+	</TerrainDef>
+
+  <!--============================= Limestone =============================-->
+
+	<TerrainDef ParentName="TerrainFloodedBase">
+		<defName>FloodedLimestone</defName>
+		<label>flooded limestone</label>
+		<texturePath>Terrain/Surfaces/FloodedStone</texturePath>
+		<color>(205,186,190)</color>
+		<pathCost>10</pathCost>
+		<modExtensions>
+			<li Class="TerraCore.ModExt_Terrain">
+				<waterByKey>Flooded</waterByKey>
+				<moistureByKey>Max</moistureByKey>
+				<ebbTo>Limestone_Rough</ebbTo>
+				<ebbAtByKey>FloodedMin</ebbAtByKey>
+				<floodTo>FillerWater</floodTo>
+				<floodAtByKey>FloodedMax</floodAtByKey>
+				<freezeTo>FrozenFloodedLimestone</freezeTo>
+			</li>
+		</modExtensions>
+	</TerrainDef>
+
+	<TerrainDef ParentName="TerrainFrozenBase">
+		<defName>FrozenFloodedLimestone</defName>
+		<label>frozen flooded limestone</label>
+		<texturePath>Terrain/Surfaces/FrozenFloodedStone</texturePath>
+		<color>(230,208,212)</color>
+		<modExtensions>
+			<li Class="TerraCore.ModExt_Terrain">
+				<waterByKey>Flooded</waterByKey>
+				<moistureByKey>Max</moistureByKey>
+				<thawTo>FloodedLimestone</thawTo>
+			</li>
+		</modExtensions>
+	</TerrainDef>
+
+  <!--============================= Slate =============================-->
+
+	<TerrainDef ParentName="TerrainFloodedBase">
+		<defName>FloodedSlate</defName>
+		<label>flooded slate</label>
+		<texturePath>Terrain/Surfaces/FloodedStone</texturePath>
+		<color>(205,186,190)</color>
+		<pathCost>10</pathCost>
+		<modExtensions>
+			<li Class="TerraCore.ModExt_Terrain">
+				<waterByKey>Flooded</waterByKey>
+				<moistureByKey>Max</moistureByKey>
+				<ebbTo>Slate_Rough</ebbTo>
+				<ebbAtByKey>FloodedMin</ebbAtByKey>
+				<floodTo>FillerWater</floodTo>
+				<floodAtByKey>FloodedMax</floodAtByKey>
+				<freezeTo>FrozenFloodedSlate</freezeTo>
+			</li>
+		</modExtensions>
+	</TerrainDef>
+
+	<TerrainDef ParentName="TerrainFrozenBase">
+		<defName>FrozenFloodedSlate</defName>
+		<label>frozen flooded slate</label>
+		<texturePath>Terrain/Surfaces/FrozenFloodedStone</texturePath>
+		<color>(230,208,212)</color>
+		<modExtensions>
+			<li Class="TerraCore.ModExt_Terrain">
+				<waterByKey>Flooded</waterByKey>
+				<moistureByKey>Max</moistureByKey>
+				<thawTo>FloodedSlate</thawTo>
+			</li>
+		</modExtensions>
+	</TerrainDef>
+
+  <!--============================= Marble =============================-->
+
+	<TerrainDef ParentName="TerrainFloodedBase">
+		<defName>FloodedMarble</defName>
+		<label>flooded marble</label>
+		<texturePath>Terrain/Surfaces/FloodedStone</texturePath>
+		<color>(205,186,190)</color>
+		<pathCost>10</pathCost>
+		<modExtensions>
+			<li Class="TerraCore.ModExt_Terrain">
+				<waterByKey>Flooded</waterByKey>
+				<moistureByKey>Max</moistureByKey>
+				<ebbTo>Marble_Rough</ebbTo>
+				<ebbAtByKey>FloodedMin</ebbAtByKey>
+				<floodTo>FillerWater</floodTo>
+				<floodAtByKey>FloodedMax</floodAtByKey>
+				<freezeTo>FrozenFloodedMarble</freezeTo>
+			</li>
+		</modExtensions>
+	</TerrainDef>
+
+	<TerrainDef ParentName="TerrainFrozenBase">
+		<defName>FrozenFloodedMarble</defName>
+		<label>frozen flooded marble</label>
+		<texturePath>Terrain/Surfaces/FrozenFloodedStone</texturePath>
+		<color>(230,208,212)</color>
+		<modExtensions>
+			<li Class="TerraCore.ModExt_Terrain">
+				<waterByKey>Flooded</waterByKey>
+				<moistureByKey>Max</moistureByKey>
+				<thawTo>FloodedMarble</thawTo>
+			</li>
+		</modExtensions>
 	</TerrainDef>
 
 </Defs>

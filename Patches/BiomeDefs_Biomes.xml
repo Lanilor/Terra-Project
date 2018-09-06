@@ -17,7 +17,7 @@
 							<max>0.90</max>
 						</li>
 						<li>
-							<terrain>WaterOceanSloping</terrain>
+							<terrain>WaterOceanChestDeep</terrain>
 							<min>0.90</min>
 							<max>0.99</max>
 						</li>
@@ -35,9 +35,9 @@
 		<xpath>/Defs/BiomeDef[defName="SeaIce"]</xpath>
 		<value>
 			<modExtensions>
-				<li Class="TerraFW.ModExt_Biome_Replacement">
+				<li Class="TerraCore.ModExt_Biome_Replacement">
 					<sandReplacement>NormalSand</sandReplacement>
-					<gravelRelacement>DryBarrenGravel</gravelRelacement>
+					<gravelReplacement>DryBarrenGravel</gravelReplacement>
 				</li>
 			</modExtensions>
 		</value>
@@ -57,7 +57,7 @@
 							<max>0.90</max>
 						</li>
 						<li>
-							<terrain>WaterOceanSloping</terrain>
+							<terrain>WaterOceanChestDeep</terrain>
 							<min>0.90</min>
 							<max>0.99</max>
 						</li>
@@ -75,9 +75,9 @@
 		<xpath>/Defs/BiomeDef[defName="IceSheet"]</xpath>
 		<value>
 			<modExtensions>
-				<li Class="TerraFW.ModExt_Biome_Replacement">
+				<li Class="TerraCore.ModExt_Biome_Replacement">
 					<sandReplacement>NormalSand</sandReplacement>
-					<gravelRelacement>DryBarrenGravel</gravelRelacement>
+					<gravelReplacement>DryBarrenGravel</gravelReplacement>
 				</li>
 			</modExtensions>
 		</value>
@@ -152,9 +152,9 @@
 		<xpath>/Defs/BiomeDef[defName="Tundra"]</xpath>
 		<value>
 			<modExtensions>
-				<li Class="TerraFW.ModExt_Biome_Replacement">
+				<li Class="TerraCore.ModExt_Biome_Replacement">
 					<sandReplacement>NormalSand</sandReplacement>
-					<gravelRelacement>DryBarrenGravel</gravelRelacement>
+					<gravelReplacement>DryBarrenGravel</gravelReplacement>
 				</li>
 			</modExtensions>
 		</value>
@@ -211,7 +211,7 @@
 							<max>0.96</max>
 						</li>
 						<li>
-							<terrain>WaterSloping</terrain>
+							<terrain>WaterChestDeep</terrain>
 							<min>0.96</min>
 							<max>1.04</max>
 						</li>
@@ -249,9 +249,9 @@
 		<xpath>/Defs/BiomeDef[defName="BorealForest"]</xpath>
 		<value>
 			<modExtensions>
-				<li Class="TerraFW.ModExt_Biome_Replacement">
+				<li Class="TerraCore.ModExt_Biome_Replacement">
 					<sandReplacement>NormalSand</sandReplacement>
-					<gravelRelacement>DryGravel</gravelRelacement>
+					<gravelReplacement>DryGravel</gravelReplacement>
 				</li>
 			</modExtensions>
 		</value>
@@ -351,9 +351,9 @@
 		<xpath>/Defs/BiomeDef[defName="ColdBog"]</xpath>
 		<value>
 			<modExtensions>
-				<li Class="TerraFW.ModExt_Biome_Replacement">
+				<li Class="TerraCore.ModExt_Biome_Replacement">
 					<sandReplacement>WetSand</sandReplacement>
-					<gravelRelacement>NormalGravel</gravelRelacement>
+					<gravelReplacement>NormalGravel</gravelReplacement>
 				</li>
 			</modExtensions>
 		</value>
@@ -407,7 +407,7 @@
 							<max>1.01</max>
 						</li>
 						<li>
-							<terrain>WaterSloping</terrain>
+							<terrain>WaterChestDeep</terrain>
 							<min>1.01</min>
 							<max>1.07</max>
 						</li>
@@ -450,9 +450,9 @@
 		<xpath>/Defs/BiomeDef[defName="TemperateForest"]</xpath>
 		<value>
 			<modExtensions>
-				<li Class="TerraFW.ModExt_Biome_Replacement">
+				<li Class="TerraCore.ModExt_Biome_Replacement">
 					<sandReplacement>NormalSand</sandReplacement>
-					<gravelRelacement>DryGravel</gravelRelacement>
+					<gravelReplacement>DryGravel</gravelReplacement>
 				</li>
 			</modExtensions>
 		</value>
@@ -562,9 +562,9 @@
 		<xpath>/Defs/BiomeDef[defName="TemperateSwamp"]</xpath>
 		<value>
 			<modExtensions>
-				<li Class="TerraFW.ModExt_Biome_Replacement">
+				<li Class="TerraCore.ModExt_Biome_Replacement">
 					<sandReplacement>WetSand</sandReplacement>
-					<gravelRelacement>NormalGravel</gravelRelacement>
+					<gravelReplacement>NormalGravel</gravelReplacement>
 				</li>
 			</modExtensions>
 		</value>
@@ -631,9 +631,9 @@
 		<xpath>/Defs/BiomeDef[defName="TropicalRainforest"]</xpath>
 		<value>
 			<modExtensions>
-				<li Class="TerraFW.ModExt_Biome_Replacement">
+				<li Class="TerraCore.ModExt_Biome_Replacement">
 					<sandReplacement>NormalSand</sandReplacement>
-					<gravelRelacement>DryGravel</gravelRelacement>
+					<gravelReplacement>DryGravel</gravelReplacement>
 				</li>
 			</modExtensions>
 		</value>
@@ -728,9 +728,9 @@
 		<xpath>/Defs/BiomeDef[defName="TropicalSwamp"]</xpath>
 		<value>
 			<modExtensions>
-				<li Class="TerraFW.ModExt_Biome_Replacement">
+				<li Class="TerraCore.ModExt_Biome_Replacement">
 					<sandReplacement>WetSand</sandReplacement>
-					<gravelRelacement>NormalGravel</gravelRelacement>
+					<gravelReplacement>NormalGravel</gravelReplacement>
 				</li>
 			</modExtensions>
 		</value>
@@ -832,9 +832,9 @@
 		<xpath>/Defs/BiomeDef[defName="AridShrubland"]</xpath>
 		<value>
 			<modExtensions>
-				<li Class="TerraFW.ModExt_Biome_Replacement">
+				<li Class="TerraCore.ModExt_Biome_Replacement">
 					<sandReplacement>DrySand</sandReplacement>
-					<gravelRelacement>ParchedBarrenGravel</gravelRelacement>
+					<gravelReplacement>ParchedBarrenGravel</gravelReplacement>
 				</li>
 			</modExtensions>
 		</value>
@@ -899,9 +899,9 @@
 		<xpath>/Defs/BiomeDef[defName="Desert"]</xpath>
 		<value>
 			<modExtensions>
-				<li Class="TerraFW.ModExt_Biome_Replacement">
+				<li Class="TerraCore.ModExt_Biome_Replacement">
 					<sandReplacement>DrySand</sandReplacement>
-					<gravelRelacement>ParchedBarrenGravel</gravelRelacement>
+					<gravelReplacement>ParchedBarrenGravel</gravelReplacement>
 				</li>
 			</modExtensions>
 		</value>
@@ -951,9 +951,9 @@
 		<xpath>/Defs/BiomeDef[defName="ExtremeDesert"]</xpath>
 		<value>
 			<modExtensions>
-				<li Class="TerraFW.ModExt_Biome_Replacement">
+				<li Class="TerraCore.ModExt_Biome_Replacement">
 					<sandReplacement>DrySand</sandReplacement>
-					<gravelRelacement>ParchedBarrenGravel</gravelRelacement>
+					<gravelReplacement>ParchedBarrenGravel</gravelReplacement>
 				</li>
 			</modExtensions>
 		</value>

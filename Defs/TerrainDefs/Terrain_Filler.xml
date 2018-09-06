@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<TerrainDef>
+		<defName>FillerTerrain</defName>
+		<label>filler terrain</label>
+		<texturePath>Terrain/Surfaces/RoughStone</texturePath>
+		<color>(255,255,255)</color>
+		<renderPrecedence>399</renderPrecedence>
+		<edgeType>Hard</edgeType>
+		<pathCost>9999</pathCost>
+		<fertility>0</fertility>
+		<modExtensions>
+			<li Class="TerraCore.ModExt_Terrain">
+				<floodTo>FloodedTerrain</floodTo>
+				<floodAtByKey>WetMax</floodAtByKey>
+			</li>
+		</modExtensions>
+	</TerrainDef>
+
+	<TerrainDef>
+		<defName>FillerFloodedTerrain</defName>
+		<label>filler flooded terrain</label>
+		<texturePath>Terrain/Surfaces/RoughStone</texturePath>
+		<color>(127,127,255)</color>
+		<renderPrecedence>399</renderPrecedence>
+		<edgeType>Hard</edgeType>
+		<pathCost>9999</pathCost>
+		<fertility>0</fertility>
+	</TerrainDef>
+
+	<TerrainDef>
+		<defName>FillerStone</defName>
+		<label>filler stone</label>
+		<texturePath>Terrain/Surfaces/RoughStone</texturePath>
+		<color>(255,0,0)</color>
+		<renderPrecedence>399</renderPrecedence>
+		<edgeType>Hard</edgeType>
+		<pathCost>9999</pathCost>
+		<fertility>0</fertility>
+	</TerrainDef>
+	
+	<TerrainDef>
+		<defName>FillerWater</defName>
+		<label>filler water</label>
+		<texturePath>Terrain/Surfaces/RoughStone</texturePath>
+		<color>(0,0,255)</color>
+		<renderPrecedence>399</renderPrecedence>
+		<edgeType>Hard</edgeType>
+		<pathCost>9999</pathCost>
+		<fertility>0</fertility>
+	</TerrainDef>
+
+</Defs>

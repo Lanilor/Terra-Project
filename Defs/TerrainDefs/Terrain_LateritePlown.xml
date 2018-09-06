@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<TerrainDef ParentName="TerrainSandBase">
+		<defName>ParchedLateritePlown</defName>
+		<label>parched laterite (plown)</label>
+		<texturePath>Terrain/Surfaces/SoilPlown/ParchedLateritePlown</texturePath>
+		<pathCost>8</pathCost>
+		<fertility>0.50</fertility>
+		<modExtensions>
+			<li Class="TerraCore.ModExt_Terrain">
+				<moistureByKey>Parched</moistureByKey>
+				<wetTo>DryLateritePlown</wetTo>
+				<wetAtByKey>ParchedMax</wetAtByKey>
+				<parchTo>ParchedSandPlown</parchTo>
+				<parchAtByKey>LateriteMin</parchAtByKey>
+				<enrichTo>ParchedBarrenSoilPlown</enrichTo>
+				<enrichAtByKey>LateriteMax</enrichAtByKey>
+				<floodTo>FloodedLaterite</floodTo>
+				<floodAtByKey>WetMax</floodAtByKey>
+				<normalizeTo>ParchedLaterite</normalizeTo>
+				<normalizeAfterDays>20</normalizeAfterDays>
+			</li>
+		</modExtensions>
+	</TerrainDef>
+
+	<TerrainDef ParentName="TerrainSandBase">
+		<defName>DryLateritePlown</defName>
+		<label>dry laterite (plown)</label>
+		<texturePath>Terrain/Surfaces/SoilPlown/DryLateritePlown</texturePath>
+		<pathCost>6</pathCost>
+		<fertility>0.50</fertility>
+		<modExtensions>
+			<li Class="TerraCore.ModExt_Terrain">
+				<moistureByKey>Dry</moistureByKey>
+				<dryTo>ParchedLateritePlown</dryTo>
+				<dryAtByKey>DryMin</dryAtByKey>
+				<wetTo>NormalLateritePlown</wetTo>
+				<wetAtByKey>DryMax</wetAtByKey>
+				<parchTo>DrySandPlown</parchTo>
+				<parchAtByKey>LateriteMin</parchAtByKey>
+				<enrichTo>DryBarrenSoilPlown</enrichTo>
+				<enrichAtByKey>LateriteMax</enrichAtByKey>
+				<floodTo>FloodedLaterite</floodTo>
+				<floodAtByKey>WetMax</floodAtByKey>
+				<normalizeTo>DryLateritePlown</normalizeTo>
+				<normalizeAfterDays>20</normalizeAfterDays>
+			</li>
+		</modExtensions>
+	</TerrainDef>
+
+	<TerrainDef ParentName="TerrainSandBase">
+		<defName>NormalLateritePlown</defName>
+		<label>laterite (plown)</label>
+		<texturePath>Terrain/Surfaces/SoilPlown/NormalLateritePlown</texturePath>
+		<pathCost>5</pathCost>
+		<fertility>0.50</fertility>
+		<modExtensions>
+			<li Class="TerraCore.ModExt_Terrain">
+				<moistureByKey>Normal</moistureByKey>
+				<dryTo>DryLateritePlown</dryTo>
+				<dryAtByKey>NormalMin</dryAtByKey>
+				<wetTo>WetLateritePlown</wetTo>
+				<wetAtByKey>NormalMax</wetAtByKey>
+				<parchTo>NormalSandPlown</parchTo>
+				<parchAtByKey>LateriteMin</parchAtByKey>
+				<enrichTo>NormalBarrenSoilPlown</enrichTo>
+				<enrichAtByKey>LateriteMax</enrichAtByKey>
+				<floodTo>FloodedLaterite</floodTo>
+				<floodAtByKey>WetMax</floodAtByKey>
+				<normalizeTo>NormalLaterite</normalizeTo>
+				<normalizeAfterDays>20</normalizeAfterDays>
+			</li>
+		</modExtensions>
+	</TerrainDef>
+
+	<TerrainDef ParentName="TerrainSandBase">
+		<defName>WetLateritePlown</defName>
+		<label>wet laterite (plown)</label>
+		<texturePath>Terrain/Surfaces/SoilPlown/WetLateritePlown</texturePath>
+		<pathCost>10</pathCost>
+		<fertility>0.50</fertility>
+		<modExtensions>
+			<li Class="TerraCore.ModExt_Terrain">
+				<moistureByKey>Wet</moistureByKey>
+				<dryTo>NormalLateritePlown</dryTo>
+				<dryAtByKey>WetMin</dryAtByKey>
+				<parchTo>WetSandPlown</parchTo>
+				<parchAtByKey>LateriteMin</parchAtByKey>
+				<enrichTo>WetBarrenSoilPlown</enrichTo>
+				<enrichAtByKey>LateriteMax</enrichAtByKey>
+				<floodTo>FloodedLaterite</floodTo>
+				<floodAtByKey>WetMax</floodAtByKey>
+				<normalizeTo>WetLaterite</normalizeTo>
+				<normalizeAfterDays>20</normalizeAfterDays>
+			</li>
+		</modExtensions>
+	</TerrainDef>
+
+</Defs>

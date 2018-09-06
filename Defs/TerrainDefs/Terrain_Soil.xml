@@ -7,6 +7,20 @@
 		<texturePath>Terrain/Surfaces/Soil/ParchedSoil</texturePath>
 		<pathCost>7</pathCost>
 		<fertility>1.00</fertility>
+		<modExtensions>
+			<li Class="TerraCore.ModExt_Terrain">
+				<moistureByKey>Parched</moistureByKey>
+				<wetTo>DrySoil</wetTo>
+				<wetAtByKey>ParchedMax</wetAtByKey>
+				<parchTo>ParchedBarrenSoil</parchTo>
+				<parchAtByKey>NormalMin</parchAtByKey>
+				<enrichTo>ParchedFertileSoil</enrichTo>
+				<enrichAtByKey>NormalMax</enrichAtByKey>
+				<floodTo>FloodedSoil</floodTo>
+				<floodAtByKey>WetMax</floodAtByKey>
+				<plowTo>ParchedSoilPlown</plowTo>
+			</li>
+		</modExtensions>
 	</TerrainDef>
 
 	<TerrainDef ParentName="TerrainSoilBase">
@@ -15,6 +29,22 @@
 		<texturePath>Terrain/Surfaces/Soil/DrySoil</texturePath>
 		<pathCost>5</pathCost>
 		<fertility>1.00</fertility>
+		<modExtensions>
+			<li Class="TerraCore.ModExt_Terrain">
+				<moistureByKey>Dry</moistureByKey>
+				<dryTo>ParchedSoil</dryTo>
+				<dryAtByKey>DryMin</dryAtByKey>
+				<wetTo>NormalSoil</wetTo>
+				<wetAtByKey>DryMax</wetAtByKey>
+				<parchTo>DryBarrenSoil</parchTo>
+				<parchAtByKey>NormalMin</parchAtByKey>
+				<enrichTo>DryFertileSoil</enrichTo>
+				<enrichAtByKey>NormalMax</enrichAtByKey>
+				<floodTo>FloodedSoil</floodTo>
+				<floodAtByKey>WetMax</floodAtByKey>
+				<plowTo>DrySoilPlown</plowTo>
+			</li>
+		</modExtensions>
 	</TerrainDef>
 
 	<TerrainDef ParentName="TerrainSoilBase">
@@ -23,6 +53,22 @@
 		<texturePath>Terrain/Surfaces/Soil/NormalSoil</texturePath>
 		<pathCost>4</pathCost>
 		<fertility>1.00</fertility>
+		<modExtensions>
+			<li Class="TerraCore.ModExt_Terrain">
+				<moistureByKey>Normal</moistureByKey>
+				<dryTo>DrySoil</dryTo>
+				<dryAtByKey>NormalMin</dryAtByKey>
+				<wetTo>WetSoil</wetTo>
+				<wetAtByKey>NormalMax</wetAtByKey>
+				<parchTo>NormalBarrenSoil</parchTo>
+				<parchAtByKey>NormalMin</parchAtByKey>
+				<enrichTo>NormalFertileSoil</enrichTo>
+				<enrichAtByKey>NormalMax</enrichAtByKey>
+				<floodTo>FloodedSoil</floodTo>
+				<floodAtByKey>WetMax</floodAtByKey>
+				<plowTo>NormalSoilPlown</plowTo>
+			</li>
+		</modExtensions>
 	</TerrainDef>
 
 	<TerrainDef ParentName="TerrainWetBase">
@@ -31,6 +77,20 @@
 		<texturePath>Terrain/Surfaces/Soil/WetSoil</texturePath>
 		<pathCost>9</pathCost>
 		<fertility>1.00</fertility>
+		<modExtensions>
+			<li Class="TerraCore.ModExt_Terrain">
+				<moistureByKey>Wet</moistureByKey>
+				<dryTo>NormalSoil</dryTo>
+				<dryAtByKey>WetMin</dryAtByKey>
+				<parchTo>WetBarrenSoil</parchTo>
+				<parchAtByKey>NormalMin</parchAtByKey>
+				<enrichTo>WetFertileSoil</enrichTo>
+				<enrichAtByKey>NormalMax</enrichAtByKey>
+				<floodTo>FloodedSoil</floodTo>
+				<floodAtByKey>WetMax</floodAtByKey>
+				<plowTo>WetSoilPlown</plowTo>
+			</li>
+		</modExtensions>
 	</TerrainDef>
 
 	<TerrainDef ParentName="TerrainFloodedBase">
@@ -39,6 +99,21 @@
 		<texturePath>Terrain/Surfaces/Soil/FloodedSoil</texturePath>
 		<pathCost>13</pathCost>
 		<fertility>1.00</fertility>
+		<modExtensions>
+			<li Class="TerraCore.ModExt_Terrain">
+				<waterByKey>Flooded</waterByKey>
+				<moistureByKey>Max</moistureByKey>
+				<parchTo>FloodedBarrenSoil</parchTo>
+				<parchAtByKey>NormalMin</parchAtByKey>
+				<enrichTo>FloodedFertileSoil</enrichTo>
+				<enrichAtByKey>NormalMax</enrichAtByKey>
+				<ebbTo>WetSoil</ebbTo>
+				<ebbAtByKey>FloodedMin</ebbAtByKey>
+				<floodTo>FillerWater</floodTo>
+				<floodAtByKey>FloodedMax</floodAtByKey>
+				<freezeTo>FrozenFloodedSoil</freezeTo>
+			</li>
+		</modExtensions>
 	</TerrainDef>
 
 	<TerrainDef ParentName="TerrainFrozenBase">
@@ -46,6 +121,13 @@
 		<label>frozen flooded soil</label>
 		<texturePath>Terrain/Surfaces/Soil/FrozenFloodedSoil</texturePath>
 		<pathCost>6</pathCost>
+		<modExtensions>
+			<li Class="TerraCore.ModExt_Terrain">
+				<waterByKey>Flooded</waterByKey>
+				<moistureByKey>Max</moistureByKey>
+				<thawTo>FloodedSoil</thawTo>
+			</li>
+		</modExtensions>
 	</TerrainDef>
 
 </Defs>

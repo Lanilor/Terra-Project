@@ -7,6 +7,20 @@
 		<texturePath>Terrain/Surfaces/Soil/ParchedFertileSoil</texturePath>
 		<pathCost>7</pathCost>
 		<fertility>1.20</fertility>
+		<modExtensions>
+			<li Class="TerraCore.ModExt_Terrain">
+				<moistureByKey>Parched</moistureByKey>
+				<wetTo>DryFertileSoil</wetTo>
+				<wetAtByKey>ParchedMax</wetAtByKey>
+				<parchTo>ParchedSoil</parchTo>
+				<parchAtByKey>FertileMin</parchAtByKey>
+				<enrichTo>ParchedRichSoil</enrichTo>
+				<enrichAtByKey>FertileMax</enrichAtByKey>
+				<floodTo>FloodedFertileSoil</floodTo>
+				<floodAtByKey>WetMax</floodAtByKey>
+				<plowTo>ParchedFertileSoilPlown</plowTo>
+			</li>
+		</modExtensions>
 	</TerrainDef>
 
 	<TerrainDef ParentName="TerrainSoilBase">
@@ -15,6 +29,22 @@
 		<texturePath>Terrain/Surfaces/Soil/DryFertileSoil</texturePath>
 		<pathCost>5</pathCost>
 		<fertility>1.20</fertility>
+		<modExtensions>
+			<li Class="TerraCore.ModExt_Terrain">
+				<moistureByKey>Dry</moistureByKey>
+				<dryTo>ParchedFertileSoil</dryTo>
+				<dryAtByKey>DryMin</dryAtByKey>
+				<wetTo>NormalFertileSoil</wetTo>
+				<wetAtByKey>DryMax</wetAtByKey>
+				<parchTo>DrySoil</parchTo>
+				<parchAtByKey>FertileMin</parchAtByKey>
+				<enrichTo>DryRichSoil</enrichTo>
+				<enrichAtByKey>FertileMax</enrichAtByKey>
+				<floodTo>FloodedFertileSoil</floodTo>
+				<floodAtByKey>WetMax</floodAtByKey>
+				<plowTo>DryFertileSoilPlown</plowTo>
+			</li>
+		</modExtensions>
 	</TerrainDef>
 
 	<TerrainDef ParentName="TerrainSoilBase">
@@ -23,6 +53,22 @@
 		<texturePath>Terrain/Surfaces/Soil/NormalFertileSoil</texturePath>
 		<pathCost>4</pathCost>
 		<fertility>1.20</fertility>
+		<modExtensions>
+			<li Class="TerraCore.ModExt_Terrain">
+				<moistureByKey>Normal</moistureByKey>
+				<dryTo>DryFertileSoil</dryTo>
+				<dryAtByKey>NormalMin</dryAtByKey>
+				<wetTo>WetFertileSoil</wetTo>
+				<wetAtByKey>NormalMax</wetAtByKey>
+				<parchTo>NormalSoil</parchTo>
+				<parchAtByKey>FertileMin</parchAtByKey>
+				<enrichTo>NormalRichSoil</enrichTo>
+				<enrichAtByKey>FertileMax</enrichAtByKey>
+				<floodTo>FloodedFertileSoil</floodTo>
+				<floodAtByKey>WetMax</floodAtByKey>
+				<plowTo>NormalFertileSoilPlown</plowTo>
+			</li>
+		</modExtensions>
 	</TerrainDef>
 
 	<TerrainDef ParentName="TerrainWetBase">
@@ -31,6 +77,20 @@
 		<texturePath>Terrain/Surfaces/Soil/WetFertileSoil</texturePath>
 		<pathCost>9</pathCost>
 		<fertility>1.20</fertility>
+		<modExtensions>
+			<li Class="TerraCore.ModExt_Terrain">
+				<moistureByKey>Wet</moistureByKey>
+				<dryTo>NormalFertileSoil</dryTo>
+				<dryAtByKey>WetMin</dryAtByKey>
+				<parchTo>WetSoil</parchTo>
+				<parchAtByKey>FertileMin</parchAtByKey>
+				<enrichTo>WetRichSoil</enrichTo>
+				<enrichAtByKey>FertileMax</enrichAtByKey>
+				<floodTo>FloodedFertileSoil</floodTo>
+				<floodAtByKey>WetMax</floodAtByKey>
+				<plowTo>WetFertileSoilPlown</plowTo>
+			</li>
+		</modExtensions>
 	</TerrainDef>
 
 	<TerrainDef ParentName="TerrainFloodedBase">
@@ -39,6 +99,21 @@
 		<texturePath>Terrain/Surfaces/Soil/FloodedFertileSoil</texturePath>
 		<pathCost>13</pathCost>
 		<fertility>1.20</fertility>
+		<modExtensions>
+			<li Class="TerraCore.ModExt_Terrain">
+				<waterByKey>Flooded</waterByKey>
+				<moistureByKey>Max</moistureByKey>
+				<parchTo>FloodedSoil</parchTo>
+				<parchAtByKey>FertileMin</parchAtByKey>
+				<enrichTo>FloodedRichSoil</enrichTo>
+				<enrichAtByKey>FertileMax</enrichAtByKey>
+				<ebbTo>WetFertileSoil</ebbTo>
+				<ebbAtByKey>FloodedMin</ebbAtByKey>
+				<floodTo>FillerWater</floodTo>
+				<floodAtByKey>FloodedMax</floodAtByKey>
+				<freezeTo>FrozenFloodedFertileSoil</freezeTo>
+			</li>
+		</modExtensions>
 	</TerrainDef>
 
 	<TerrainDef ParentName="TerrainFrozenBase">
@@ -46,6 +121,13 @@
 		<label>frozen flooded fertile soil</label>
 		<texturePath>Terrain/Surfaces/Soil/FrozenFloodedFertileSoil</texturePath>
 		<pathCost>6</pathCost>
+		<modExtensions>
+			<li Class="TerraCore.ModExt_Terrain">
+				<waterByKey>Flooded</waterByKey>
+				<moistureByKey>Max</moistureByKey>
+				<thawTo>FloodedFertileSoil</thawTo>
+			</li>
+		</modExtensions>
 	</TerrainDef>
 
 </Defs>

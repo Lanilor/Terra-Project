@@ -5,10 +5,10 @@
 		<defName>Savanna</defName>
 		<label>savanna</label>
 		<description>A mildly dry region, but not dry enough to become an arid shrubland. The plains are covered with a thick grass layer. Bushes and trees are widely spaced to maintain an open canopy but enough to give this area a light foresty though. Despite the good abount of plants the soil is mostly dry and animals roam the area on the search for food and water.</description>
-		<workerClass>TerraFW.BiomeWorker_Savanna</workerClass>
+		<workerClass>TerraCore.BiomeWorker_Savanna</workerClass>
 		<animalDensity>2.0</animalDensity>
 		<plantDensity>0.20</plantDensity>
-		<factionBaseSelectionWeight>0.95</factionBaseSelectionWeight>
+		<settlementSelectionWeight>0.95</settlementSelectionWeight>
 		<movementDifficulty>1</movementDifficulty>
 		<texture>World/Biomes/Savanna</texture>
 		<forageability>0.75</forageability>
@@ -144,7 +144,7 @@
 			<Plant_SaguaroCactus>0.2</Plant_SaguaroCactus>
 			<Plant_TreeDrago>0.8</Plant_TreeDrago>
 			<Plant_TreePoplar>0.15</Plant_TreePoplar>
-			<Plant_Raspberry>0.05</Plant_Raspberry>
+			<Plant_Berry>0.05</Plant_Berry>
 		</wildPlants>
 		<wildAnimals>
 			<Hare>0.3</Hare>
@@ -183,9 +183,9 @@
 			<li>Alpaca</li>
 		</allowedPackAnimals>
 		<modExtensions>
-			<li Class="TerraFW.ModExt_Biome_Replacement">
+			<li Class="TerraCore.ModExt_Biome_Replacement">
 				<sandReplacement>DrySand</sandReplacement>
-				<gravelRelacement>ParchedBarrenGravel</gravelRelacement>
+				<gravelReplacement>ParchedBarrenGravel</gravelReplacement>
 			</li>
 		</modExtensions>
 	</BiomeDef>
@@ -194,10 +194,10 @@
 		<defName>Oasis</defName>
 		<label>oasis</label>
 		<description>An oasis somewhere in the seemingly endless deserts. Plants grow around water spots and animals gather near them to drink and search for a shaded place.</description>
-		<workerClass>TerraFW.BiomeWorkerSpecial_Oasis</workerClass>
+		<workerClass>TerraCore.BiomeWorkerSpecial_Oasis</workerClass>
 		<animalDensity>1.5</animalDensity>
 		<plantDensity>0.21</plantDensity>
-		<factionBaseSelectionWeight>0</factionBaseSelectionWeight>
+		<settlementSelectionWeight>0</settlementSelectionWeight>
 		<movementDifficulty>1</movementDifficulty>
 		<texture>World/Biomes/Oasis</texture>
 		<forageability>0.75</forageability>
@@ -353,7 +353,7 @@
 			<Plant_TreePalm>0.8</Plant_TreePalm>
 			<Plant_TreePoplar>0.05</Plant_TreePoplar>
 			<Plant_Agave>0.2</Plant_Agave>
-			<Plant_Raspberry>0.1</Plant_Raspberry>
+			<Plant_Berry>0.1</Plant_Berry>
 		</wildPlants>
 		<wildAnimals>
 			<Muffalo>0.2</Muffalo>
@@ -386,11 +386,11 @@
 			<li>Dromedary</li>
 		</allowedPackAnimals>
 		<modExtensions>
-			<li Class="TerraFW.ModExt_Biome_Replacement">
+			<li Class="TerraCore.ModExt_Biome_Replacement">
 				<sandReplacement>DrySand</sandReplacement>
-				<gravelRelacement>ParchedBarrenGravel</gravelRelacement>
+				<gravelReplacement>ParchedBarrenGravel</gravelReplacement>
 			</li>
-			<li Class="TerraFW.ModExt_Biome_GenStep_Islands">
+			<li Class="TerraCore.ModExt_Biome_GenStep_Islands">
 				<baseFrequency>0.03</baseFrequency>
 				<islandCountMin>3</islandCountMin>
 				<islandCountMax>5</islandCountMax>

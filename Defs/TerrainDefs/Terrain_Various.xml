@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--============================= Generic terrain =============================-->
+
+	<TerrainDef ParentName="TerrainFloodedBase">
+		<defName>FloodedTerrain</defName>
+		<label>flooded terrain</label>
+		<texturePath>Terrain/Surfaces/FloodedStone</texturePath>
+		<color>(203,206,220)</color>
+		<pathCost>10</pathCost>
+		<modExtensions>
+			<li Class="TerraCore.ModExt_Terrain">
+				<waterByKey>Flooded</waterByKey>
+				<moistureByKey>Max</moistureByKey>
+				<ebbTo>FillerTerrain</ebbTo>
+				<ebbAtByKey>FloodedMin</ebbAtByKey>
+				<floodTo>FillerWater</floodTo>
+				<floodAtByKey>FloodedMax</floodAtByKey>
+				<freezeTo>FrozenFloodedTerrain</freezeTo>
+			</li>
+		</modExtensions>
+	</TerrainDef>
+
+	<TerrainDef ParentName="TerrainFrozenBase">
+		<defName>FrozenFloodedTerrain</defName>
+		<label>frozen flooded terrain</label>
+		<texturePath>Terrain/Surfaces/FrozenFloodedStone</texturePath>
+		<color>(203,206,220)</color>
+		<modExtensions>
+			<li Class="TerraCore.ModExt_Terrain">
+				<waterByKey>Flooded</waterByKey>
+				<moistureByKey>Max</moistureByKey>
+				<thawTo>FloodedTerrain</thawTo>
+			</li>
+		</modExtensions>
+	</TerrainDef>
+
+</Defs>

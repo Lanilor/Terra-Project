@@ -1,61 +1,204 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <!--============================= Ice deep =============================-->
-
-  <!-- Normal level -->
+  <!--============================= Ice (normal) =============================-->
 
 	<TerrainDef ParentName="IceBase">
 		<defName>IceDeep</defName>
 		<label>ice (deep water)</label>
+		<modExtensions>
+			<li Class="TerraCore.ModExt_Terrain">
+				<waterByKey>Deep</waterByKey>
+				<moistureByKey>Max</moistureByKey>
+				<thawTo>WaterDeep</thawTo>
+				<freezeThawOffset>-7</freezeThawOffset>
+			</li>
+		</modExtensions>
 	</TerrainDef>
-
-	<TerrainDef ParentName="IceBase">
-		<defName>IceOceanDeep</defName>
-		<label>ice (deep ocean water)</label>
-	</TerrainDef>
-
-	<TerrainDef ParentName="IceBase">
-		<defName>IceMovingDeep</defName>
-		<label>ice (deep moving water)</label>
-	</TerrainDef>
-
-  <!--============================= Ice sloping =============================-->
-
-  <!-- Normal level -->
 
 	<TerrainDef ParentName="IceBase">
 		<defName>IceSloping</defName>
 		<label>ice (sloping water)</label>
+		<modExtensions>
+			<li Class="TerraCore.ModExt_Terrain">
+				<waterByKey>Sloping</waterByKey>
+				<moistureByKey>Max</moistureByKey>
+				<thawTo>WaterSloping</thawTo>
+				<freezeThawOffset>-5</freezeThawOffset>
+			</li>
+		</modExtensions>
 	</TerrainDef>
 
 	<TerrainDef ParentName="IceBase">
-		<defName>IceOceanSloping</defName>
-		<label>ice (sloping ocean water)</label>
+		<defName>IceChestDeep</defName>
+		<label>ice (chest-deep water)</label>
+		<modExtensions>
+			<li Class="TerraCore.ModExt_Terrain">
+				<waterByKey>ChestDeep</waterByKey>
+				<moistureByKey>Max</moistureByKey>
+				<thawTo>WaterChestDeep</thawTo>
+				<freezeThawOffset>-3</freezeThawOffset>
+			</li>
+		</modExtensions>
 	</TerrainDef>
 
 	<TerrainDef ParentName="IceBase">
-		<defName>IceMovingSloping</defName>
-		<label>ice (sloping moving water)</label>
+		<defName>IceHipDeep</defName>
+		<label>ice (hip-deep water)</label>
+		<modExtensions>
+			<li Class="TerraCore.ModExt_Terrain">
+				<waterByKey>HipDeep</waterByKey>
+				<moistureByKey>Max</moistureByKey>
+				<thawTo>WaterHipDeep</thawTo>
+				<freezeThawOffset>-1</freezeThawOffset>
+			</li>
+		</modExtensions>
 	</TerrainDef>
-
-  <!--============================= Ice shallow =============================-->
-
-  <!-- Normal level -->
 
 	<TerrainDef ParentName="IceBase">
 		<defName>IceShallow</defName>
 		<label>ice (shallow water)</label>
+		<modExtensions>
+			<li Class="TerraCore.ModExt_Terrain">
+				<waterByKey>Shallow</waterByKey>
+				<moistureByKey>Max</moistureByKey>
+				<thawTo>WaterShallow</thawTo>
+			</li>
+		</modExtensions>
+	</TerrainDef>
+
+  <!--============================= Ice (ocean) =============================-->
+
+	<TerrainDef ParentName="IceBase">
+		<defName>IceOceanDeep</defName>
+		<label>ice (deep ocean water)</label>
+		<modExtensions>
+			<li Class="TerraCore.ModExt_Terrain">
+				<waterByKey>Deep</waterByKey>
+				<moistureByKey>Max</moistureByKey>
+				<thawTo>WaterOceanDeep</thawTo>
+				<freezeThawOffset>-19</freezeThawOffset>
+			</li>
+		</modExtensions>
+	</TerrainDef>
+	
+	<TerrainDef ParentName="IceBase">
+		<defName>IceOceanSloping</defName>
+		<label>ice (sloping ocean water)</label>
+		<modExtensions>
+			<li Class="TerraCore.ModExt_Terrain">
+				<waterByKey>Sloping</waterByKey>
+				<moistureByKey>Max</moistureByKey>
+				<thawTo>WaterOceanSloping</thawTo>
+				<freezeThawOffset>-16</freezeThawOffset>
+			</li>
+		</modExtensions>
+	</TerrainDef>
+
+	<TerrainDef ParentName="IceBase">
+		<defName>IceOceanChestDeep</defName>
+		<label>ice (chest-deep ocean water)</label>
+		<modExtensions>
+			<li Class="TerraCore.ModExt_Terrain">
+				<waterByKey>ChestDeep</waterByKey>
+				<moistureByKey>Max</moistureByKey>
+				<thawTo>WaterOceanChestDeep</thawTo>
+				<freezeThawOffset>-13</freezeThawOffset>
+			</li>
+		</modExtensions>
+	</TerrainDef>
+
+	<TerrainDef ParentName="IceBase">
+		<defName>IceOceanHipDeep</defName>
+		<label>ice (hip-deep ocean water)</label>
+		<modExtensions>
+			<li Class="TerraCore.ModExt_Terrain">
+				<waterByKey>HipDeep</waterByKey>
+				<moistureByKey>Max</moistureByKey>
+				<thawTo>WaterOceanHipDeep</thawTo>
+				<freezeThawOffset>-10</freezeThawOffset>
+			</li>
+		</modExtensions>
 	</TerrainDef>
 
 	<TerrainDef ParentName="IceBase">
 		<defName>IceOceanShallow</defName>
 		<label>ice (shallow ocean water)</label>
+		<modExtensions>
+			<li Class="TerraCore.ModExt_Terrain">
+				<waterByKey>Shallow</waterByKey>
+				<moistureByKey>Max</moistureByKey>
+				<thawTo>WaterOceanShallow</thawTo>
+				<freezeThawOffset>-8</freezeThawOffset>
+			</li>
+		</modExtensions>
+	</TerrainDef>
+
+  <!--============================= Ice (moving) =============================-->
+
+	<TerrainDef ParentName="IceBase">
+		<defName>IceMovingDeep</defName>
+		<label>ice (deep moving water)</label>
+		<modExtensions>
+			<li Class="TerraCore.ModExt_Terrain">
+				<waterByKey>Deep</waterByKey>
+				<moistureByKey>Max</moistureByKey>
+				<thawTo>WaterMovingDeep</thawTo>
+				<freezeThawOffset>-11</freezeThawOffset>
+			</li>
+		</modExtensions>
+	</TerrainDef>
+
+	<TerrainDef ParentName="IceBase">
+		<defName>IceMovingSloping</defName>
+		<label>ice (sloping moving water)</label>
+		<modExtensions>
+			<li Class="TerraCore.ModExt_Terrain">
+				<waterByKey>Sloping</waterByKey>
+				<moistureByKey>Max</moistureByKey>
+				<thawTo>WaterMovingSloping</thawTo>
+				<freezeThawOffset>-10</freezeThawOffset>
+			</li>
+		</modExtensions>
+	</TerrainDef>
+
+	<TerrainDef ParentName="IceBase">
+		<defName>IceMovingChestDeep</defName>
+		<label>ice (chest-deep moving water)</label>
+		<modExtensions>
+			<li Class="TerraCore.ModExt_Terrain">
+				<waterByKey>ChestDeep</waterByKey>
+				<moistureByKey>Max</moistureByKey>
+				<thawTo>WaterMovingChestDeep</thawTo>
+				<freezeThawOffset>-9</freezeThawOffset>
+			</li>
+		</modExtensions>
+	</TerrainDef>
+
+	<TerrainDef ParentName="IceBase">
+		<defName>IceMovingHipDeep</defName>
+		<label>ice (hip-deep moving water)</label>
+		<modExtensions>
+			<li Class="TerraCore.ModExt_Terrain">
+				<waterByKey>HipDeep</waterByKey>
+				<moistureByKey>Max</moistureByKey>
+				<thawTo>WaterMovingHipDeep</thawTo>
+				<freezeThawOffset>-7</freezeThawOffset>
+			</li>
+		</modExtensions>
 	</TerrainDef>
 
 	<TerrainDef ParentName="IceBase">
 		<defName>IceMovingShallow</defName>
 		<label>ice (shallow moving water)</label>
+		<modExtensions>
+			<li Class="TerraCore.ModExt_Terrain">
+				<waterByKey>Shallow</waterByKey>
+				<moistureByKey>Max</moistureByKey>
+				<thawTo>WaterMovingShallow</thawTo>
+				<freezeThawOffset>-5</freezeThawOffset>
+			</li>
+		</modExtensions>
 	</TerrainDef>
 
 </Defs>

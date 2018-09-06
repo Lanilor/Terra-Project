@@ -132,6 +132,7 @@
 			<li>Light</li>
 			<li>GrowSoil</li>
 			<li>Diggable</li>
+			<li>ShallowWater</li>
 			<li>Bridgeable</li>
 		</affordances>
 		<changeable>false</changeable>
@@ -154,6 +155,7 @@
 	</TerrainDef>
 	
 	<TerrainDef Name="TerrainFrozenBase" ParentName="TerrainBase" Abstract="True">
+		<pathCost>12</pathCost>
 		<statBases>
 			<Beauty>-1</Beauty>
 		</statBases>
@@ -187,7 +189,7 @@
 			<li>Diggable</li>
 		</affordances>
 		<generatedFilth>Filth_Dirt</generatedFilth>
-		<fertility>0.00</fertility>
+		<fertility>0</fertility>
 		<changeable>false</changeable>
 		<takeFootprints>True</takeFootprints>
 	</TerrainDef>

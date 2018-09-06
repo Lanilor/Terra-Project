@@ -5,10 +5,10 @@
 		<defName>CaveOasis</defName>
 		<label>cave oasis</label>
 		<description>An underground cave system. Some geological activities a long time ago formed these huge cave cambers and tunnels deep under the surface where no light reaches. Now the chambers are partly filled with water which sustains an unique ecosystem of mushrooms and animals that are adaped to live deep under the surface.</description>
-		<workerClass>TerraFW.BiomeWorkerSpecial_CaveOasis</workerClass>
+		<workerClass>TerraCore.BiomeWorkerSpecial_CaveOasis</workerClass>
 		<animalDensity>0.14</animalDensity>
-		<plantDensity>0.16</plantDensity>
-		<factionBaseSelectionWeight>0</factionBaseSelectionWeight>
+		<plantDensity>0.42</plantDensity>
+		<settlementSelectionWeight>0</settlementSelectionWeight>
 		<movementDifficulty>3</movementDifficulty>
 		<texture>World/Biomes/CaveOasis</texture>
 		<forageability>0.75</forageability>
@@ -111,24 +111,24 @@
 			<li>Muffalo</li>
 		</allowedPackAnimals>
 		<modExtensions>
-			<li Class="TerraFW.ModExt_Biome_Replacement">
+			<li Class="TerraCore.ModExt_Biome_Replacement">
 				<replaceHilliness>Mountainous</replaceHilliness>
 				<sandReplacement>NormalSand</sandReplacement>
-				<gravelRelacement>NormalBarrenGravel</gravelRelacement>
+				<gravelReplacement>NormalBarrenGravel</gravelReplacement>
 			</li>
-			<li Class="TerraFW.ModExt_Biome_FeatureControl">
+			<li Class="TerraCore.ModExt_Biome_FeatureControl">
 				<overwriteCaves>Remove</overwriteCaves>
 				<overwriteHives>Remove</overwriteHives>
 				<overwriteRoof>FullStable</overwriteRoof>
 				<roomCalculationType>NoSky</roomCalculationType>
 				<overwriteRockChunks>AddToCaves</overwriteRockChunks>
 			</li>
-			<li Class="TerraFW.ModExt_Biome_Temperature">
+			<li Class="TerraCore.ModExt_Biome_Temperature">
 				<tempStableValue>24</tempStableValue>
 				<tempStableWeight>0.8</tempStableWeight>
 				<tempOffset>0</tempOffset>
 			</li>
-			<li Class="TerraFW.ModExt_Biome_GenStep_Islands">
+			<li Class="TerraCore.ModExt_Biome_GenStep_Islands">
 				<baseFrequency>0.03</baseFrequency>
 				<islandCountMin>3</islandCountMin>
 				<islandCountMax>5</islandCountMax>
@@ -162,7 +162,7 @@
 					</li>
 				</terrainPatchMakerByIslandFertility>
 			</li>
-			<li Class="TerraFW.ModExt_Biome_GenStep_BetterCaves">
+			<li Class="TerraCore.ModExt_Biome_GenStep_BetterCaves">
 				<startTunnelsPer10k>1.9</startTunnelsPer10k>
 				<maxStartTunnelsPerRockGroup>7</maxStartTunnelsPerRockGroup>
 				<tunnelStartWidthFactorMin>0.6</tunnelStartWidthFactorMin>
@@ -211,10 +211,10 @@
 		<defName>TunnelworldCave</defName>
 		<label>tunnelworld cave</label>
 		<description>An underground cave system of many interconnected tunnels. These areas were mostly formed naturally due to plate tectonics or other geological activity. These tunnels are deep under a solid rock ceiling, so no sunlight will every reach here. Therefore plants are non-existent, instead various mushrooms inhabitate the caves, some of them even provide a little light for animals to live in this region.</description>
-		<workerClass>TerraFW.BiomeWorkerSpecial_TunnelworldCave</workerClass>
+		<workerClass>TerraCore.BiomeWorkerSpecial_TunnelworldCave</workerClass>
 		<animalDensity>0.10</animalDensity>
-		<plantDensity>0.075</plantDensity>
-		<factionBaseSelectionWeight>0</factionBaseSelectionWeight>
+		<plantDensity>0.14</plantDensity>
+		<settlementSelectionWeight>0</settlementSelectionWeight>
 		<movementDifficulty>3</movementDifficulty>
 		<texture>World/Biomes/TunnelworldCave</texture>
 		<forageability>0.5</forageability>
@@ -312,24 +312,24 @@
 			<li>Muffalo</li>
 		</allowedPackAnimals>
 		<modExtensions>
-			<li Class="TerraFW.ModExt_Biome_Replacement">
+			<li Class="TerraCore.ModExt_Biome_Replacement">
 				<replaceHilliness>Mountainous</replaceHilliness>
 				<sandReplacement>NormalSand</sandReplacement>
-				<gravelRelacement>NormalBarrenGravel</gravelRelacement>
+				<gravelReplacement>NormalBarrenGravel</gravelReplacement>
 			</li>
-			<li Class="TerraFW.ModExt_Biome_FeatureControl">
+			<li Class="TerraCore.ModExt_Biome_FeatureControl">
 				<overwriteCaves>Remove</overwriteCaves>
 				<overwriteHives>Remove</overwriteHives>
 				<overwriteRoof>FullStable</overwriteRoof>
 				<roomCalculationType>NoSky</roomCalculationType>
 				<overwriteRockChunks>AddToCaves</overwriteRockChunks>
 			</li>
-			<li Class="TerraFW.ModExt_Biome_Temperature">
+			<li Class="TerraCore.ModExt_Biome_Temperature">
 				<tempStableValue>14</tempStableValue>
 				<tempStableWeight>0.7</tempStableWeight>
 				<tempOffset>0</tempOffset>
 			</li>
-			<li Class="TerraFW.ModExt_Biome_GenStep_Islands">
+			<li Class="TerraCore.ModExt_Biome_GenStep_Islands">
 				<baseFrequency>0.03</baseFrequency>
 				<islandCountMin>2</islandCountMin>
 				<islandCountMax>3</islandCountMax>
@@ -344,7 +344,7 @@
 				<noiseElevationPreOffset>0</noiseElevationPreOffset>
 				<elevationPostOffset>0.55</elevationPostOffset>
 			</li>
-			<li Class="TerraFW.ModExt_Biome_GenStep_BetterCaves">
+			<li Class="TerraCore.ModExt_Biome_GenStep_BetterCaves">
 				<startTunnelsPer10k>1.9</startTunnelsPer10k>
 				<maxStartTunnelsPerRockGroup>7</maxStartTunnelsPerRockGroup>
 				<tunnelStartWidthFactorMin>0.55</tunnelStartWidthFactorMin>
@@ -393,10 +393,10 @@
 		<defName>CaveEntrance</defName>
 		<label>cave entrance</label>
 		<description>The entrance area to an underground cave system on the side of a mountain. Various tunnels are heading deep into the mountain, some of them may lead to another exit or exotic underground biotopes. The outside area is very rocky, so only plants and animals accustomed to the harsh terrain live here.</description>
-		<workerClass>TerraFW.BiomeWorkerSpecial_CaveEntrance</workerClass>
+		<workerClass>TerraCore.BiomeWorkerSpecial_CaveEntrance</workerClass>
 		<animalDensity>0.05</animalDensity>
-		<plantDensity>0.12</plantDensity>
-		<factionBaseSelectionWeight>0</factionBaseSelectionWeight>
+		<plantDensity>0.18</plantDensity>
+		<settlementSelectionWeight>0</settlementSelectionWeight>
 		<movementDifficulty>3</movementDifficulty>
 		<texture>World/Biomes/CaveEntrance</texture>
 		<forageability>0.5</forageability>
@@ -490,7 +490,7 @@
 			<Plant_TreePoplar>0.1</Plant_TreePoplar>
 			<Plant_TreePine>0.3</Plant_TreePine>
 			<Plant_TreeBirch>0.1</Plant_TreeBirch>
-			<Plant_Raspberry>0.01</Plant_Raspberry>
+			<Plant_Berry>0.01</Plant_Berry>
 			<Plant_HealrootWild>0.005</Plant_HealrootWild>
 		</wildPlants>
 		<wildAnimals>
@@ -515,18 +515,18 @@
 			<li>Muffalo</li>
 		</allowedPackAnimals>
 		<modExtensions>
-			<li Class="TerraFW.ModExt_Biome_Replacement">
+			<li Class="TerraCore.ModExt_Biome_Replacement">
 				<replaceHilliness>Mountainous</replaceHilliness>
 				<sandReplacement>NormalSand</sandReplacement>
-				<gravelRelacement>NormalBarrenGravel</gravelRelacement>
+				<gravelReplacement>NormalBarrenGravel</gravelReplacement>
 			</li>
-			<li Class="TerraFW.ModExt_Biome_FeatureControl">
+			<li Class="TerraCore.ModExt_Biome_FeatureControl">
 				<overwriteCaves>Remove</overwriteCaves>
 				<overwriteHives>Remove</overwriteHives>
 				<overwriteRoof>DeepOnlyStable</overwriteRoof>
 				<overwriteRockChunks>AddToCaves</overwriteRockChunks>
 			</li>
-			<li Class="TerraFW.ModExt_Biome_GenStep_Spikes">
+			<li Class="TerraCore.ModExt_Biome_GenStep_Spikes">
 				<baseFrequency>0.030</baseFrequency>
 				<sineX>17</sineX>
 				<sineZ>18</sineZ>
@@ -537,7 +537,7 @@
 				<noiseElevationPreOffset>0.65</noiseElevationPreOffset>
 				<elevationPostOffset>0</elevationPostOffset>
 			</li>
-			<li Class="TerraFW.ModExt_Biome_GenStep_Ravine">
+			<li Class="TerraCore.ModExt_Biome_GenStep_Ravine">
 				<ravineWidthMin>0.25</ravineWidthMin>
 				<ravineWidthMax>0.30</ravineWidthMax>
 				<slopeFactor>1.7</slopeFactor>
@@ -554,7 +554,7 @@
 				<noiseElevationPreOffset>0</noiseElevationPreOffset>
 				<elevationPostOffset>-0.08</elevationPostOffset>
 			</li>
-			<li Class="TerraFW.ModExt_Biome_GenStep_BetterCaves">
+			<li Class="TerraCore.ModExt_Biome_GenStep_BetterCaves">
 				<startTunnelsPer10k>4.1</startTunnelsPer10k>
 				<maxStartTunnelsPerRockGroup>9</maxStartTunnelsPerRockGroup>
 				<tunnelStartWidthFactorMin>0.45</tunnelStartWidthFactorMin>
@@ -607,10 +607,10 @@
 		<defName>InfestedMountains</defName>
 		<label>infested mountains</label>
 		<description>An underground cave system interconnecting many sinkholes of various sizes. The sinkholes are of natural origin, the cave tunnels not so much. Gigant insectoids dug these tunnels over years and now live in them. Don't get tempted by the peaceful look of the overgrown sinkholes, this area is dangerous!</description>
-		<workerClass>TerraFW.BiomeWorkerSpecial_InfestedMountains</workerClass>
+		<workerClass>TerraCore.BiomeWorkerSpecial_InfestedMountains</workerClass>
 		<animalDensity>0.4</animalDensity>
 		<plantDensity>0.35</plantDensity>
-		<factionBaseSelectionWeight>0</factionBaseSelectionWeight>
+		<settlementSelectionWeight>0</settlementSelectionWeight>
 		<movementDifficulty>4</movementDifficulty>
 		<texture>World/Biomes/InfestedMountains</texture>
 		<forageability>0.5</forageability>
@@ -690,7 +690,7 @@
 			<Plant_Bush>0.3</Plant_Bush>
 			<Plant_Clivia>0.1</Plant_Clivia>
 			<Plant_Rafflesia>0.02</Plant_Rafflesia>
-			<Plant_Raspberry>0.01</Plant_Raspberry>
+			<Plant_Berry>0.01</Plant_Berry>
 			<Plant_HealrootWild>0.005</Plant_HealrootWild>
 		</wildPlants>
 		<wildAnimals>
@@ -709,12 +709,12 @@
 			<li>Muffalo</li>
 		</allowedPackAnimals>
 		<modExtensions>
-			<li Class="TerraFW.ModExt_Biome_Replacement">
+			<li Class="TerraCore.ModExt_Biome_Replacement">
 				<replaceHilliness>Mountainous</replaceHilliness>
 				<sandReplacement>NormalSand</sandReplacement>
-				<gravelRelacement>NormalGravel</gravelRelacement>
+				<gravelReplacement>NormalGravel</gravelReplacement>
 			</li>
-			<li Class="TerraFW.ModExt_Biome_FeatureControl">
+			<li Class="TerraCore.ModExt_Biome_FeatureControl">
 				<overwriteCaves>Remove</overwriteCaves>
 				<overwriteHives>AddActive</overwriteHives>
 				<additionalHivesScaling>30</additionalHivesScaling>
@@ -722,12 +722,12 @@
 				<roomCalculationType>LessSky</roomCalculationType>
 				<overwriteRockChunks>AddToCaves</overwriteRockChunks>
 			</li>
-			<li Class="TerraFW.ModExt_Biome_Temperature">
+			<li Class="TerraCore.ModExt_Biome_Temperature">
 				<tempStableValue>19</tempStableValue>
 				<tempStableWeight>0.3</tempStableWeight>
 				<tempOffset>0</tempOffset>
 			</li>
-			<li Class="TerraFW.ModExt_Biome_GenStep_Spikes">
+			<li Class="TerraCore.ModExt_Biome_GenStep_Spikes">
 				<baseFrequency>0.030</baseFrequency>
 				<sineX>16</sineX>
 				<sineZ>15</sineZ>
@@ -738,7 +738,7 @@
 				<noiseElevationPreOffset>0.65</noiseElevationPreOffset>
 				<elevationPostOffset>0.90</elevationPostOffset>
 			</li>
-			<li Class="TerraFW.ModExt_Biome_GenStep_BetterCaves">
+			<li Class="TerraCore.ModExt_Biome_GenStep_BetterCaves">
 				<startTunnelsPer10k>1.7</startTunnelsPer10k>
 				<maxStartTunnelsPerRockGroup>11</maxStartTunnelsPerRockGroup>
 				<tunnelStartWidthFactorMin>0.4</tunnelStartWidthFactorMin>
@@ -781,11 +781,11 @@
 	<BiomeDef>
 		<defName>DeepRavine</defName>
 		<label>deep ravine</label>
-		<description>A deep ravine formed by a river over many millenials. Various tunnels, partly natural and partly made by living creatures, are starting in the ravine and head deep into the mountain. The area is now dry after the river dried up, so plants are rare and only animals adapted to the environment live here.</description>
-		<workerClass>TerraFW.BiomeWorkerSpecial_DeepRavine</workerClass>
+		<description>A deep ravine formed by a river over many millenia. Various tunnels, partly natural and partly made by living creatures, are starting in the ravine and head deep into the mountain. The area is now dry after the river dried up, so plants are rare and only animals adapted to the environment live here.</description>
+		<workerClass>TerraCore.BiomeWorkerSpecial_DeepRavine</workerClass>
 		<animalDensity>0.9</animalDensity>
-		<plantDensity>0.10</plantDensity>
-		<factionBaseSelectionWeight>0</factionBaseSelectionWeight>
+		<plantDensity>0.12</plantDensity>
+		<settlementSelectionWeight>0</settlementSelectionWeight>
 		<movementDifficulty>2</movementDifficulty>
 		<texture>World/Biomes/DeepRavine</texture>
 		<forageability>0.25</forageability>
@@ -940,22 +940,22 @@
 			<li>Dromedary</li>
 		</allowedPackAnimals>
 		<modExtensions>
-			<li Class="TerraFW.ModExt_Biome_Replacement">
+			<li Class="TerraCore.ModExt_Biome_Replacement">
 				<replaceHilliness>LargeHills</replaceHilliness>
 				<sandReplacement>DrySand</sandReplacement>
-				<gravelRelacement>ParchedBarrenGravel</gravelRelacement>
+				<gravelReplacement>ParchedBarrenGravel</gravelReplacement>
 			</li>
-			<li Class="TerraFW.ModExt_Biome_FeatureControl">
+			<li Class="TerraCore.ModExt_Biome_FeatureControl">
 				<overwriteCaves>Remove</overwriteCaves>
 				<overwriteRoof>DeepOnlyStable</overwriteRoof>
 				<overwriteRockChunks>AddToCaves</overwriteRockChunks>
 			</li>
-			<li Class="TerraFW.ModExt_Biome_Temperature">
+			<li Class="TerraCore.ModExt_Biome_Temperature">
 				<tempStableValue>16</tempStableValue>
 				<tempStableWeight>0.2</tempStableWeight>
 				<tempOffset>0</tempOffset>
 			</li>
-			<li Class="TerraFW.ModExt_Biome_GenStep_Spikes">
+			<li Class="TerraCore.ModExt_Biome_GenStep_Spikes">
 				<baseFrequency>0.040</baseFrequency>
 				<sineX>3</sineX>
 				<sineZ>4</sineZ>
@@ -966,7 +966,7 @@
 				<noiseElevationPreOffset>0.65</noiseElevationPreOffset>
 				<elevationPostOffset>0.02</elevationPostOffset>
 			</li>
-			<li Class="TerraFW.ModExt_Biome_GenStep_Ravine">
+			<li Class="TerraCore.ModExt_Biome_GenStep_Ravine">
 				<ravineWidthMin>0.09</ravineWidthMin>
 				<ravineWidthMax>0.12</ravineWidthMax>
 				<slopeFactor>1.7</slopeFactor>
@@ -982,7 +982,7 @@
 				<noiseElevationPreOffset>0</noiseElevationPreOffset>
 				<elevationPostOffset>-0.08</elevationPostOffset>
 			</li>
-			<li Class="TerraFW.ModExt_Biome_GenStep_BetterCaves">
+			<li Class="TerraCore.ModExt_Biome_GenStep_BetterCaves">
 				<startTunnelsPer10k>3.6</startTunnelsPer10k>
 				<maxStartTunnelsPerRockGroup>5</maxStartTunnelsPerRockGroup>
 				<tunnelStartWidthFactorMin>0.4</tunnelStartWidthFactorMin>

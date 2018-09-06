@@ -5,11 +5,11 @@
 		<defName>DesertHighPlains</defName>
 		<label>desert high plains</label>
 		<description>A deserty elevated plain which is often more rocky than the common sand deserts. These remote areas have little to no vegetation because of the weather and soil conditions, even through the climate is quite humid. Some animals live in these harsh conditions or roam for fresh water.</description>
-		<workerClass>TerraFW.BiomeWorker_DesertHighPlains</workerClass>
+		<workerClass>TerraCore.BiomeWorker_DesertHighPlains</workerClass>
 		<animalDensity>0.15</animalDensity>
 		<plantDensity>0.006</plantDensity>
 		<hasVirtualPlants>false</hasVirtualPlants>
-		<factionBaseSelectionWeight>0.50</factionBaseSelectionWeight>
+		<settlementSelectionWeight>0.50</settlementSelectionWeight>
 		<movementDifficulty>1</movementDifficulty>
 		<texture>World/Biomes/DesertHighPlains</texture>
 		<forageability>0</forageability>
@@ -141,11 +141,11 @@
 			<li>Muffalo</li>
 		</allowedPackAnimals>
 		<modExtensions>
-			<li Class="TerraFW.ModExt_Biome_Replacement">
+			<li Class="TerraCore.ModExt_Biome_Replacement">
 				<sandReplacement>NormalSand</sandReplacement>
-				<gravelRelacement>DryBarrenGravel</gravelRelacement>
+				<gravelReplacement>DryBarrenGravel</gravelReplacement>
 			</li>
-			<li Class="TerraFW.ModExt_Biome_GenStep_Spikes">
+			<li Class="TerraCore.ModExt_Biome_GenStep_Spikes">
 				<baseFrequency>0.0647</baseFrequency>
 				<sineX>11</sineX>
 				<sineZ>12</sineZ>

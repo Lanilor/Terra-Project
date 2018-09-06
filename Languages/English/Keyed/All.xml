@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+  <!-- General -->
+
+  <!-- Various -->
+	<Moisture>Moisture</Moisture>
+	<MoistShort>moist.</MoistShort>
+	<WaterLevel>Water level</WaterLevel>
+	<WaterLevelShort>water lev.</WaterLevelShort>
+
+  <!-- UI -->
+	<ShowElevationOverlayToggleButton>Toggle elevation overlay.</ShowElevationOverlayToggleButton>
+	<ShowFertilityOverlayToggleButton>Toggle fertility overlay.</ShowFertilityOverlayToggleButton>
+	<ShowMoistureOverlayToggleButton>Toggle ground moisture overlay.</ShowMoistureOverlayToggleButton>
+	<ShowWaterOverlayToggleButton>Toggle water level overlay.</ShowWaterOverlayToggleButton>
+	<ShowPlowOverlayToggleButton>Toggle overlay of soil plown status.</ShowPlowOverlayToggleButton>
+
+  <!-- Messages -->
+	<MessageThingDiedOfWrongTerrain>{0} was destroyed by terrain effects.</MessageThingDiedOfWrongTerrain>
+
+  <!-- Designation -->
+
+  <!-- Settings -->
+	<Terra_SettingsCategory>Terra Project</Terra_SettingsCategory>
+	<Terra_SettingsDynamicRiversLabel>Dynamic rivers</Terra_SettingsDynamicRiversLabel>
+	<Terra_SettingsDynamicRiversDescription>Enable this if you want rivers to have dynamic water levels. For example floods after a big rain or low water during a drought in summer. Note that changing this mid game / for existing saves can result in weird behaviour.</Terra_SettingsDynamicRiversDescription>
+	<Terra_SettingsDynamicOceansLabel>Dynamic oceans (tides)</Terra_SettingsDynamicOceansLabel>
+	<Terra_SettingsDynamicOceansDescription>Enable this if you want oceans to have dynamic water levels, mainly tides. Note that changing this mid game / for existing saves can result in weird behaviour.</Terra_SettingsDynamicOceansDescription>
+
+</LanguageData>

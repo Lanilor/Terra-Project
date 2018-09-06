@@ -5,10 +5,10 @@
 		<defName>Archipelago</defName>
 		<label>archipelago</label>
 		<description>A group of small islands in the ocean. Sometimes they are connected via shallow banks so people or animals can roam to another island. Mostly small animals and birds live here to fit the cramped environment.</description>
-		<workerClass>TerraFW.BiomeWorkerSpecial_Archipelago</workerClass>
+		<workerClass>TerraCore.BiomeWorkerSpecial_Archipelago</workerClass>
 		<animalDensity>1.9</animalDensity>
-		<plantDensity>0.45</plantDensity>
-		<factionBaseSelectionWeight>0</factionBaseSelectionWeight>
+		<plantDensity>0.51</plantDensity>
+		<settlementSelectionWeight>0</settlementSelectionWeight>
 		<movementDifficulty>1.5</movementDifficulty>
 		<texture>World/Biomes/Base_Island</texture>
 		<forageability>1</forageability>
@@ -63,7 +63,7 @@
 				<max>0.45</max>
 			</li>
 			<li>
-				<terrain>WaterOceanSloping</terrain>
+				<terrain>WaterOceanChestDeep</terrain>
 				<min>0.45</min>
 				<max>0.62</max>
 			</li>
@@ -102,7 +102,7 @@
 			<Plant_Bush>0.6</Plant_Bush>
 			<Plant_TreeOak>0.5</Plant_TreeOak>
 			<Plant_TreePoplar>0.5</Plant_TreePoplar>
-			<Plant_Raspberry>0.1</Plant_Raspberry>
+			<Plant_Berry>0.1</Plant_Berry>
 			<Plant_HealrootWild>0.05</Plant_HealrootWild>
 		</wildPlants>
 		<wildAnimals>
@@ -134,17 +134,17 @@
 			<li>Muffalo</li>
 		</allowedPackAnimals>
 		<modExtensions>
-			<li Class="TerraFW.ModExt_Biome_Replacement">
+			<li Class="TerraCore.ModExt_Biome_Replacement">
 				<replaceElevation>true</replaceElevation>
 				<elevationMin>10</elevationMin>
 				<elevationMax>50</elevationMax>
 				<sandReplacement>WaterOceanShallow</sandReplacement>
-				<gravelRelacement>DryGravel</gravelRelacement>
+				<gravelReplacement>DryGravel</gravelReplacement>
 			</li>
-			<li Class="TerraFW.ModExt_Biome_FeatureControl">
+			<li Class="TerraCore.ModExt_Biome_FeatureControl">
 				<removeBeach>true</removeBeach>
 			</li>
-			<li Class="TerraFW.ModExt_Biome_GenStep_Ravine">
+			<li Class="TerraCore.ModExt_Biome_GenStep_Ravine">
 				<ravineWidthMin>0.10</ravineWidthMin>
 				<ravineWidthMax>0.14</ravineWidthMax>
 				<slopeFactor>0.75</slopeFactor>
@@ -160,7 +160,7 @@
 				<noiseFertilityPreOffset>0</noiseFertilityPreOffset>
 				<fertilityPostOffset>0</fertilityPostOffset>
 			</li>
-			<li Class="TerraFW.ModExt_Biome_GenStep_Islands">
+			<li Class="TerraCore.ModExt_Biome_GenStep_Islands">
 				<baseFrequency>0.015</baseFrequency>
 				<islandCountMin>6</islandCountMin>
 				<islandCountMax>9</islandCountMax>
@@ -178,7 +178,7 @@
 				<noiseFertilityPreOffset>0</noiseFertilityPreOffset>
 				<terrainPatchMakerByIslandFertility>
 					<li>
-						<terrain>WaterOceanSloping</terrain>
+						<terrain>WaterOceanChestDeep</terrain>
 						<min>0.32</min>
 						<max>0.45</max>
 						<excludeOverwrite><li>WaterOceanShallow</li></excludeOverwrite>
@@ -222,10 +222,10 @@
 		<defName>VolcanicIsland</defName>
 		<label>volcanic island</label>
 		<description>A dormant volcano reaching out of the water. A small costal area is buildable, then that the mountain starts reaches into the sky. A mixed variety of plants live here together with many different smaller animals in a balanced ecosystem.</description>
-		<workerClass>TerraFW.BiomeWorkerSpecial_VolcanicIsland</workerClass>
+		<workerClass>TerraCore.BiomeWorkerSpecial_VolcanicIsland</workerClass>
 		<animalDensity>1.6</animalDensity>
-		<plantDensity>0.30</plantDensity>
-		<factionBaseSelectionWeight>0</factionBaseSelectionWeight>
+		<plantDensity>0.45</plantDensity>
+		<settlementSelectionWeight>0</settlementSelectionWeight>
 		<movementDifficulty>1.5</movementDifficulty>
 		<texture>World/Biomes/Base_Island</texture>
 		<forageability>1</forageability>
@@ -280,7 +280,7 @@
 				<max>0.52</max>
 			</li>
 			<li>
-				<terrain>WaterOceanSloping</terrain>
+				<terrain>WaterOceanChestDeep</terrain>
 				<min>0.52</min>
 				<max>0.65</max>
 			</li>
@@ -307,7 +307,7 @@
 			<Plant_Bush>0.6</Plant_Bush>
 			<Plant_TreeOak>0.7</Plant_TreeOak>
 			<Plant_TreePoplar>0.9</Plant_TreePoplar>
-			<Plant_Raspberry>0.1</Plant_Raspberry>
+			<Plant_Berry>0.1</Plant_Berry>
 			<Plant_HealrootWild>0.05</Plant_HealrootWild>
 		</wildPlants>
 		<wildAnimals>
@@ -339,18 +339,18 @@
 			<li>Muffalo</li>
 		</allowedPackAnimals>
 		<modExtensions>
-			<li Class="TerraFW.ModExt_Biome_Replacement">
+			<li Class="TerraCore.ModExt_Biome_Replacement">
 				<replaceElevation>true</replaceElevation>
 				<elevationMin>50</elevationMin>
 				<elevationMax>400</elevationMax>
 				<replaceHilliness>LargeHills</replaceHilliness>
 				<sandReplacement>WaterOceanShallow</sandReplacement>
-				<gravelRelacement>DryGravel</gravelRelacement>
+				<gravelReplacement>DryGravel</gravelReplacement>
 			</li>
-			<li Class="TerraFW.ModExt_Biome_FeatureControl">
+			<li Class="TerraCore.ModExt_Biome_FeatureControl">
 				<removeBeach>true</removeBeach>
 			</li>
-			<li Class="TerraFW.ModExt_Biome_GenStep_Ravine">
+			<li Class="TerraCore.ModExt_Biome_GenStep_Ravine">
 				<ravineWidthMin>0.09</ravineWidthMin>
 				<ravineWidthMax>0.13</ravineWidthMax>
 				<slopeFactor>0.8</slopeFactor>
@@ -366,7 +366,7 @@
 				<noiseFertilityPreOffset>0</noiseFertilityPreOffset>
 				<fertilityPostOffset>0</fertilityPostOffset>
 			</li>
-			<li Class="TerraFW.ModExt_Biome_GenStep_Islands">
+			<li Class="TerraCore.ModExt_Biome_GenStep_Islands">
 				<baseFrequency>0.025</baseFrequency>
 				<islandCountMin>3</islandCountMin>
 				<islandCountMax>6</islandCountMax>
@@ -384,7 +384,7 @@
 				<noiseFertilityPreOffset>0</noiseFertilityPreOffset>
 				<terrainPatchMakerByIslandFertility>
 					<li>
-						<terrain>WaterOceanSloping</terrain>
+						<terrain>WaterOceanChestDeep</terrain>
 						<min>0.42</min>
 						<max>0.50</max>
 						<excludeOverwrite><li>WaterOceanShallow</li></excludeOverwrite>
@@ -397,26 +397,26 @@
 					<li>
 						<terrain>NormalSand</terrain>
 						<min>0.64</min>
-						<max>0.72</max>
+						<max>0.75</max>
 					</li>
 					<li>
 						<terrain>NormalLaterite</terrain>
-						<min>0.72</min>
-						<max>0.80</max>
+						<min>0.75</min>
+						<max>0.82</max>
 					</li>
 					<li>
 						<terrain>NormalBarrenSoil</terrain>
-						<min>0.80</min>
-						<max>0.92</max>
+						<min>0.82</min>
+						<max>0.91</max>
 					</li>
 					<li>
 						<terrain>NormalSoil</terrain>
-						<min>0.92</min>
-						<max>1.21</max>
+						<min>0.91</min>
+						<max>1.22</max>
 					</li>
 					<li>
 						<terrain>NormalFertileSoil</terrain>
-						<min>1.21</min>
+						<min>1.22</min>
 						<max>999</max>
 					</li>
 				</terrainPatchMakerByIslandFertility>
@@ -428,10 +428,10 @@
 		<defName>TundraSkerries</defName>
 		<label>tundra skerries</label>
 		<description>An archipelago of many skerries and smaller islands. There is not really much going on here. A few islands have some soil and a decent vegetation, other are just composed of sand or ice in the winter. Mostly small animals and birds live here to fit the cramped environment.</description>
-		<workerClass>TerraFW.BiomeWorkerSpecial_TundraSkerries</workerClass>
+		<workerClass>TerraCore.BiomeWorkerSpecial_TundraSkerries</workerClass>
 		<animalDensity>0.9</animalDensity>
-		<plantDensity>0.30</plantDensity>
-		<factionBaseSelectionWeight>0</factionBaseSelectionWeight>
+		<plantDensity>0.40</plantDensity>
+		<settlementSelectionWeight>0</settlementSelectionWeight>
 		<movementDifficulty>1.5</movementDifficulty>
 		<texture>World/Biomes/Base_Island</texture>
 		<forageability>0.5</forageability>
@@ -486,7 +486,7 @@
 				<max>0.40</max>
 			</li>
 			<li>
-				<terrain>WaterOceanSloping</terrain>
+				<terrain>WaterOceanChestDeep</terrain>
 				<min>0.40</min>
 				<max>0.57</max>
 			</li>
@@ -536,7 +536,7 @@
 			<Plant_TreePoplar>0.3</Plant_TreePoplar>
 			<Plant_TreePine>0.6</Plant_TreePine>
 			<Plant_TreeBirch>0.4</Plant_TreeBirch>
-			<Plant_Raspberry>0.1</Plant_Raspberry>
+			<Plant_Berry>0.1</Plant_Berry>
 			<Plant_HealrootWild>0.05</Plant_HealrootWild>
 		</wildPlants>
 		<wildAnimals>
@@ -558,19 +558,19 @@
 			<li>Muffalo</li>
 		</allowedPackAnimals>
 		<modExtensions>
-			<li Class="TerraFW.ModExt_Biome_Replacement">
+			<li Class="TerraCore.ModExt_Biome_Replacement">
 				<replaceElevation>true</replaceElevation>
 				<elevationMin>1</elevationMin>
 				<elevationMax>9</elevationMax>
 				<sandReplacement>WaterOceanShallow</sandReplacement>
-				<gravelRelacement>NormalGravel</gravelRelacement>
+				<gravelReplacement>NormalGravel</gravelReplacement>
 			</li>
-			<li Class="TerraFW.ModExt_Biome_FeatureControl">
+			<li Class="TerraCore.ModExt_Biome_FeatureControl">
 				<removeBeach>true</removeBeach>
 				<removeRuinsSimple>true</removeRuinsSimple>
 				<removeShrines>true</removeShrines>
 			</li>
-			<li Class="TerraFW.ModExt_Biome_GenStep_Spikes">
+			<li Class="TerraCore.ModExt_Biome_GenStep_Spikes">
 				<baseFrequency>0.0647</baseFrequency>
 				<sineX>6</sineX>
 				<sineZ>7</sineZ>
@@ -592,11 +592,11 @@
 		<defName>Atoll</defName>
 		<label>atoll</label>
 		<description>An often ring-shaped coral island or group of islands that onces was a volcano which has eroded over time. The form can vary much, from one round island to many small that are connected via shallow banks. Mostly tropical plants and small animals live here to fit the environment.</description>
-		<workerClass>TerraFW.BiomeWorkerSpecial_Atoll</workerClass>
+		<workerClass>TerraCore.BiomeWorkerSpecial_Atoll</workerClass>
 		<animalDensity>1.5</animalDensity>
-		<plantDensity>0.35</plantDensity>
+		<plantDensity>1.75</plantDensity>
 		<hasBedrock>false</hasBedrock>
-		<factionBaseSelectionWeight>0</factionBaseSelectionWeight>
+		<settlementSelectionWeight>0</settlementSelectionWeight>
 		<movementDifficulty>1</movementDifficulty>
 		<texture>World/Biomes/Base_Island</texture>
 		<forageability>0.5</forageability>
@@ -648,16 +648,16 @@
 			<li>
 				<terrain>WaterOceanDeep</terrain>
 				<min>-999</min>
-				<max>0.67</max>
+				<max>0.51</max>
 			</li>
 			<li>
-				<terrain>WaterOceanSloping</terrain>
-				<min>0.67</min>
-				<max>0.74</max>
+				<terrain>WaterOceanChestDeep</terrain>
+				<min>0.51</min>
+				<max>0.65</max>
 			</li>
 			<li>
 				<terrain>WaterOceanShallow</terrain>
-				<min>0.74</min>
+				<min>0.65</min>
 				<max>999</max>
 			</li>
 		</terrainsByFertility>
@@ -670,8 +670,8 @@
 			<SnowHard>4</SnowHard>
 		</baseWeatherCommonalities>
 		<wildPlants>
-			<Plant_Grass>1.2</Plant_Grass>
-			<Plant_TallGrass>0.5</Plant_TallGrass>
+			<Plant_Grass>1.6</Plant_Grass>
+			<Plant_TallGrass>0.7</Plant_TallGrass>
 			<Plant_Dandelion>0.1</Plant_Dandelion>
 			<Plant_Alocasia>0.6</Plant_Alocasia>
 			<Plant_TreeCecropia>0.1</Plant_TreeCecropia>
@@ -679,7 +679,7 @@
 			<Plant_TreeBamboo>0.25</Plant_TreeBamboo>
 			<Plant_Bush>0.1</Plant_Bush>
 			<Plant_Clivia>0.07</Plant_Clivia>
-			<Plant_Raspberry>0.1</Plant_Raspberry>
+			<Plant_Berry>0.1</Plant_Berry>
 		</wildPlants>
 		<wildAnimals>
 			<Hare>0.6</Hare>
@@ -708,20 +708,20 @@
 			<li>Muffalo</li>
 		</allowedPackAnimals>
 		<modExtensions>
-			<li Class="TerraFW.ModExt_Biome_Replacement">
+			<li Class="TerraCore.ModExt_Biome_Replacement">
 				<replaceElevation>true</replaceElevation>
 				<elevationMin>0</elevationMin>
 				<elevationMax>5</elevationMax>
 				<sandReplacement>WaterOceanShallow</sandReplacement>
-				<gravelRelacement>NormalBarrenGravel</gravelRelacement>
+				<gravelReplacement>NormalBarrenGravel</gravelReplacement>
 			</li>
-			<li Class="TerraFW.ModExt_Biome_FeatureControl">
+			<li Class="TerraCore.ModExt_Biome_FeatureControl">
 				<removeBeach>true</removeBeach>
 				<overwriteRockChunks>Remove</overwriteRockChunks>
 				<removeRuinsSimple>true</removeRuinsSimple>
 				<removeShrines>true</removeShrines>
 			</li>
-			<li Class="TerraFW.ModExt_Biome_GenStep_Ravine">
+			<li Class="TerraCore.ModExt_Biome_GenStep_Ravine">
 				<ravineWidthMin>0.07</ravineWidthMin>
 				<ravineWidthMax>0.11</ravineWidthMax>
 				<slopeFactor>0.7</slopeFactor>
@@ -737,7 +737,7 @@
 				<noiseFertilityPreOffset>0</noiseFertilityPreOffset>
 				<fertilityPostOffset>0</fertilityPostOffset>
 			</li>
-			<li Class="TerraFW.ModExt_Biome_GenStep_Islands">
+			<li Class="TerraCore.ModExt_Biome_GenStep_Islands">
 				<baseFrequency>0.02</baseFrequency>
 				<islandCountMin>2</islandCountMin>
 				<islandCountMax>3</islandCountMax>
@@ -755,14 +755,14 @@
 				<noiseFertilityPreOffset>0</noiseFertilityPreOffset>
 				<terrainPatchMakerByIslandFertility>
 					<li>
-						<terrain>WaterOceanSloping</terrain>
-						<min>0.37</min>
-						<max>0.44</max>
+						<terrain>WaterOceanChestDeep</terrain>
+						<min>0.31</min>
+						<max>0.40</max>
 						<excludeOverwrite><li>WaterOceanShallow</li></excludeOverwrite>
 					</li>
 					<li>
 						<terrain>WaterOceanShallow</terrain>
-						<min>0.44</min>
+						<min>0.40</min>
 						<max>0.57</max>
 					</li>
 					<li>
@@ -786,7 +786,7 @@
 						<max>1.72</max>
 					</li>
 					<li>
-						<terrain>WaterSloping</terrain>
+						<terrain>WaterChestDeep</terrain>
 						<min>1.72</min>
 						<max>1.86</max>
 					</li>

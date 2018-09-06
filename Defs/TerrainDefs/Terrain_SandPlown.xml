@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<TerrainDef ParentName="TerrainSandBase">
+		<defName>ParchedSandPlown</defName>
+		<label>desert sand (parched and plown)</label>
+		<texturePath>Terrain/Surfaces/SoilPlown/ParchedSandPlown</texturePath>
+		<pathCost>7</pathCost>
+		<fertility>0.15</fertility>
+		<modExtensions>
+			<li Class="TerraCore.ModExt_Terrain">
+				<moistureByKey>Parched</moistureByKey>
+				<wetTo>DrySandPlown</wetTo>
+				<wetAtByKey>ParchedMax</wetAtByKey>
+				<enrichTo>ParchedLateritePlown</enrichTo>
+				<enrichAtByKey>SandMax</enrichAtByKey>
+				<floodTo>FloodedSand</floodTo>
+				<floodAtByKey>WetMax</floodAtByKey>
+				<normalizeTo>ParchedSand</normalizeTo>
+				<normalizeAfterDays>10</normalizeAfterDays>
+			</li>
+		</modExtensions>
+	</TerrainDef>
+
+	<TerrainDef ParentName="TerrainSandBase">
+		<defName>DrySandPlown</defName>
+		<label>desert sand (plown)</label>
+		<texturePath>Terrain/Surfaces/SoilPlown/DrySandPlown</texturePath>
+		<pathCost>7</pathCost>
+		<fertility>0.15</fertility>
+		<modExtensions>
+			<li Class="TerraCore.ModExt_Terrain">
+				<moistureByKey>Dry</moistureByKey>
+				<dryTo>ParchedSandPlown</dryTo>
+				<dryAtByKey>DryMin</dryAtByKey>
+				<wetTo>NormalSandPlown</wetTo>
+				<wetAtByKey>DryMax</wetAtByKey>
+				<enrichTo>DryLateritePlown</enrichTo>
+				<enrichAtByKey>SandMax</enrichAtByKey>
+				<floodTo>FloodedSand</floodTo>
+				<floodAtByKey>WetMax</floodAtByKey>
+				<normalizeTo>DrySandPlown</normalizeTo>
+				<normalizeAfterDays>10</normalizeAfterDays>
+			</li>
+		</modExtensions>
+	</TerrainDef>
+
+	<TerrainDef ParentName="TerrainSandBase">
+		<defName>NormalSandPlown</defName>
+		<label>sand (plown)</label>
+		<texturePath>Terrain/Surfaces/SoilPlown/NormalSandPlown</texturePath>
+		<pathCost>6</pathCost>
+		<fertility>0.15</fertility>
+		<modExtensions>
+			<li Class="TerraCore.ModExt_Terrain">
+				<moistureByKey>Normal</moistureByKey>
+				<dryTo>DrySandPlown</dryTo>
+				<dryAtByKey>NormalMin</dryAtByKey>
+				<wetTo>WetSandPlown</wetTo>
+				<wetAtByKey>NormalMax</wetAtByKey>
+				<enrichTo>NormalLateritePlown</enrichTo>
+				<enrichAtByKey>SandMax</enrichAtByKey>
+				<floodTo>FloodedSand</floodTo>
+				<floodAtByKey>WetMax</floodAtByKey>
+				<normalizeTo>NormalSand</normalizeTo>
+				<normalizeAfterDays>10</normalizeAfterDays>
+			</li>
+		</modExtensions>
+	</TerrainDef>
+
+	<TerrainDef ParentName="TerrainSandBase">
+		<defName>WetSandPlown</defName>
+		<label>wet sand (plown)</label>
+		<texturePath>Terrain/Surfaces/SoilPlown/WetSandPlown</texturePath>
+		<pathCost>8</pathCost>
+		<fertility>0.15</fertility>
+		<modExtensions>
+			<li Class="TerraCore.ModExt_Terrain">
+				<moistureByKey>Wet</moistureByKey>
+				<dryTo>NormalSandPlown</dryTo>
+				<dryAtByKey>WetMin</dryAtByKey>
+				<enrichTo>WetLateritePlown</enrichTo>
+				<enrichAtByKey>SandMax</enrichAtByKey>
+				<floodTo>FloodedSand</floodTo>
+				<floodAtByKey>WetMax</floodAtByKey>
+				<normalizeTo>WetSand</normalizeTo>
+				<normalizeAfterDays>10</normalizeAfterDays>
+			</li>
+		</modExtensions>
+	</TerrainDef>
+
+</Defs>

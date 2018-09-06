@@ -1,49 +1,210 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <!--============================= Water sloping =============================-->
+  <!--============================= Water bases =============================-->
 
-	<TerrainDef ParentName="WaterBase">
+	<TerrainDef Name="WaterSlopingBase" ParentName="WaterBase" Abstract="True">
+		<texturePath>Terrain/Surfaces/WaterSlopingRamp</texturePath>
+		<waterDepthShader>Map/WaterDepth</waterDepthShader>
+		<passability>Impassable</passability>
+		<pathCost>200</pathCost>
+		<changeable>false</changeable>
+	</TerrainDef>
+
+	<TerrainDef Name="WaterHipDeepBase" ParentName="WaterBase" Abstract="True">
+		<texturePath>Terrain/Surfaces/WaterHipDeepRamp</texturePath>
+		<waterDepthShader>Map/WaterDepth</waterDepthShader>
+		<pathCost>30</pathCost>
+		<affordances>
+			<li>Bridgeable</li>
+		</affordances>
+	</TerrainDef>
+	
+  <!--============================= Water (normal) =============================-->
+
+	<!-- Water deep (def in core) -->
+	
+	<TerrainDef ParentName="WaterSlopingBase">
 		<defName>WaterSloping</defName>
-		<label>water</label>
-		<texturePath>Terrain/Surfaces/WaterSlopingRamp</texturePath>
+		<label>sloping water</label>
 		<renderPrecedence>395</renderPrecedence>
-		<pathCost>300</pathCost>
-		<changeable>false</changeable>
-		<affordances>
-			<li>Bridgeable</li>
-		</affordances>
+		<modExtensions>
+			<li Class="TerraCore.ModExt_Terrain">
+				<waterByKey>Sloping</waterByKey>
+				<moistureByKey>Max</moistureByKey>
+				<ebbTo>WaterChestDeep</ebbTo>
+				<ebbAtByKey>SlopingMin</ebbAtByKey>
+				<floodTo>WaterDeep</floodTo>
+				<floodAtByKey>SlopingMax</floodAtByKey>
+				<freezeTo>IceSloping</freezeTo>
+				<freezeThawOffset>-5</freezeThawOffset>
+			</li>
+		</modExtensions>
 	</TerrainDef>
+	
+	<TerrainDef ParentName="WaterChestDeepBase">
+		<defName>WaterChestDeep</defName>
+		<label>chest-deep water</label>
+		<renderPrecedence>394</renderPrecedence>
+		<modExtensions>
+			<li Class="TerraCore.ModExt_Terrain">
+				<waterByKey>ChestDeep</waterByKey>
+				<moistureByKey>Max</moistureByKey>
+				<ebbTo>WaterHipDeep</ebbTo>
+				<ebbAtByKey>ChestDeepMin</ebbAtByKey>
+				<floodTo>WaterSloping</floodTo>
+				<floodAtByKey>ChestDeepMax</floodAtByKey>
+				<freezeTo>IceChestDeep</freezeTo>
+				<freezeThawOffset>-3</freezeThawOffset>
+			</li>
+		</modExtensions>
+	</TerrainDef>
+	
+	<TerrainDef ParentName="WaterHipDeepBase">
+		<defName>WaterHipDeep</defName>
+		<label>hip-deep water</label>
+		<renderPrecedence>393</renderPrecedence>
+		<modExtensions>
+			<li Class="TerraCore.ModExt_Terrain">
+				<waterByKey>HipDeep</waterByKey>
+				<moistureByKey>Max</moistureByKey>
+				<ebbTo>WaterShallow</ebbTo>
+				<ebbAtByKey>HipDeepMin</ebbAtByKey>
+				<floodTo>WaterChestDeep</floodTo>
+				<floodAtByKey>HipDeepMax</floodAtByKey>
+				<freezeTo>IceHipDeep</freezeTo>
+				<freezeThawOffset>-1</freezeThawOffset>
+			</li>
+		</modExtensions>
+	</TerrainDef>
+	
+	<!-- Water shallow (def in core) -->
 
-	<TerrainDef ParentName="WaterBase">
+  <!--============================= Water (ocean) =============================-->
+
+	<!-- Water ocean deep (def in core) -->
+	
+	<TerrainDef ParentName="WaterSlopingBase">
 		<defName>WaterOceanSloping</defName>
-		<label>ocean water</label>
-		<texturePath>Terrain/Surfaces/WaterSlopingRamp</texturePath>
+		<label>sloping ocean water</label>
 		<renderPrecedence>397</renderPrecedence>
-		<pathCost>300</pathCost>
-		<changeable>false</changeable>
-		<affordances>
-			<li>Bridgeable</li>
-		</affordances>
-	</TerrainDef>
-
-	<TerrainDef ParentName="WaterBase">
-		<defName>WaterMovingSloping</defName>
-		<label>moving water</label>
-		<texturePath>Terrain/Surfaces/WaterSlopingRamp</texturePath>
-		<waterDepthShaderParameters>
-			<_UseWaterOffset>1</_UseWaterOffset>
-		</waterDepthShaderParameters>
-		<renderPrecedence>399</renderPrecedence>
-		<pathCost>300</pathCost>
-		<changeable>false</changeable>
 		<tags>
-			<li>River</li>
+			<li>Ocean</li>
 		</tags>
-		<affordances>
-			<li>MovingFluid</li>
-			<li>Bridgeable</li>
-		</affordances>
+		<modExtensions>
+			<li Class="TerraCore.ModExt_Terrain">
+				<waterByKey>Sloping</waterByKey>
+				<moistureByKey>Max</moistureByKey>
+				<ebbTo>WaterOceanChestDeep</ebbTo>
+				<ebbAtByKey>SlopingMin</ebbAtByKey>
+				<floodTo>WaterOceanDeep</floodTo>
+				<floodAtByKey>SlopingMax</floodAtByKey>
+				<freezeTo>IceOceanSloping</freezeTo>
+				<freezeThawOffset>-16</freezeThawOffset>
+			</li>
+		</modExtensions>
 	</TerrainDef>
+	
+	<TerrainDef ParentName="WaterChestDeepBase">
+		<defName>WaterOceanChestDeep</defName>
+		<label>chest-deep ocean water</label>
+		<renderPrecedence>396</renderPrecedence>
+		<tags>
+			<li>Ocean</li>
+		</tags>
+		<modExtensions>
+			<li Class="TerraCore.ModExt_Terrain">
+				<waterByKey>ChestDeep</waterByKey>
+				<moistureByKey>Max</moistureByKey>
+				<ebbTo>WaterOceanHipDeep</ebbTo>
+				<ebbAtByKey>ChestDeepMin</ebbAtByKey>
+				<floodTo>WaterOceanSloping</floodTo>
+				<floodAtByKey>ChestDeepMax</floodAtByKey>
+				<freezeTo>IceOceanChestDeep</freezeTo>
+				<freezeThawOffset>-13</freezeThawOffset>
+			</li>
+		</modExtensions>
+	</TerrainDef>
+	
+	<TerrainDef ParentName="WaterHipDeepBase">
+		<defName>WaterOceanHipDeep</defName>
+		<label>hip-deep ocean water</label>
+		<renderPrecedence>395</renderPrecedence>
+		<tags>
+			<li>Ocean</li>
+		</tags>
+		<modExtensions>
+			<li Class="TerraCore.ModExt_Terrain">
+				<waterByKey>HipDeep</waterByKey>
+				<moistureByKey>Max</moistureByKey>
+				<ebbTo>WaterOceanShallow</ebbTo>
+				<ebbAtByKey>HipDeepMin</ebbAtByKey>
+				<floodTo>WaterOceanChestDeep</floodTo>
+				<floodAtByKey>HipDeepMax</floodAtByKey>
+				<freezeTo>IceOceanHipDeep</freezeTo>
+				<freezeThawOffset>-10</freezeThawOffset>
+			</li>
+		</modExtensions>
+	</TerrainDef>
+	
+	<!-- Water ocean shallow (def in core) -->
+
+  <!--============================= Water (moving) =============================-->
+
+	<TerrainDef ParentName="WaterDeepBase">
+		<defName>WaterMovingDeep</defName>
+		<label>deep moving water</label>
+		<renderPrecedence>399</renderPrecedence>
+		<modExtensions>
+			<li Class="TerraCore.ModExt_Terrain">
+				<waterByKey>Deep</waterByKey>
+				<moistureByKey>Max</moistureByKey>
+				<ebbTo>WaterMovingSloping</ebbTo>
+				<ebbAtByKey>DeepMin</ebbAtByKey>
+				<freezeTo>IceMovingDeep</freezeTo>
+				<freezeThawOffset>-11</freezeThawOffset>
+			</li>
+		</modExtensions>
+	</TerrainDef>
+	
+	<TerrainDef ParentName="WaterSlopingBase">
+		<defName>WaterMovingSloping</defName>
+		<label>sloping moving water</label>
+		<renderPrecedence>398</renderPrecedence>
+		<modExtensions>
+			<li Class="TerraCore.ModExt_Terrain">
+				<waterByKey>Sloping</waterByKey>
+				<moistureByKey>Max</moistureByKey>
+				<ebbTo>WaterMovingChestDeep</ebbTo>
+				<ebbAtByKey>SlopingMin</ebbAtByKey>
+				<floodTo>WaterMovingDeep</floodTo>
+				<floodAtByKey>SlopingMax</floodAtByKey>
+				<freezeTo>IceMovingSloping</freezeTo>
+				<freezeThawOffset>-10</freezeThawOffset>
+			</li>
+		</modExtensions>
+	</TerrainDef>
+	
+	<!-- Water moving chest-deep (def in core) -->
+	
+	<TerrainDef ParentName="WaterHipDeepBase">
+		<defName>WaterMovingHipDeep</defName>
+		<label>hip-deep moving water</label>
+		<renderPrecedence>396</renderPrecedence>
+		<modExtensions>
+			<li Class="TerraCore.ModExt_Terrain">
+				<waterByKey>HipDeep</waterByKey>
+				<moistureByKey>Max</moistureByKey>
+				<ebbTo>WaterMovingShallow</ebbTo>
+				<ebbAtByKey>HipDeepMin</ebbAtByKey>
+				<floodTo>WaterMovingChestDeep</floodTo>
+				<floodAtByKey>HipDeepMax</floodAtByKey>
+				<freezeTo>IceMovingHipDeep</freezeTo>
+				<freezeThawOffset>-7</freezeThawOffset>
+			</li>
+		</modExtensions>
+	</TerrainDef>
+	
+	<!-- Water moving shallow (def in core) -->
 
 </Defs>

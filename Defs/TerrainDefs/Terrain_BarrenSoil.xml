@@ -7,6 +7,20 @@
 		<texturePath>Terrain/Surfaces/Soil/ParchedBarrenSoil</texturePath>
 		<pathCost>7</pathCost>
 		<fertility>0.75</fertility>
+		<modExtensions>
+			<li Class="TerraCore.ModExt_Terrain">
+				<moistureByKey>Parched</moistureByKey>
+				<wetTo>DryBarrenSoil</wetTo>
+				<wetAtByKey>ParchedMax</wetAtByKey>
+				<parchTo>ParchedLaterite</parchTo>
+				<parchAtByKey>BarrenMin</parchAtByKey>
+				<enrichTo>ParchedSoil</enrichTo>
+				<enrichAtByKey>BarrenMax</enrichAtByKey>
+				<floodTo>FloodedBarrenSoil</floodTo>
+				<floodAtByKey>WetMax</floodAtByKey>
+				<plowTo>ParchedBarrenSoilPlown</plowTo>
+			</li>
+		</modExtensions>
 	</TerrainDef>
 
 	<TerrainDef ParentName="TerrainSoilBase">
@@ -15,6 +29,22 @@
 		<texturePath>Terrain/Surfaces/Soil/DryBarrenSoil</texturePath>
 		<pathCost>5</pathCost>
 		<fertility>0.75</fertility>
+		<modExtensions>
+			<li Class="TerraCore.ModExt_Terrain">
+				<moistureByKey>Dry</moistureByKey>
+				<dryTo>ParchedBarrenSoil</dryTo>
+				<dryAtByKey>DryMin</dryAtByKey>
+				<wetTo>NormalBarrenSoil</wetTo>
+				<wetAtByKey>DryMax</wetAtByKey>
+				<parchTo>DryLaterite</parchTo>
+				<parchAtByKey>BarrenMin</parchAtByKey>
+				<enrichTo>DrySoil</enrichTo>
+				<enrichAtByKey>BarrenMax</enrichAtByKey>
+				<floodTo>FloodedBarrenSoil</floodTo>
+				<floodAtByKey>WetMax</floodAtByKey>
+				<plowTo>DryBarrenSoilPlown</plowTo>
+			</li>
+		</modExtensions>
 	</TerrainDef>
 
 	<TerrainDef ParentName="TerrainSoilBase">
@@ -23,6 +53,22 @@
 		<texturePath>Terrain/Surfaces/Soil/NormalBarrenSoil</texturePath>
 		<pathCost>4</pathCost>
 		<fertility>0.75</fertility>
+		<modExtensions>
+			<li Class="TerraCore.ModExt_Terrain">
+				<moistureByKey>Normal</moistureByKey>
+				<dryTo>DryBarrenSoil</dryTo>
+				<dryAtByKey>NormalMin</dryAtByKey>
+				<wetTo>WetBarrenSoil</wetTo>
+				<wetAtByKey>NormalMax</wetAtByKey>
+				<parchTo>NormalLaterite</parchTo>
+				<parchAtByKey>BarrenMin</parchAtByKey>
+				<enrichTo>NormalSoil</enrichTo>
+				<enrichAtByKey>BarrenMax</enrichAtByKey>
+				<floodTo>FloodedBarrenSoil</floodTo>
+				<floodAtByKey>WetMax</floodAtByKey>
+				<plowTo>NormalBarrenSoilPlown</plowTo>
+			</li>
+		</modExtensions>
 	</TerrainDef>
 
 	<TerrainDef ParentName="TerrainWetBase">
@@ -31,6 +77,20 @@
 		<texturePath>Terrain/Surfaces/Soil/WetBarrenSoil</texturePath>
 		<pathCost>9</pathCost>
 		<fertility>0.75</fertility>
+		<modExtensions>
+			<li Class="TerraCore.ModExt_Terrain">
+				<moistureByKey>Wet</moistureByKey>
+				<dryTo>NormalBarrenSoil</dryTo>
+				<dryAtByKey>WetMin</dryAtByKey>
+				<parchTo>WetLaterite</parchTo>
+				<parchAtByKey>BarrenMin</parchAtByKey>
+				<enrichTo>WetSoil</enrichTo>
+				<enrichAtByKey>BarrenMax</enrichAtByKey>
+				<floodTo>FloodedBarrenSoil</floodTo>
+				<floodAtByKey>WetMax</floodAtByKey>
+				<plowTo>WetBarrenSoilPlown</plowTo>
+			</li>
+		</modExtensions>
 	</TerrainDef>
 
 	<TerrainDef ParentName="TerrainFloodedBase">
@@ -39,6 +99,21 @@
 		<texturePath>Terrain/Surfaces/Soil/FloodedBarrenSoil</texturePath>
 		<pathCost>13</pathCost>
 		<fertility>0.75</fertility>
+		<modExtensions>
+			<li Class="TerraCore.ModExt_Terrain">
+				<waterByKey>Flooded</waterByKey>
+				<moistureByKey>Max</moistureByKey>
+				<parchTo>FloodedLaterite</parchTo>
+				<parchAtByKey>BarrenMin</parchAtByKey>
+				<enrichTo>FloodedSoil</enrichTo>
+				<enrichAtByKey>BarrenMax</enrichAtByKey>
+				<ebbTo>WetBarrenSoil</ebbTo>
+				<ebbAtByKey>FloodedMin</ebbAtByKey>
+				<floodTo>FillerWater</floodTo>
+				<floodAtByKey>FloodedMax</floodAtByKey>
+				<freezeTo>FrozenFloodedBarrenSoil</freezeTo>
+			</li>
+		</modExtensions>
 	</TerrainDef>
 
 	<TerrainDef ParentName="TerrainFrozenBase">
@@ -46,6 +121,13 @@
 		<label>frozen flooded barren soil</label>
 		<texturePath>Terrain/Surfaces/Soil/FrozenFloodedBarrenSoil</texturePath>
 		<pathCost>6</pathCost>
+		<modExtensions>
+			<li Class="TerraCore.ModExt_Terrain">
+				<waterByKey>Flooded</waterByKey>
+				<moistureByKey>Max</moistureByKey>
+				<thawTo>FloodedBarrenSoil</thawTo>
+			</li>
+		</modExtensions>
 	</TerrainDef>
 
 </Defs>

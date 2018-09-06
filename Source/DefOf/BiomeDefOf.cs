@@ -1,16 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using RimWorld;
-using Verse;
+﻿using RimWorld;
 
-namespace TerraFW
+namespace TerraCore
 {
 
     [DefOf]
     public static class BiomeDefOf
     {
+
+        static BiomeDefOf()
+		{
+            DefOfHelper.EnsureInitializedInCtor(typeof(BiomeDefOf));
+		}
 
         public static BiomeDef SeaIce;
 

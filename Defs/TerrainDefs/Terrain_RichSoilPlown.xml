@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<TerrainDef ParentName="TerrainSoilBase">
+		<defName>ParchedRichSoilPlown</defName>
+		<label>parched rich soil (plown)</label>
+		<texturePath>Terrain/Surfaces/SoilPlown/ParchedRichSoilPlown</texturePath>
+		<pathCost>8</pathCost>
+		<fertility>1.35</fertility>
+		<modExtensions>
+			<li Class="TerraCore.ModExt_Terrain">
+				<moistureByKey>Parched</moistureByKey>
+				<wetTo>DryRichSoilPlown</wetTo>
+				<wetAtByKey>ParchedMax</wetAtByKey>
+				<parchTo>ParchedFertileSoilPlown</parchTo>
+				<parchAtByKey>RichMin</parchAtByKey>
+				<floodTo>FloodedRichSoil</floodTo>
+				<floodAtByKey>WetMax</floodAtByKey>
+				<normalizeTo>ParchedRichSoil</normalizeTo>
+				<normalizeAfterDays>20</normalizeAfterDays>
+			</li>
+		</modExtensions>
+	</TerrainDef>
+
+	<TerrainDef ParentName="TerrainSoilBase">
+		<defName>DryRichSoilPlown</defName>
+		<label>dry rich soil (plown)</label>
+		<texturePath>Terrain/Surfaces/SoilPlown/DryRichSoilPlown</texturePath>
+		<pathCost>6</pathCost>
+		<fertility>1.35</fertility>
+		<modExtensions>
+			<li Class="TerraCore.ModExt_Terrain">
+				<moistureByKey>Dry</moistureByKey>
+				<dryTo>ParchedRichSoilPlown</dryTo>
+				<dryAtByKey>DryMin</dryAtByKey>
+				<wetTo>NormalRichSoilPlown</wetTo>
+				<wetAtByKey>DryMax</wetAtByKey>
+				<parchTo>DryFertileSoilPlown</parchTo>
+				<parchAtByKey>RichMin</parchAtByKey>
+				<floodTo>FloodedRichSoil</floodTo>
+				<floodAtByKey>WetMax</floodAtByKey>
+				<normalizeTo>DryRichSoilPlown</normalizeTo>
+				<normalizeAfterDays>20</normalizeAfterDays>
+			</li>
+		</modExtensions>
+	</TerrainDef>
+
+	<TerrainDef ParentName="TerrainSoilBase">
+		<defName>NormalRichSoilPlown</defName>
+		<label>rich soil (plown)</label>
+		<texturePath>Terrain/Surfaces/SoilPlown/NormalRichSoilPlown</texturePath>
+		<pathCost>5</pathCost>
+		<fertility>1.35</fertility>
+		<modExtensions>
+			<li Class="TerraCore.ModExt_Terrain">
+				<moistureByKey>Normal</moistureByKey>
+				<dryTo>DryRichSoilPlown</dryTo>
+				<dryAtByKey>NormalMin</dryAtByKey>
+				<wetTo>WetRichSoilPlown</wetTo>
+				<wetAtByKey>NormalMax</wetAtByKey>
+				<parchTo>NormalFertileSoilPlown</parchTo>
+				<parchAtByKey>RichMin</parchAtByKey>
+				<floodTo>FloodedRichSoil</floodTo>
+				<floodAtByKey>WetMax</floodAtByKey>
+				<normalizeTo>NormalRichSoil</normalizeTo>
+				<normalizeAfterDays>20</normalizeAfterDays>
+			</li>
+		</modExtensions>
+	</TerrainDef>
+
+	<TerrainDef ParentName="TerrainSoilBase">
+		<defName>WetRichSoilPlown</defName>
+		<label>wet rich soil (plown)</label>
+		<texturePath>Terrain/Surfaces/SoilPlown/WetRichSoilPlown</texturePath>
+		<pathCost>10</pathCost>
+		<fertility>1.35</fertility>
+		<modExtensions>
+			<li Class="TerraCore.ModExt_Terrain">
+				<moistureByKey>Wet</moistureByKey>
+				<dryTo>NormalRichSoilPlown</dryTo>
+				<dryAtByKey>WetMin</dryAtByKey>
+				<parchTo>WetFertileSoilPlown</parchTo>
+				<parchAtByKey>RichMin</parchAtByKey>
+				<floodTo>FloodedRichSoil</floodTo>
+				<floodAtByKey>WetMax</floodAtByKey>
+				<normalizeTo>WetRichSoil</normalizeTo>
+				<normalizeAfterDays>20</normalizeAfterDays>
+			</li>
+		</modExtensions>
+	</TerrainDef>
+
+</Defs>
